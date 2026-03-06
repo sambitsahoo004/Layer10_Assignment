@@ -1,0 +1,196 @@
+[
+  {
+    "question": "Who is assigned to the frozendict issue?",
+    "results": [
+      {
+        "subject": "johnslavik",
+        "predicate": "assigned_to",
+        "object": "issue#145452",
+        "status": "current",
+        "confidence": 1.0,
+        "score": 0.2344,
+        "valid_from": "2026-03-03T08:07:13",
+        "evidence": {
+          "source": "issue#145452",
+          "author": "johnslavik",
+          "excerpt": "SOURCE ID: issue#145452...",
+          "version": "schema_v1/prompt_v1/llama-3.1-8b-instant"
+        }
+      },
+      {
+        "subject": "hroncok",
+        "predicate": "assigned_to",
+        "object": "issue#145417",
+        "status": "current",
+        "confidence": 1.0,
+        "score": 0.2322,
+        "valid_from": "2026-03-02T12:02:06",
+        "evidence": {
+          "source": "issue#145417",
+          "author": "hroncok",
+          "excerpt": "SOURCE ID: issue#145417...",
+          "version": "schema_v1/prompt_v1/llama-3.1-8b-instant"
+        }
+      },
+      {
+        "subject": "cyberphone",
+        "predicate": "assigned_to",
+        "object": "issue#145405",
+        "status": "current",
+        "confidence": 1.0,
+        "score": 0.2146,
+        "valid_from": "2026-03-02T06:53:38",
+        "evidence": {
+          "source": "issue#145405",
+          "author": "cyberphone",
+          "excerpt": "AUTHOR: cyberphone...",
+          "version": "schema_v1/prompt_v1/llama-3.1-8b-instant"
+        }
+      },
+      {
+        "subject": "vstinner",
+        "predicate": "owns",
+        "object": "frozendict",
+        "status": "current",
+        "confidence": 0.95,
+        "score": 0.6906,
+        "valid_from": "2026-03-03T16:00:11",
+        "evidence": {
+          "source": "issue#145481",
+          "author": "vstinner",
+          "excerpt": "Frozendict lookups use locks and atomic operations for thread safety...",
+          "version": "schema_v1/prompt_v1/llama-3.1-8b-instant"
+        }
+      },
+      {
+        "subject": "KowalskiThomas",
+        "predicate": "assigned_to",
+        "object": "issue#145458",
+        "status": "current",
+        "confidence": 0.95,
+        "score": 0.5505,
+        "valid_from": "2026-03-03T09:56:59",
+        "evidence": {
+          "source": "issue#145458",
+          "author": "KowalskiThomas",
+          "excerpt": "I was looking at the code in Tachyon and I think I've found something...",
+          "version": "schema_v1/prompt_v1/llama-3.1-8b-instant"
+        }
+      }
+    ]
+  },
+  {
+    "question": "What component is causing the sqlite3 bug?",
+    "conflict_detected": true,
+    "results": [
+      {
+        "subject": "injust",
+        "predicate": "caused_by",
+        "object": "python",
+        "status": "current",
+        "confidence": 0.95,
+        "score": 0.4994,
+        "valid_from": "2026-03-03T05:56:28",
+        "conflict": true,
+        "evidence": {
+          "source": "issue#145448",
+          "author": "injust",
+          "excerpt": "This is a bug in Terminal.app in how it handles CUB...",
+          "version": "schema_v1/prompt_v1/llama-3.1-8b-instant"
+        }
+      },
+      {
+        "subject": "rohit-kotian",
+        "predicate": "caused_by",
+        "object": "sqlite",
+        "status": "current",
+        "confidence": 0.95,
+        "score": 0.4626,
+        "valid_from": "2026-03-03T15:06:52",
+        "evidence": {
+          "source": "issue#145475/comment#3991681525",
+          "author": "Shrey-N",
+          "excerpt": "Linux & SQLite interaction issue...",
+          "version": "schema_v1/prompt_v1/llama-3.1-8b-instant"
+        }
+      }
+    ]
+  },
+  {
+    "question": "What did bkap123 decide?",
+    "conflict_detected": true,
+    "results": [
+      {
+        "subject": "bkap123",
+        "predicate": "reviewed_by",
+        "object": "issue#145446",
+        "status": "current",
+        "confidence": 0.95,
+        "score": 0.6743,
+        "valid_from": "2026-03-03T11:40:55",
+        "evidence": {
+          "source": "issue#145446/comment#3990458157",
+          "author": "bkap123",
+          "excerpt": "Thank you for changing the title...",
+          "version": "schema_v1/prompt_v1/llama-3.1-8b-instant"
+        }
+      },
+      {
+        "subject": "bkap123",
+        "predicate": "decided",
+        "object": "issue#145446",
+        "status": "current",
+        "confidence": 0.95,
+        "score": 0.5312,
+        "valid_from": "2026-03-03T15:05:51",
+        "conflict": true,
+        "evidence": {
+          "source": "issue#145478",
+          "author": "bkap123",
+          "excerpt": "I will wait until https://github.com/python/cpython/issues/145446 is resolved...",
+          "version": "schema_v1/prompt_v1/llama-3.1-8b-instant"
+        }
+      }
+    ]
+  },
+  {
+    "question": "Which issues are blocking other issues?",
+    "results": [
+      {
+        "subject": "issue#145455",
+        "predicate": "linked_to",
+        "object": "issue#145462",
+        "status": "current",
+        "confidence": 1.0,
+        "score": 0.1544,
+        "valid_from": "2026-03-03T08:56:45",
+        "evidence": {
+          "source": "issue#145455",
+          "author": "encukou",
+          "excerpt": "* gh-145462...",
+          "version": "schema_v1/prompt_v1/llama-3.1-8b-instant"
+        }
+      }
+    ]
+  },
+  {
+    "question": "Who owns the asyncio component?",
+    "results": [
+      {
+        "subject": "hroncok",
+        "predicate": "owns",
+        "object": "cpython",
+        "status": "current",
+        "confidence": 0.95,
+        "score": 0.5271,
+        "valid_from": "2026-03-02T12:02:06",
+        "evidence": {
+          "source": "issue#145417",
+          "author": "hroncok",
+          "excerpt": "I think the problem might be near https://github.com/python/cpython/blob...",
+          "version": "schema_v1/prompt_v1/llama-3.1-8b-instant"
+        }
+      }
+    ]
+  }
+]
