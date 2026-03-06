@@ -1,0 +1,4181 @@
+{
+  "metadata": {
+    "created_at": "2026-03-03T18:02:03.713568+00:00",
+    "node_count": 175,
+    "edge_count": 130,
+    "entity_count": 96,
+    "claim_count": 79,
+    "current_claims": 71,
+    "predicate_distribution": {
+      "assigned_to": 14,
+      "owns": 19,
+      "decided": 4,
+      "caused_by": 17,
+      "reviewed_by": 15,
+      "linked_to": 9,
+      "status_changed_to": 1
+    }
+  },
+  "nodes": [
+    {
+      "id": "2a87acd1264bbf4cebcadd27a12f8fb658ac3b0aab56fdc5140a17df7d8126c5",
+      "node_type": "Entity",
+      "entity_type": "Person",
+      "canonical_name": "vstinner",
+      "aliases": [],
+      "first_seen": "2026-03-03T16:00:11Z",
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "label": "vstinner"
+    },
+    {
+      "id": "156d77c70dd94602ec770c3a0d4bf1746b88b0e602f73820c992d3e50b105888",
+      "node_type": "Entity",
+      "entity_type": "Component",
+      "canonical_name": "frozendict",
+      "aliases": [],
+      "first_seen": "2026-03-03T16:00:11Z",
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "label": "frozendict"
+    },
+    {
+      "id": "0cf7d4ee550e2bbec52d659bd81fd7398c4612dc4f66fa04f2c9f58131e20972",
+      "node_type": "Entity",
+      "entity_type": "Issue",
+      "canonical_name": "issue#145482",
+      "aliases": [],
+      "first_seen": "2026-03-03T16:00:11Z",
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "label": "issue#145482"
+    },
+    {
+      "id": "a740ef0b6ced6b50c5e2de94aba57e98dc6422c027cf498ff702159e67eba1b8",
+      "node_type": "Entity",
+      "entity_type": "Person",
+      "canonical_name": "bkap123",
+      "aliases": [],
+      "first_seen": "2026-03-03T15:05:51Z",
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "label": "bkap123"
+    },
+    {
+      "id": "6e03b2b33987d80c68aa9642589447cf459535ebc4b723971a75545ad9ac471c",
+      "node_type": "Entity",
+      "entity_type": "Component",
+      "canonical_name": "functools",
+      "aliases": [],
+      "first_seen": "2026-03-03T15:05:51Z",
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "label": "functools"
+    },
+    {
+      "id": "9d03c73c12be3a04a2ae8b88637a693fc656fa81304ca8aa5c207fe7d3288282",
+      "node_type": "Entity",
+      "entity_type": "Issue",
+      "canonical_name": "issue#145362",
+      "aliases": [],
+      "first_seen": "2026-03-03T15:05:51Z",
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "label": "issue#145362"
+    },
+    {
+      "id": "0f4fee82e1ecd51cb1872c9fbfd5946453a2fcf6f96bca4284b0717fab9d53ce",
+      "node_type": "Entity",
+      "entity_type": "Issue",
+      "canonical_name": "issue#145446",
+      "aliases": [],
+      "first_seen": "2026-03-03T15:05:51Z",
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "label": "issue#145446"
+    },
+    {
+      "id": "1c9a7cd7ed43991213c56afe5cbd8c6b82ea5dbfb150c77bc4d33daee875af16",
+      "node_type": "Entity",
+      "entity_type": "Person",
+      "canonical_name": "rohit-kotian",
+      "aliases": [],
+      "first_seen": "2026-03-03T14:45:45Z",
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "label": "rohit-kotian"
+    },
+    {
+      "id": "97d03e3d854d99bf6d63733df19a2dfcd3ce5120b0db4d9153d9ca8207fda529",
+      "node_type": "Entity",
+      "entity_type": "Component",
+      "canonical_name": "sqlite3",
+      "aliases": [],
+      "first_seen": "2026-03-03T14:45:45Z",
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "label": "sqlite3"
+    },
+    {
+      "id": "860290cd12ac0198c1b85fb348dfaed6d910a4fe47b25996d57aefaa81413468",
+      "node_type": "Entity",
+      "entity_type": "Component",
+      "canonical_name": "linux",
+      "aliases": [],
+      "first_seen": "2026-03-03T15:06:52Z",
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "label": "linux"
+    },
+    {
+      "id": "17b3a6a5a467108290f910303c72c8c503d8df6be982fc78eefddfbd0d8fec18",
+      "node_type": "Entity",
+      "entity_type": "Component",
+      "canonical_name": "sqlite",
+      "aliases": [],
+      "first_seen": "2026-03-03T15:06:52Z",
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "label": "sqlite"
+    },
+    {
+      "id": "5129fc78468fb1263a0db930dc6dd6fb1047e71691cc19fceebc389409c72524",
+      "node_type": "Entity",
+      "entity_type": "Component",
+      "canonical_name": "cpython",
+      "aliases": [],
+      "first_seen": "2026-03-03T15:06:52Z",
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "label": "cpython"
+    },
+    {
+      "id": "54939402299b564b7549880e364e9e1955eeaaa3cd43c962e606416c34adb0b5",
+      "node_type": "Entity",
+      "entity_type": "Person",
+      "canonical_name": "Shrey-N",
+      "aliases": [
+        "Shrey-n"
+      ],
+      "first_seen": "2026-03-03T15:28:50Z",
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "label": "Shrey-N"
+    },
+    {
+      "id": "436bb99d9ba4f68538bb2dc2e612c8efae76484d437942510b687f617e9ff7de",
+      "node_type": "Entity",
+      "entity_type": "Person",
+      "canonical_name": "hugovk",
+      "aliases": [],
+      "first_seen": "2026-03-03T13:20:13Z",
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "label": "hugovk"
+    },
+    {
+      "id": "4fb997908b698462a1e9cc90b73618060bbdd0f60fa4088ced5b77e5d2515858",
+      "node_type": "Entity",
+      "entity_type": "Person",
+      "canonical_name": "smontanaro",
+      "aliases": [],
+      "first_seen": "2026-03-03T11:59:39Z",
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "label": "smontanaro"
+    },
+    {
+      "id": "577acaf4bf558fedd932e8c25b228c5be00da624252ef1ed1105af8244943471",
+      "node_type": "Entity",
+      "entity_type": "Issue",
+      "canonical_name": "issue#145465",
+      "aliases": [],
+      "first_seen": "2026-03-03T11:59:39Z",
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "label": "issue#145465"
+    },
+    {
+      "id": "be7bab2f2c67661906f520fce2e3ff5813822dcf9cc5b932ea9ee76f2eb66626",
+      "node_type": "Entity",
+      "entity_type": "Component",
+      "canonical_name": "Platforms/Mac",
+      "aliases": [],
+      "first_seen": "2026-03-03T11:59:39Z",
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "label": "Platforms/Mac"
+    },
+    {
+      "id": "1335e152f34303c69a19bf8eba6e5f26ad8f86b6755f90a392017732c2d593d7",
+      "node_type": "Entity",
+      "entity_type": "Issue",
+      "canonical_name": "issue#143941",
+      "aliases": [],
+      "first_seen": "2026-03-03T12:06:18Z",
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "label": "issue#143941"
+    },
+    {
+      "id": "3d6bb8b9975ca70f0778549c2ec5a091872f353ac62456bddb011a3e044d5b76",
+      "node_type": "Entity",
+      "entity_type": "Person",
+      "canonical_name": "maurycy",
+      "aliases": [],
+      "first_seen": "2026-03-03T11:25:46Z",
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "label": "maurycy"
+    },
+    {
+      "id": "d8c12994992af490d8140e0b2874ecd268dbc3f1b572199f6eb55dc88f97346a",
+      "node_type": "Entity",
+      "entity_type": "Component",
+      "canonical_name": "profiling.sampling",
+      "aliases": [],
+      "first_seen": "2026-03-03T11:25:46Z",
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "label": "profiling.sampling"
+    },
+    {
+      "id": "531b88606193708b73be9e420c1403382e3081062cd32a286a004f6dc9a4451b",
+      "node_type": "Entity",
+      "entity_type": "Issue",
+      "canonical_name": "issue#145464",
+      "aliases": [],
+      "first_seen": "2026-03-03T11:25:46Z",
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "label": "issue#145464"
+    },
+    {
+      "id": "c91c333d48fb59c7cfc99b55cd84771cf5ad0587ffe0b9e2fb30255755c0426b",
+      "node_type": "Entity",
+      "entity_type": "Person",
+      "canonical_name": "KowalskiThomas",
+      "aliases": [],
+      "first_seen": "2026-03-03T09:56:59Z",
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "label": "KowalskiThomas"
+    },
+    {
+      "id": "6d07d0d386a9902a04500b7505f0ff5222c42fe09e2b64163f089576071367b4",
+      "node_type": "Entity",
+      "entity_type": "Component",
+      "canonical_name": "stdlib",
+      "aliases": [],
+      "first_seen": "2026-03-03T09:56:59Z",
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "label": "stdlib"
+    },
+    {
+      "id": "020583c629e737cd57723ed3868bd912316afaa4e6e255654d3389e790920333",
+      "node_type": "Entity",
+      "entity_type": "Issue",
+      "canonical_name": "issue#145458",
+      "aliases": [],
+      "first_seen": "2026-03-03T09:56:59Z",
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "label": "issue#145458"
+    },
+    {
+      "id": "dcf6858a2fcdbc35c3a1568f8d0857b1b6e27d29b5907004e845ee203b713208",
+      "node_type": "Entity",
+      "entity_type": "Issue",
+      "canonical_name": "issue#145459",
+      "aliases": [],
+      "first_seen": "2026-03-03T09:56:59Z",
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "label": "issue#145459"
+    },
+    {
+      "id": "5bf5439186187f2e34da80560e7a5f2127ea2a0157043c8816975bc0f9ab3440",
+      "node_type": "Entity",
+      "entity_type": "Person",
+      "canonical_name": "picnixz",
+      "aliases": [],
+      "first_seen": "2026-03-03T09:59:47Z",
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "label": "picnixz"
+    },
+    {
+      "id": "474d7ffb2f579d699cbc9ac77f40f90911eeeaba77459c3ea10e498846d8f392",
+      "node_type": "Entity",
+      "entity_type": "Component",
+      "canonical_name": "tachyon",
+      "aliases": [],
+      "first_seen": "2026-03-03T09:59:47Z",
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "label": "tachyon"
+    },
+    {
+      "id": "ea0096f494e005eaa9a8eebd58faf5ae0f8f08d5b3cd950bc3f7fabda2ae0e9c",
+      "node_type": "Entity",
+      "entity_type": "Person",
+      "canonical_name": "encukou",
+      "aliases": [],
+      "first_seen": "2026-03-03T08:56:45Z",
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "label": "encukou"
+    },
+    {
+      "id": "3962c90be4a9645848bca8976eff122fefc9d1a5296e3772bde8b939f6702347",
+      "node_type": "Entity",
+      "entity_type": "Issue",
+      "canonical_name": "issue#145455",
+      "aliases": [],
+      "first_seen": "2026-03-03T08:56:45Z",
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "label": "issue#145455"
+    },
+    {
+      "id": "2a880906805733c5cd7b29f93779b5f67a891036773fa51b7a0f24f47a8b4ab5",
+      "node_type": "Entity",
+      "entity_type": "Component",
+      "canonical_name": "sphinx",
+      "aliases": [],
+      "first_seen": "2026-03-03T08:56:45Z",
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "label": "sphinx"
+    },
+    {
+      "id": "e788ef23313f06ded9744d63a6e67aed67376d3d8ad80d5f089f7aa7488907eb",
+      "node_type": "Entity",
+      "entity_type": "Component",
+      "canonical_name": "setuptools",
+      "aliases": [],
+      "first_seen": "2026-03-03T08:56:45Z",
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "label": "setuptools"
+    },
+    {
+      "id": "4f8447bb2a31836e812357af0e45441192ea70a6255cc419d9501d2e4fc6878a",
+      "node_type": "Entity",
+      "entity_type": "Component",
+      "canonical_name": "blurb",
+      "aliases": [],
+      "first_seen": "2026-03-03T08:56:45Z",
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "label": "blurb"
+    },
+    {
+      "id": "9ba8d4fb0d79acec02730a2decc5ef9107abfc888351b5d58eeb49de267db069",
+      "node_type": "Entity",
+      "entity_type": "Component",
+      "canonical_name": "sphinx-build",
+      "aliases": [],
+      "first_seen": "2026-03-03T08:56:45Z",
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "label": "sphinx-build"
+    },
+    {
+      "id": "26ff84c22576da63a2000aec22630c170ac4db1556a5b9ead77c3fac73d09246",
+      "node_type": "Entity",
+      "entity_type": "Person",
+      "canonical_name": "johnslavik",
+      "aliases": [],
+      "first_seen": "2026-03-03T08:07:13Z",
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "label": "johnslavik"
+    },
+    {
+      "id": "2531afca19bd41f837f2b1cd1ab038471456d880cd640489a0019adcf196422a",
+      "node_type": "Entity",
+      "entity_type": "Issue",
+      "canonical_name": "issue#145452",
+      "aliases": [],
+      "first_seen": "2026-03-03T08:07:13Z",
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "label": "issue#145452"
+    },
+    {
+      "id": "7614e01f4fe46f9cfc2a79e72722e973c5dacf8a415f49e8f085e9af13fc3bfd",
+      "node_type": "Entity",
+      "entity_type": "Component",
+      "canonical_name": "interpreter-core",
+      "aliases": [],
+      "first_seen": "2026-03-03T08:07:13Z",
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "label": "interpreter-core"
+    },
+    {
+      "id": "bcde23cbc24ec51c67dddf7f519dcb27d6aed07a1381f37c636c17efb4ffbfaf",
+      "node_type": "Entity",
+      "entity_type": "Component",
+      "canonical_name": "3.15",
+      "aliases": [],
+      "first_seen": "2026-03-03T08:07:13Z",
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "label": "3.15"
+    },
+    {
+      "id": "fb2e0644d82574ea1e10b1b17f952a379724bbfb9b59a25780300ab3f93f9658",
+      "node_type": "Entity",
+      "entity_type": "Component",
+      "canonical_name": "types",
+      "aliases": [],
+      "first_seen": "2026-03-03T08:07:13Z",
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "label": "types"
+    },
+    {
+      "id": "a166513529b535036124023c186fb421665d525a80dbd1d085985d5637c0c46d",
+      "node_type": "Entity",
+      "entity_type": "Component",
+      "canonical_name": "lazy_import",
+      "aliases": [],
+      "first_seen": "2026-03-03T08:07:13Z",
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "label": "lazy_import"
+    },
+    {
+      "id": "2b33676fcb0a73e2f618ea2e2551c789114cb4cc4cdb4a958a401b712091fbee",
+      "node_type": "Entity",
+      "entity_type": "Component",
+      "canonical_name": "wave",
+      "aliases": [],
+      "first_seen": "2026-03-03T08:07:13Z",
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "label": "wave"
+    },
+    {
+      "id": "6c6bba966f3764997e57b4da06512b118a2ec089a8cf73f5773c8b2542b77ab4",
+      "node_type": "Entity",
+      "entity_type": "Component",
+      "canonical_name": "traceback",
+      "aliases": [],
+      "first_seen": "2026-03-03T08:07:13Z",
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "label": "traceback"
+    },
+    {
+      "id": "a6c36a372b23f46967f1fdac28a61a7f0db4ae27b938d2063d349e115d227bc8",
+      "node_type": "Entity",
+      "entity_type": "Person",
+      "canonical_name": "Yhg1s",
+      "aliases": [],
+      "first_seen": "2026-03-03T08:11:08Z",
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "label": "Yhg1s"
+    },
+    {
+      "id": "44c39bd7e123a5de7a76bc3e52f834576e8df1333d267562052b0a329a9a93f8",
+      "node_type": "Entity",
+      "entity_type": "Person",
+      "canonical_name": "DinoV",
+      "aliases": [],
+      "first_seen": "2026-03-03T08:11:08Z",
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "label": "DinoV"
+    },
+    {
+      "id": "1eed7b643c37a8213aa34b1e7ef66a658e65cd3bbc82548e57fc09e5767954bb",
+      "node_type": "Entity",
+      "entity_type": "Person",
+      "canonical_name": "pablogsal",
+      "aliases": [],
+      "first_seen": "2026-03-03T08:11:08Z",
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "label": "pablogsal"
+    },
+    {
+      "id": "59ce6679c9f0f4f23130b27894e5750c26c4012caf5bbd48927dc143918b4a42",
+      "node_type": "Entity",
+      "entity_type": "Person",
+      "canonical_name": "ZeroIntensity",
+      "aliases": [],
+      "first_seen": "2026-03-03T08:11:08Z",
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "label": "ZeroIntensity"
+    },
+    {
+      "id": "6eae859cb4e4ac6e134cca1e3c3e7005f75423228b4b82f5c2026f23dd49ef45",
+      "node_type": "Entity",
+      "entity_type": "Person",
+      "canonical_name": "serhiy-storchaka",
+      "aliases": [],
+      "first_seen": "2026-03-03T08:11:08Z",
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "label": "serhiy-storchaka"
+    },
+    {
+      "id": "296a638e7639f82d0a0fbb3d9569c83a542174c821770d0e374ab9f14f87fb35",
+      "node_type": "Entity",
+      "entity_type": "Person",
+      "canonical_name": "mbeijen",
+      "aliases": [],
+      "first_seen": "2026-03-03T07:15:58Z",
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "label": "mbeijen"
+    },
+    {
+      "id": "012a8e9f8ea4c9416ebf14045abf069b981c2864f0b92a0ebb6d6d5aec5ef03c",
+      "node_type": "Entity",
+      "entity_type": "Issue",
+      "canonical_name": "issue#145450",
+      "aliases": [],
+      "first_seen": "2026-03-03T07:15:58Z",
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "label": "issue#145450"
+    },
+    {
+      "id": "7edb8ef1cd38edc96f188fc9b642883fad6f0b1b2afdf8fdbedb0420715a3951",
+      "node_type": "Entity",
+      "entity_type": "Issue",
+      "canonical_name": "issue#60729",
+      "aliases": [],
+      "first_seen": "2026-03-03T12:59:05Z",
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "label": "issue#60729"
+    },
+    {
+      "id": "cb977009d67287105e964f745c2bb89989ef3b12fd3e7d1b5def2f35fd28e4cb",
+      "node_type": "Entity",
+      "entity_type": "Person",
+      "canonical_name": "GentleRV",
+      "aliases": [],
+      "first_seen": "2026-03-03T06:58:05Z",
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "label": "GentleRV"
+    },
+    {
+      "id": "46c3da87f944b8925cb1a982cbe98e360bbacb4257e863cdc31aec8f13a7b418",
+      "node_type": "Entity",
+      "entity_type": "Component",
+      "canonical_name": "smtplib",
+      "aliases": [],
+      "first_seen": "2026-03-03T06:58:05Z",
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "label": "smtplib"
+    },
+    {
+      "id": "f6c9a5533da3d3b18b6526d14de5f618793d1b5683f67348e3faf3183102d7d3",
+      "node_type": "Entity",
+      "entity_type": "Issue",
+      "canonical_name": "issue#145449",
+      "aliases": [],
+      "first_seen": "2026-03-03T06:58:05Z",
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "label": "issue#145449"
+    },
+    {
+      "id": "4bf4f4e0cba2dafbf1cabafb884d4d538321163b6712933005c332fd34c83f2e",
+      "node_type": "Entity",
+      "entity_type": "Person",
+      "canonical_name": "injust",
+      "aliases": [
+        "injust"
+      ],
+      "first_seen": "2026-03-03T05:56:28Z",
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "label": "injust"
+    },
+    {
+      "id": "412941f16dedeea2ceb2e65778eaf0f4a47352b8fc06353d37e3bb301cdc20ca",
+      "node_type": "Entity",
+      "entity_type": "Component",
+      "canonical_name": "repl",
+      "aliases": [],
+      "first_seen": "2026-03-03T05:56:28Z",
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "label": "repl"
+    },
+    {
+      "id": "ee155bfdc8cf7ee79bd42d5b2fde1781e42a3e8a1c4546e6f4c7c965bfc8132c",
+      "node_type": "Entity",
+      "entity_type": "Component",
+      "canonical_name": "ghostty",
+      "aliases": [],
+      "first_seen": "2026-03-03T05:56:28Z",
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "label": "ghostty"
+    },
+    {
+      "id": "056ea4f70a3b9e3a2a10542feeec95855be3556242ecdc03fe253af504949e83",
+      "node_type": "Entity",
+      "entity_type": "Component",
+      "canonical_name": "xterm",
+      "aliases": [],
+      "first_seen": "2026-03-03T05:56:28Z",
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "label": "xterm"
+    },
+    {
+      "id": "84035e386a1dd7079b1632572fdf331e0eac58d4e48e79fdb4f7f851665b8157",
+      "node_type": "Entity",
+      "entity_type": "Component",
+      "canonical_name": "terminal.app",
+      "aliases": [],
+      "first_seen": "2026-03-03T05:56:28Z",
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "label": "terminal.app"
+    },
+    {
+      "id": "cf2fe52aeb457882ada870939db83c18561dd6a8e16617e5f0442ff86f9f632d",
+      "node_type": "Entity",
+      "entity_type": "Component",
+      "canonical_name": "python",
+      "aliases": [],
+      "first_seen": "2026-03-03T05:56:28Z",
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "label": "python"
+    },
+    {
+      "id": "a94896672086cbb5ef5f4b8f34bfabfc87089832d45e6b34b590a386456b52d0",
+      "node_type": "Entity",
+      "entity_type": "Component",
+      "canonical_name": "readline",
+      "aliases": [],
+      "first_seen": "2026-03-03T05:56:28Z",
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "label": "readline"
+    },
+    {
+      "id": "5e63618b76065d0981af6f49df7a0fc5beaa772514f0ee0d3cbd466fd41b5e52",
+      "node_type": "Entity",
+      "entity_type": "Component",
+      "canonical_name": "c-api",
+      "aliases": [],
+      "first_seen": "2026-03-03T02:19:48Z",
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "label": "c-api"
+    },
+    {
+      "id": "839d2ae16fcb56b0d5ec1ef23c2039f13ce6294b4f6c16ddba76e56352b70b0f",
+      "node_type": "Entity",
+      "entity_type": "Component",
+      "canonical_name": "synchronization",
+      "aliases": [],
+      "first_seen": "2026-03-03T02:19:48Z",
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "label": "synchronization"
+    },
+    {
+      "id": "48a60ef18f9063ddc7fd5f4ee92db1ebf97457c85ee75ef1c07e1d4371b25966",
+      "node_type": "Entity",
+      "entity_type": "Person",
+      "canonical_name": "aisk",
+      "aliases": [],
+      "first_seen": "2026-03-03T03:44:33Z",
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "label": "aisk"
+    },
+    {
+      "id": "7bcdac4abf2df277a53d2f24bc8d9c0e89dc3ecdaf4dee687323d3e8c55f3d83",
+      "node_type": "Entity",
+      "entity_type": "Issue",
+      "canonical_name": "issue#120858",
+      "aliases": [],
+      "first_seen": "2026-03-03T03:50:39Z",
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "label": "issue#120858"
+    },
+    {
+      "id": "83428a717b9d13ae001e81e00ab64b37b781a534fd0bf6c0f89a9a263cad137d",
+      "node_type": "Entity",
+      "entity_type": "Component",
+      "canonical_name": "pydict_next",
+      "aliases": [],
+      "first_seen": "2026-03-03T03:50:39Z",
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "label": "pydict_next"
+    },
+    {
+      "id": "f07f6e4e73b52c984f791ade5624a237281ab4398218dbd833a251b09fc35f7b",
+      "node_type": "Entity",
+      "entity_type": "Person",
+      "canonical_name": "vfazio",
+      "aliases": [],
+      "first_seen": "2026-03-02T15:53:04Z",
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "label": "vfazio"
+    },
+    {
+      "id": "3f7374d083ca759df20dc6e7df6c0ca4f0d7f6ee83b8e1401bb2a8232acff083",
+      "node_type": "Entity",
+      "entity_type": "Person",
+      "canonical_name": "JelleZijlstra",
+      "aliases": [],
+      "first_seen": "2026-03-02T23:05:57Z",
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "label": "JelleZijlstra"
+    },
+    {
+      "id": "46ad4900a915808b357f1ecf44f2b9720f2a46cc5501d08466ee13e7ed015dbf",
+      "node_type": "Entity",
+      "entity_type": "Person",
+      "canonical_name": "inventshah",
+      "aliases": [],
+      "first_seen": "2026-03-03T03:11:15Z",
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "label": "inventshah"
+    },
+    {
+      "id": "deb67ddcdf1f6940661b3663458834b28307a66817a631d264ccfceb87d61f8e",
+      "node_type": "Entity",
+      "entity_type": "Component",
+      "canonical_name": "typing",
+      "aliases": [],
+      "first_seen": "2026-03-03T03:11:15Z",
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "label": "typing"
+    },
+    {
+      "id": "5106f32ed789242f0f5ef08413a5f97b69d835cc8fa3dd509116f50e8e5a70f3",
+      "node_type": "Entity",
+      "entity_type": "Component",
+      "canonical_name": "io",
+      "aliases": [],
+      "first_seen": "2026-03-03T03:11:15Z",
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "label": "io"
+    },
+    {
+      "id": "f88fe1b91e6b2bfc7de25a1f7d4cf71f3179364ae1484cfee77c50100f6a8cf2",
+      "node_type": "Entity",
+      "entity_type": "Component",
+      "canonical_name": "pytest",
+      "aliases": [],
+      "first_seen": "2026-03-03T15:01:25Z",
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "label": "pytest"
+    },
+    {
+      "id": "23226984c165682221d0d73062eb0391a1db8fbafc524cd42b5d63a9424ca78b",
+      "node_type": "Entity",
+      "entity_type": "Component",
+      "canonical_name": "annotated_types",
+      "aliases": [],
+      "first_seen": "2026-03-03T15:01:25Z",
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "label": "annotated_types"
+    },
+    {
+      "id": "ee2b958b1b3a0e526d73ffa596e67a33b2639e713c3628e9bb28166a255efcf8",
+      "node_type": "Entity",
+      "entity_type": "Issue",
+      "canonical_name": "issue#145426",
+      "aliases": [],
+      "first_seen": "2026-03-03T15:01:25Z",
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "label": "issue#145426"
+    },
+    {
+      "id": "e3e3f3f78cd4aaa3cce0dcafe4a2c5437580117fe85a675ad8632525dcd8dc5e",
+      "node_type": "Entity",
+      "entity_type": "Person",
+      "canonical_name": "hroncok",
+      "aliases": [],
+      "first_seen": "2026-03-02T12:02:06Z",
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "label": "hroncok"
+    },
+    {
+      "id": "9f4f58c9b8d55131339e9d1e413018275a30fb63f13499149965925b690403ef",
+      "node_type": "Entity",
+      "entity_type": "Component",
+      "canonical_name": "venv",
+      "aliases": [],
+      "first_seen": "2026-03-02T12:02:06Z",
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "label": "venv"
+    },
+    {
+      "id": "11529fd05819bd2a7f3788ea49737367bd21c9bf6d64a0728d4f11330f269845",
+      "node_type": "Entity",
+      "entity_type": "Issue",
+      "canonical_name": "issue#145417",
+      "aliases": [],
+      "first_seen": "2026-03-02T12:02:06Z",
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "label": "issue#145417"
+    },
+    {
+      "id": "d6345baaf97a5b0ca93bd221969b3676bced185cb66057ca1c4c2788232bc60d",
+      "node_type": "Entity",
+      "entity_type": "Issue",
+      "canonical_name": "issue#145454",
+      "aliases": [],
+      "first_seen": "2026-03-02T12:02:06Z",
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "label": "issue#145454"
+    },
+    {
+      "id": "9c541a72bf77e18729f5c9b759ff17d888fc0f15fd5763fadd3728d0d7742f6d",
+      "node_type": "Entity",
+      "entity_type": "Person",
+      "canonical_name": "Shrey-n",
+      "aliases": [],
+      "first_seen": "2026-03-03T12:07:37Z",
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "label": "Shrey-n"
+    },
+    {
+      "id": "9fc1fd812630c9383a6813b4039d790332cd30e7ccd0f4c039f876a404d0ea03",
+      "node_type": "Entity",
+      "entity_type": "Person",
+      "canonical_name": "Hiumee",
+      "aliases": [],
+      "first_seen": "2026-03-02T11:33:48Z",
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "label": "Hiumee"
+    },
+    {
+      "id": "6c8a3230100553a07fe1bccf37d1f5dd9949c5e1ef9a392d317568ecba033868",
+      "node_type": "Entity",
+      "entity_type": "Issue",
+      "canonical_name": "issue#145413",
+      "aliases": [],
+      "first_seen": "2026-03-02T11:33:48Z",
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "label": "issue#145413"
+    },
+    {
+      "id": "8ac5a81afb6714d0fcc497b87243025238df4d7f714ad6dff9d7f8484ffcd659",
+      "node_type": "Entity",
+      "entity_type": "Component",
+      "canonical_name": "topic-profiling",
+      "aliases": [],
+      "first_seen": "2026-03-02T09:51:16Z",
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "label": "topic-profiling"
+    },
+    {
+      "id": "35e8c2df7b8d2504ae6c5458a9071cf0afda665758d076a3456e832c12ca24b6",
+      "node_type": "Entity",
+      "entity_type": "Issue",
+      "canonical_name": "issue#145411",
+      "aliases": [],
+      "first_seen": "2026-03-02T09:51:16Z",
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "label": "issue#145411"
+    },
+    {
+      "id": "077e88d44682aa8fa61e58c129f34aa2b621c96ccc32d1061556c85738cab038",
+      "node_type": "Entity",
+      "entity_type": "Component",
+      "canonical_name": "pyperf",
+      "aliases": [],
+      "first_seen": "2026-03-02T09:51:16Z",
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "label": "pyperf"
+    },
+    {
+      "id": "a6a85110d5e53d3912caacc60e2658795474bdb292db72e389d6154808a37ac9",
+      "node_type": "Entity",
+      "entity_type": "Person",
+      "canonical_name": "char101",
+      "aliases": [],
+      "first_seen": "2026-03-02T09:45:44Z",
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "label": "char101"
+    },
+    {
+      "id": "4efb5aa25528cb4fe49747a9a60a4c38d8769d2f8f3dd57d5a13c6e66dbaca56",
+      "node_type": "Entity",
+      "entity_type": "Component",
+      "canonical_name": "sysconfig",
+      "aliases": [],
+      "first_seen": "2026-03-02T09:45:44Z",
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "label": "sysconfig"
+    },
+    {
+      "id": "839489b08e28abe8d307d81b763c494b4b93d70509c091d3a95bf9d26c47f548",
+      "node_type": "Entity",
+      "entity_type": "Component",
+      "canonical_name": "platform",
+      "aliases": [],
+      "first_seen": "2026-03-02T09:45:44Z",
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "label": "platform"
+    },
+    {
+      "id": "0652099cf0604dc084b342b979e566c39e7b47c487d51ef92e686b2f4414b9a1",
+      "node_type": "Entity",
+      "entity_type": "Component",
+      "canonical_name": "sys",
+      "aliases": [],
+      "first_seen": "2026-03-02T09:45:44Z",
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "label": "sys"
+    },
+    {
+      "id": "0c72aa07542a56e3c474b6e6d7f31bd975494b40f6b2acdf7f6fe304c72a6965",
+      "node_type": "Entity",
+      "entity_type": "Issue",
+      "canonical_name": "issue#145410",
+      "aliases": [],
+      "first_seen": "2026-03-02T09:45:44Z",
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "label": "issue#145410"
+    },
+    {
+      "id": "ca9894b5fdbd292a931090d879676433cf8e292eef4de0970e6abe690c5b9ff1",
+      "node_type": "Entity",
+      "entity_type": "Component",
+      "canonical_name": "clang",
+      "aliases": [],
+      "first_seen": "2026-03-02T09:59:59Z",
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "label": "clang"
+    },
+    {
+      "id": "456a9e0a04976b35387c871386eedaedbd21e289a07970bb910e90a216d890a8",
+      "node_type": "Entity",
+      "entity_type": "Component",
+      "canonical_name": "getversion.c",
+      "aliases": [],
+      "first_seen": "2026-03-02T16:27:35Z",
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "label": "getversion.c"
+    },
+    {
+      "id": "fdee7a58d69ec31feaf95f27d41ff763be2d7478b19c29b94acf75d0eb494f5f",
+      "node_type": "Entity",
+      "entity_type": "Component",
+      "canonical_name": "_sysconfig",
+      "aliases": [],
+      "first_seen": "2026-03-02T16:30:01Z",
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "label": "_sysconfig"
+    },
+    {
+      "id": "6dd8210794580d05bd58bcf52bfb11b23ceb579a0f21a97a3bd777ffccbe5c58",
+      "node_type": "Entity",
+      "entity_type": "Person",
+      "canonical_name": "cyberphone",
+      "aliases": [],
+      "first_seen": "2026-03-02T06:53:38Z",
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "label": "cyberphone"
+    },
+    {
+      "id": "cff4b31a91d6ec6548f48658b0289f45000133d8c0fe2a16ce0cf82279c029a5",
+      "node_type": "Entity",
+      "entity_type": "Component",
+      "canonical_name": "datetime",
+      "aliases": [],
+      "first_seen": "2026-03-02T06:53:38Z",
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "label": "datetime"
+    },
+    {
+      "id": "be5e0e23ef1b22a26b5bfc8363c3ba522dd36201bf6eb3c2e796ff0691f628cc",
+      "node_type": "Entity",
+      "entity_type": "Component",
+      "canonical_name": "math",
+      "aliases": [],
+      "first_seen": "2026-03-02T06:53:38Z",
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "label": "math"
+    },
+    {
+      "id": "dd066fb5b26be2e9007270a732a74267666e2ce56193fd000107a11dddb5ad7e",
+      "node_type": "Entity",
+      "entity_type": "Issue",
+      "canonical_name": "issue#145405",
+      "aliases": [],
+      "first_seen": "2026-03-02T07:55:53Z",
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "label": "issue#145405"
+    },
+    {
+      "id": "9cf51153699b782a79eba9b84a23d2013dba9e7de095e7fae0d609adfc42e0ad",
+      "node_type": "Entity",
+      "entity_type": "Component",
+      "canonical_name": "discuss.python.org",
+      "aliases": [],
+      "first_seen": "2026-03-02T07:55:53Z",
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "label": "discuss.python.org"
+    },
+    {
+      "id": "f90904a2bcc50a8fdfe152fdfcd8a087fb0503237a8b85cef2ca9e697577bcf4",
+      "node_type": "Entity",
+      "entity_type": "Component",
+      "canonical_name": "python.org",
+      "aliases": [],
+      "first_seen": "2026-03-02T07:55:53Z",
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "label": "python.org"
+    },
+    {
+      "id": "8580a85e38f905f5844422c8d9aefcfa3fe7b7b5151e8b1090e9904ed9a9b940",
+      "node_type": "Claim",
+      "predicate": "assigned_to",
+      "object_label": "issue#145482",
+      "valid_from": "2026-03-03T16:00:11Z",
+      "valid_until": "",
+      "superseded": false,
+      "is_current": true,
+      "confidence": 0.95,
+      "cross_evidence_count": 1,
+      "promoted_to_memory": true,
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "evidence": [
+        {
+          "evidence_id": "c9c18954f4818e99379f54f520e384e710464af02ce9654c9b6ca70c8ce0e8b9",
+          "source_id": "issue#145481",
+          "excerpt": "<!-- gh-linked-prs -->\n* gh-145482\n<!-- /gh-linked-prs -->",
+          "char_offset_start": 0,
+          "char_offset_end": 43,
+          "author": "vstinner",
+          "event_timestamp": "2026-03-03T16:00:11Z",
+          "source_artifact_hash": "ea8904511a2ca350792dadcf94bd387c0a0e6367a8b1f594b70170d81be615bc",
+          "claim_extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant"
+        }
+      ],
+      "label": "assigned_to",
+      "event_time": "2026-03-03T16:00:11Z",
+      "latest_event": "2026-03-03T16:00:11Z"
+    },
+    {
+      "id": "7768ddcfbeecee9de597b6f04aa04cd9b5e963ae716ceac6bf1f5763319b6829",
+      "node_type": "Claim",
+      "predicate": "owns",
+      "object_label": "frozendict",
+      "valid_from": "2026-03-03T16:00:11Z",
+      "valid_until": "",
+      "superseded": false,
+      "is_current": true,
+      "confidence": 0.95,
+      "cross_evidence_count": 1,
+      "promoted_to_memory": true,
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "evidence": [
+        {
+          "evidence_id": "eca5225b411285abb7e4a90ac837bcc29fd007543a51c46293fbd7162712dd9b",
+          "source_id": "issue#145481",
+          "excerpt": "Frozendict lookups use locks and atomic operations for thread safety. We should be able to use a faster implementation for `frozendict`, avoid locks and atomic operations, since the `frozendict` mapping is immutable.",
+          "char_offset_start": 0,
+          "char_offset_end": 101,
+          "author": "vstinner",
+          "event_timestamp": "2026-03-03T16:00:11Z",
+          "source_artifact_hash": "ea8904511a2ca350792dadcf94bd387c0a0e6367a8b1f594b70170d81be615bc",
+          "claim_extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant"
+        }
+      ],
+      "label": "owns",
+      "event_time": "2026-03-03T16:00:11Z",
+      "latest_event": "2026-03-03T16:00:11Z"
+    },
+    {
+      "id": "d3673c77864c2850f54ba4b7d2b5ae6145830c6e1865ea0cc6af7c49227f66f8",
+      "node_type": "Claim",
+      "predicate": "assigned_to",
+      "object_label": "issue#145478",
+      "valid_from": "2026-03-03T15:05:51Z",
+      "valid_until": "",
+      "superseded": false,
+      "is_current": true,
+      "confidence": 0.95,
+      "cross_evidence_count": 1,
+      "promoted_to_memory": true,
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "evidence": [
+        {
+          "evidence_id": "afca4f0c26af21b1714f8fb56bed6f5031216f7f0d7cd8e18513a6c650ca3b4b",
+          "source_id": "issue#145478",
+          "excerpt": "I will work on this and create a PR in the next couple of days.",
+          "char_offset_start": 0,
+          "char_offset_end": 44,
+          "author": "bkap123",
+          "event_timestamp": "2026-03-03T15:05:51Z",
+          "source_artifact_hash": "b9a1eb52e7cd27055841e97ab6985e6d1876b07a1c08c902a90eb41b58ab2ee8",
+          "claim_extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant"
+        }
+      ],
+      "label": "assigned_to",
+      "event_time": "2026-03-03T15:05:51Z",
+      "latest_event": "2026-03-03T15:05:51Z"
+    },
+    {
+      "id": "4965d7260ee22accb6e847e4962b5914bae150e8f97c940867c957d01b7e17ba",
+      "node_type": "Claim",
+      "predicate": "decided",
+      "object_label": "issue#145362",
+      "valid_from": "2026-03-03T15:05:51Z",
+      "valid_until": "",
+      "superseded": false,
+      "is_current": true,
+      "confidence": 0.95,
+      "cross_evidence_count": 1,
+      "promoted_to_memory": true,
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "evidence": [
+        {
+          "evidence_id": "b235f5e3d5c174d8adb5d9501d6d575218386a1eba47eb51c262dc0c97d5636c",
+          "source_id": "issue#145478",
+          "excerpt": "After discussion on PR https://github.com/python/cpython/pull/145362",
+          "char_offset_start": 0,
+          "char_offset_end": 54,
+          "author": "bkap123",
+          "event_timestamp": "2026-03-03T15:05:51Z",
+          "source_artifact_hash": "b9a1eb52e7cd27055841e97ab6985e6d1876b07a1c08c902a90eb41b58ab2ee8",
+          "claim_extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant"
+        }
+      ],
+      "label": "decided",
+      "event_time": "2026-03-03T15:05:51Z",
+      "latest_event": "2026-03-03T15:05:51Z"
+    },
+    {
+      "id": "21d4207319a1fc8ac29bf96e432b1f85c874815f6e4b45fbde78fca7ef0be072",
+      "node_type": "Claim",
+      "predicate": "decided",
+      "object_label": "issue#145446",
+      "valid_from": "2026-03-03T15:05:51Z",
+      "valid_until": "",
+      "superseded": false,
+      "is_current": true,
+      "confidence": 0.95,
+      "cross_evidence_count": 1,
+      "promoted_to_memory": true,
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "evidence": [
+        {
+          "evidence_id": "6ee3cfd02a2f4e06180756f90e56085995cf96aace31940eede87f2c606fd7c4",
+          "source_id": "issue#145478",
+          "excerpt": "I will wait until https://github.com/python/cpython/issues/145446 is resolved",
+          "char_offset_start": 0,
+          "char_offset_end": 64,
+          "author": "bkap123",
+          "event_timestamp": "2026-03-03T15:05:51Z",
+          "source_artifact_hash": "b9a1eb52e7cd27055841e97ab6985e6d1876b07a1c08c902a90eb41b58ab2ee8",
+          "claim_extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant"
+        }
+      ],
+      "label": "decided",
+      "event_time": "2026-03-03T15:05:51Z",
+      "latest_event": "2026-03-03T15:05:51Z"
+    },
+    {
+      "id": "f554b262bd66c0c0d7d8621c341f69540032923a03a439f4d0cb4d5c473149de",
+      "node_type": "Claim",
+      "predicate": "owns",
+      "object_label": "functools",
+      "valid_from": "2026-03-03T15:05:51Z",
+      "valid_until": "",
+      "superseded": false,
+      "is_current": true,
+      "confidence": 0.95,
+      "cross_evidence_count": 1,
+      "promoted_to_memory": true,
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "evidence": [
+        {
+          "evidence_id": "0e43635cf663e9884d91712605f173a31585793b86136045a1494998f5c821b5",
+          "source_id": "issue#145478",
+          "excerpt": "Implement `frozendict` for `partialobject` in functools module",
+          "char_offset_start": 0,
+          "char_offset_end": 44,
+          "author": "bkap123",
+          "event_timestamp": "2026-03-03T15:05:51Z",
+          "source_artifact_hash": "b9a1eb52e7cd27055841e97ab6985e6d1876b07a1c08c902a90eb41b58ab2ee8",
+          "claim_extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant"
+        }
+      ],
+      "label": "owns",
+      "event_time": "2026-03-03T15:05:51Z",
+      "latest_event": "2026-03-03T15:05:51Z"
+    },
+    {
+      "id": "9a5616a365d85b13d333e02aade5a3e372bf2a751c17329cf453f5903ffc1f6c",
+      "node_type": "Claim",
+      "predicate": "caused_by",
+      "object_label": "linux",
+      "valid_from": "2026-03-03T15:06:52Z",
+      "valid_until": "",
+      "superseded": false,
+      "is_current": true,
+      "confidence": 0.95,
+      "cross_evidence_count": 1,
+      "promoted_to_memory": true,
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "evidence": [
+        {
+          "evidence_id": "a4ca63df39e04787146a26f5fdf9a05c5564ebade690679acbbd67541d3b13b5",
+          "source_id": "issue#145475/comment#3991681525",
+          "excerpt": "hitting the wall of the Linux kernel's PATH_MAX limit",
+          "char_offset_start": 34,
+          "char_offset_end": 74,
+          "author": "Shrey-N",
+          "event_timestamp": "2026-03-03T15:06:52Z",
+          "source_artifact_hash": "0e90c5fdb42b59d44567401a75465627a873cc8eabcab9ca751c9a2c7cf80c58",
+          "claim_extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant"
+        }
+      ],
+      "label": "caused_by",
+      "event_time": "2026-03-03T15:06:52Z",
+      "latest_event": "2026-03-03T15:06:52Z"
+    },
+    {
+      "id": "699c07698f75bf2ecc09cce93db5c2819fed4190b0d24be3113343b133177d11",
+      "node_type": "Claim",
+      "predicate": "caused_by",
+      "object_label": "sqlite",
+      "valid_from": "2026-03-03T15:06:52Z",
+      "valid_until": "",
+      "superseded": false,
+      "is_current": true,
+      "confidence": 0.95,
+      "cross_evidence_count": 1,
+      "promoted_to_memory": true,
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "evidence": [
+        {
+          "evidence_id": "a63362dfcb1f330e7b3f5a20bcf0d2e01f3824da9dbefde97d18e26bf1a16283",
+          "source_id": "issue#145475/comment#3991681525",
+          "excerpt": "Linux & SQLite interaction issue",
+          "char_offset_start": 134,
+          "char_offset_end": 155,
+          "author": "Shrey-N",
+          "event_timestamp": "2026-03-03T15:06:52Z",
+          "source_artifact_hash": "0e90c5fdb42b59d44567401a75465627a873cc8eabcab9ca751c9a2c7cf80c58",
+          "claim_extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant"
+        }
+      ],
+      "label": "caused_by",
+      "event_time": "2026-03-03T15:06:52Z",
+      "latest_event": "2026-03-03T15:06:52Z"
+    },
+    {
+      "id": "43c8c15cfbb68afd0175c88c1a16bd9126ef2f6c142b8bbab1dc47fdc181fac4",
+      "node_type": "Claim",
+      "predicate": "caused_by",
+      "object_label": "cpython",
+      "valid_from": "2026-03-03T15:06:52Z",
+      "valid_until": "",
+      "superseded": false,
+      "is_current": true,
+      "confidence": 0.8,
+      "cross_evidence_count": 1,
+      "promoted_to_memory": true,
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "evidence": [
+        {
+          "evidence_id": "9a7d9e3b5b7b9fb50e8c0ac262f38b1cc1d6998158477e11d8258dd58b473626",
+          "source_id": "issue#145475/comment#3991681525",
+          "excerpt": "inside CPython",
+          "char_offset_start": 176,
+          "char_offset_end": 187,
+          "author": "Shrey-N",
+          "event_timestamp": "2026-03-03T15:06:52Z",
+          "source_artifact_hash": "0e90c5fdb42b59d44567401a75465627a873cc8eabcab9ca751c9a2c7cf80c58",
+          "claim_extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant"
+        }
+      ],
+      "label": "caused_by",
+      "event_time": "2026-03-03T15:06:52Z",
+      "latest_event": "2026-03-03T15:06:52Z"
+    },
+    {
+      "id": "70a178db85882e3810580b9f77d212f9238c7de20fc04af95c731583776e3c74",
+      "node_type": "Claim",
+      "predicate": "assigned_to",
+      "object_label": "issue#145468",
+      "valid_from": "2026-03-03T13:20:13Z",
+      "valid_until": "",
+      "superseded": false,
+      "is_current": true,
+      "confidence": 0.95,
+      "cross_evidence_count": 1,
+      "promoted_to_memory": true,
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "evidence": [
+        {
+          "evidence_id": "efa1948b2b60a53d7e8f61fb8ab0c234db0dd86b500d4175f9c6f8799463cfac",
+          "source_id": "issue#145468/comment#3991049320",
+          "excerpt": "Reported.",
+          "char_offset_start": 0,
+          "char_offset_end": 9,
+          "author": "hugovk",
+          "event_timestamp": "2026-03-03T13:20:13Z",
+          "source_artifact_hash": "8dffb4fa9c5d02ae6b4673b7c385bd26fcfbe9f692f7807e561d53953a4d0da5",
+          "claim_extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant"
+        }
+      ],
+      "label": "assigned_to",
+      "event_time": "2026-03-03T13:20:13Z",
+      "latest_event": "2026-03-03T13:20:13Z"
+    },
+    {
+      "id": "3edff4232f6282b152345c633a078b7ddbb9344575703cdbd0f7a2bc6c4dcb4c",
+      "node_type": "Claim",
+      "predicate": "reviewed_by",
+      "object_label": "issue#143941",
+      "valid_from": "2026-03-03T12:06:18Z",
+      "valid_until": "",
+      "superseded": false,
+      "is_current": true,
+      "confidence": 0.95,
+      "cross_evidence_count": 1,
+      "promoted_to_memory": true,
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "evidence": [
+        {
+          "evidence_id": "dd6f3a5a7b51386fa330e876ac4bc332ddb4aa0c168c5d4be1d4f0f1ccc271e0",
+          "source_id": "issue#145465/comment#3990584021",
+          "excerpt": "the WASI issue https://github.com/python/cpython/issues/143941",
+          "char_offset_start": 0,
+          "char_offset_end": 64,
+          "author": "hugovk",
+          "event_timestamp": "2026-03-03T12:06:18Z",
+          "source_artifact_hash": "a548e5d2e8be16b16704f5f83551d90b00395528aca177d97293faf5db393967",
+          "claim_extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant"
+        }
+      ],
+      "label": "reviewed_by",
+      "event_time": "2026-03-03T12:06:18Z",
+      "latest_event": "2026-03-03T12:06:18Z"
+    },
+    {
+      "id": "01b8118adf618daae716d26e36037b6167b37f597b7fa4bce48bd7ee294098bb",
+      "node_type": "Claim",
+      "predicate": "assigned_to",
+      "object_label": "issue#145464",
+      "valid_from": "2026-03-03T11:25:46Z",
+      "valid_until": "",
+      "superseded": false,
+      "is_current": true,
+      "confidence": 1.0,
+      "cross_evidence_count": 1,
+      "promoted_to_memory": true,
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "evidence": [
+        {
+          "evidence_id": "7a0ca2ea16042e32f0db2c5a6cb214b8ad96d4a02eb85b8bad46dd1fec38b319",
+          "source_id": "issue#145464",
+          "excerpt": "Add streaming to `profiling.sampling`",
+          "char_offset_start": 0,
+          "char_offset_end": 31,
+          "author": "maurycy",
+          "event_timestamp": "2026-03-03T11:25:46Z",
+          "source_artifact_hash": "79be39260edab54e868aa42b5c12e528a4a3ca3a1c8058117de15830b60498de",
+          "claim_extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant"
+        }
+      ],
+      "label": "assigned_to",
+      "event_time": "2026-03-03T11:25:46Z",
+      "latest_event": "2026-03-03T11:25:46Z"
+    },
+    {
+      "id": "3f04062127891282f37123d707d6c42ac60e8649c74ed666f88c7db9e8edd49a",
+      "node_type": "Claim",
+      "predicate": "owns",
+      "object_label": "profiling.sampling",
+      "valid_from": "2026-03-03T11:25:46Z",
+      "valid_until": "",
+      "superseded": false,
+      "is_current": true,
+      "confidence": 0.95,
+      "cross_evidence_count": 1,
+      "promoted_to_memory": true,
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "evidence": [
+        {
+          "evidence_id": "e35b62a6bdf1025afc7309c1793e0f5f684ca3c9d777df1a5d1f8e8710f49d33",
+          "source_id": "issue#145464",
+          "excerpt": "Right now, `profiling.sampling` has roughly two modes",
+          "char_offset_start": 34,
+          "char_offset_end": 54,
+          "author": "maurycy",
+          "event_timestamp": "2026-03-03T11:25:46Z",
+          "source_artifact_hash": "79be39260edab54e868aa42b5c12e528a4a3ca3a1c8058117de15830b60498de",
+          "claim_extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant"
+        }
+      ],
+      "label": "owns",
+      "event_time": "2026-03-03T11:25:46Z",
+      "latest_event": "2026-03-03T11:25:46Z"
+    },
+    {
+      "id": "6ca9a233859628579340cff523e1487832462bc6fcca1f74be56084ddbd3ee0c",
+      "node_type": "Claim",
+      "predicate": "decided",
+      "object_label": "issue#145411",
+      "valid_from": "2026-03-03T11:25:46Z",
+      "valid_until": "",
+      "superseded": false,
+      "is_current": true,
+      "confidence": 0.9,
+      "cross_evidence_count": 1,
+      "promoted_to_memory": true,
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "evidence": [
+        {
+          "evidence_id": "30db7b37aa10060afe1f033890fc0f8b147b0b2e127ade3da64546c35fb7541b",
+          "source_id": "issue#145464",
+          "excerpt": "This one is less defined than #145411",
+          "char_offset_start": 123,
+          "char_offset_end": 143,
+          "author": "maurycy",
+          "event_timestamp": "2026-03-03T11:25:46Z",
+          "source_artifact_hash": "79be39260edab54e868aa42b5c12e528a4a3ca3a1c8058117de15830b60498de",
+          "claim_extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant"
+        }
+      ],
+      "label": "decided",
+      "event_time": "2026-03-03T11:25:46Z",
+      "latest_event": "2026-03-03T11:25:46Z"
+    },
+    {
+      "id": "a5d81783e0c1094dc1560853301353473b580b3a7f055a82694c498827d8cac2",
+      "node_type": "Claim",
+      "predicate": "linked_to",
+      "object_label": "issue#145411",
+      "valid_from": "2026-03-03T11:25:46Z",
+      "valid_until": "",
+      "superseded": false,
+      "is_current": true,
+      "confidence": 0.95,
+      "cross_evidence_count": 3,
+      "promoted_to_memory": true,
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "evidence": [
+        {
+          "evidence_id": "6fc1e3a73cd45b5ecde177f1f054ca39269f1d47cb832744690c8856217257b3",
+          "source_id": "issue#145464",
+          "excerpt": "less defined than #145411",
+          "char_offset_start": 123,
+          "char_offset_end": 143,
+          "author": "maurycy",
+          "event_timestamp": "2026-03-03T11:25:46Z",
+          "source_artifact_hash": "79be39260edab54e868aa42b5c12e528a4a3ca3a1c8058117de15830b60498de",
+          "claim_extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant"
+        },
+        {
+          "evidence_id": "f8b636c6b203220dea9b8b60da02daff386424217cd6ba42e071f377220f772d",
+          "source_id": "issue#145411",
+          "excerpt": "While working on https://github.com/psf/pyperf/pull/230",
+          "char_offset_start": 0,
+          "char_offset_end": 43,
+          "author": "maurycy",
+          "event_timestamp": "2026-03-02T09:51:16Z",
+          "source_artifact_hash": "70a300b705ef6a12c695fe2eb67f9385ef4fa3168fb8029115cdbf5f08b543f5",
+          "claim_extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant"
+        }
+      ],
+      "label": "linked_to",
+      "event_time": "2026-03-02T09:51:16Z",
+      "latest_event": "2026-03-03T11:25:46Z"
+    },
+    {
+      "id": "d07f7ebee89fd05834362ef4182633eda15a536f45cec76c1e6b2c93454d3dd8",
+      "node_type": "Claim",
+      "predicate": "assigned_to",
+      "object_label": "issue#145458",
+      "valid_from": "2026-03-03T09:56:59Z",
+      "valid_until": "",
+      "superseded": false,
+      "is_current": true,
+      "confidence": 0.95,
+      "cross_evidence_count": 1,
+      "promoted_to_memory": true,
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "evidence": [
+        {
+          "evidence_id": "ac0beb833cfa1add4a69b95dfee773ee0f8b40e86154bf8836f977433775211a",
+          "source_id": "issue#145458",
+          "excerpt": "I was looking at the code in Tachyon and I think I've found something that isn't quite right (or at least is misleading and needs to be documented?)",
+          "char_offset_start": 0,
+          "char_offset_end": 69,
+          "author": "KowalskiThomas",
+          "event_timestamp": "2026-03-03T09:56:59Z",
+          "source_artifact_hash": "ea8bd6439874f8831f58c8aad6556791706f046fde3613c677b59fa67bb8f176",
+          "claim_extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant"
+        }
+      ],
+      "label": "assigned_to",
+      "event_time": "2026-03-03T09:56:59Z",
+      "latest_event": "2026-03-03T09:56:59Z"
+    },
+    {
+      "id": "d69cb5bd546ea1e73a79a77daa3e9aa60ac99ea56e1ff75de4fe0ae9dd1e63bc",
+      "node_type": "Claim",
+      "predicate": "caused_by",
+      "object_label": "issue#145459",
+      "valid_from": "2026-03-03T09:56:59Z",
+      "valid_until": "",
+      "superseded": false,
+      "is_current": true,
+      "confidence": 0.95,
+      "cross_evidence_count": 1,
+      "promoted_to_memory": true,
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "evidence": [
+        {
+          "evidence_id": "5d3cd0e91185d498d723c214fdb216055ab57355afc64ad7d3f8775a02b2c3e2",
+          "source_id": "issue#145458",
+          "excerpt": "<!-- gh-linked-prs -->\n### Linked PRs\n* gh-145459\n<!-- /gh-linked-prs -->",
+          "char_offset_start": 0,
+          "char_offset_end": 69,
+          "author": "KowalskiThomas",
+          "event_timestamp": "2026-03-03T09:56:59Z",
+          "source_artifact_hash": "ea8bd6439874f8831f58c8aad6556791706f046fde3613c677b59fa67bb8f176",
+          "claim_extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant"
+        }
+      ],
+      "label": "caused_by",
+      "event_time": "2026-03-03T09:56:59Z",
+      "latest_event": "2026-03-03T09:56:59Z"
+    },
+    {
+      "id": "2dca9de279e3f9e60d7c699ca8f03c4fa591bb4264cb44469bd244c35cd4e7ab",
+      "node_type": "Claim",
+      "predicate": "assigned_to",
+      "object_label": "issue#145455",
+      "valid_from": "2026-03-03T08:56:45Z",
+      "valid_until": "",
+      "superseded": false,
+      "is_current": true,
+      "confidence": 1.0,
+      "cross_evidence_count": 1,
+      "promoted_to_memory": true,
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "evidence": [
+        {
+          "evidence_id": "f701adec7ad657f4308f375cde8f73494ed061f8d6a5b73a812958a02696ed82",
+          "source_id": "issue#145455",
+          "excerpt": "ASSIGNEES: [",
+          "char_offset_start": 123,
+          "char_offset_end": 132,
+          "author": "encukou",
+          "event_timestamp": "2026-03-03T08:56:45Z",
+          "source_artifact_hash": "23870305175b41d8f7dbc021578cc86f035b72beb6671924d5948d1e4a09b3f1",
+          "claim_extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant"
+        }
+      ],
+      "label": "assigned_to",
+      "event_time": "2026-03-03T08:56:45Z",
+      "latest_event": "2026-03-03T08:56:45Z"
+    },
+    {
+      "id": "f15131c25ccae2dc5040f9778b4d1d6a7ee7ba20bd9d3569799efe49a42ac491",
+      "node_type": "Claim",
+      "predicate": "owns",
+      "object_label": "issue#145455",
+      "valid_from": "2026-03-03T08:56:45Z",
+      "valid_until": "",
+      "superseded": false,
+      "is_current": true,
+      "confidence": 0.95,
+      "cross_evidence_count": 1,
+      "promoted_to_memory": true,
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "evidence": [
+        {
+          "evidence_id": "84de78c652c15f459d2e6d1a5c9d0a51e58ab766ac5d45b9683bc11e55a95b86",
+          "source_id": "issue#145455",
+          "excerpt": "AUTHOR: encukou",
+          "char_offset_start": 24,
+          "char_offset_end": 34,
+          "author": "encukou",
+          "event_timestamp": "2026-03-03T08:56:45Z",
+          "source_artifact_hash": "23870305175b41d8f7dbc021578cc86f035b72beb6671924d5948d1e4a09b3f1",
+          "claim_extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant"
+        }
+      ],
+      "label": "owns",
+      "event_time": "2026-03-03T08:56:45Z",
+      "latest_event": "2026-03-03T08:56:45Z"
+    },
+    {
+      "id": "2764d414450f076ba1eb91e59ee05c2d165df8622aa1b2d5e87f0af1ba3e6255",
+      "node_type": "Claim",
+      "predicate": "linked_to",
+      "object_label": "issue#145456",
+      "valid_from": "2026-03-03T08:56:45Z",
+      "valid_until": "",
+      "superseded": false,
+      "is_current": true,
+      "confidence": 1.0,
+      "cross_evidence_count": 1,
+      "promoted_to_memory": true,
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "evidence": [
+        {
+          "evidence_id": "f55abb117387282419274b3f9453309a4d77e0a7e89e1478e61d80163fcbd5be",
+          "source_id": "issue#145455",
+          "excerpt": "* gh-145456",
+          "char_offset_start": 245,
+          "char_offset_end": 255,
+          "author": "encukou",
+          "event_timestamp": "2026-03-03T08:56:45Z",
+          "source_artifact_hash": "23870305175b41d8f7dbc021578cc86f035b72beb6671924d5948d1e4a09b3f1",
+          "claim_extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant"
+        }
+      ],
+      "label": "linked_to",
+      "event_time": "2026-03-03T08:56:45Z",
+      "latest_event": "2026-03-03T08:56:45Z"
+    },
+    {
+      "id": "8d111e5a8b1787e88bc929d5c1057a7b1776a4cd9c46bc40e8a5955b26d65830",
+      "node_type": "Claim",
+      "predicate": "linked_to",
+      "object_label": "issue#145457",
+      "valid_from": "2026-03-03T08:56:45Z",
+      "valid_until": "",
+      "superseded": false,
+      "is_current": true,
+      "confidence": 1.0,
+      "cross_evidence_count": 1,
+      "promoted_to_memory": true,
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "evidence": [
+        {
+          "evidence_id": "3b2f0f0f016c68971e360ef56c31765224b97cfab085746d32dfff8be4d8e880",
+          "source_id": "issue#145455",
+          "excerpt": "* gh-145457",
+          "char_offset_start": 256,
+          "char_offset_end": 266,
+          "author": "encukou",
+          "event_timestamp": "2026-03-03T08:56:45Z",
+          "source_artifact_hash": "23870305175b41d8f7dbc021578cc86f035b72beb6671924d5948d1e4a09b3f1",
+          "claim_extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant"
+        }
+      ],
+      "label": "linked_to",
+      "event_time": "2026-03-03T08:56:45Z",
+      "latest_event": "2026-03-03T08:56:45Z"
+    },
+    {
+      "id": "d90bb242ccc4a9093b8bcac9f5ea5d6f6641e7f51718a76253226450c98ebb58",
+      "node_type": "Claim",
+      "predicate": "linked_to",
+      "object_label": "issue#145461",
+      "valid_from": "2026-03-03T08:56:45Z",
+      "valid_until": "",
+      "superseded": false,
+      "is_current": true,
+      "confidence": 1.0,
+      "cross_evidence_count": 1,
+      "promoted_to_memory": true,
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "evidence": [
+        {
+          "evidence_id": "97c21044d6f7a8349cc0e46b29fbd53a57c63b672ee3e7492060a0391aa9254b",
+          "source_id": "issue#145455",
+          "excerpt": "* gh-145461",
+          "char_offset_start": 272,
+          "char_offset_end": 282,
+          "author": "encukou",
+          "event_timestamp": "2026-03-03T08:56:45Z",
+          "source_artifact_hash": "23870305175b41d8f7dbc021578cc86f035b72beb6671924d5948d1e4a09b3f1",
+          "claim_extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant"
+        }
+      ],
+      "label": "linked_to",
+      "event_time": "2026-03-03T08:56:45Z",
+      "latest_event": "2026-03-03T08:56:45Z"
+    },
+    {
+      "id": "e483d5bb0728494733a1c4992eab9f44f7884d221ee28d9f872e799f37b01d41",
+      "node_type": "Claim",
+      "predicate": "linked_to",
+      "object_label": "issue#145462",
+      "valid_from": "2026-03-03T08:56:45Z",
+      "valid_until": "",
+      "superseded": false,
+      "is_current": true,
+      "confidence": 1.0,
+      "cross_evidence_count": 1,
+      "promoted_to_memory": true,
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "evidence": [
+        {
+          "evidence_id": "8b323c50d3c5d73171a32d2c4d24bde3a7dd153013b1f29256c10572d8a62278",
+          "source_id": "issue#145455",
+          "excerpt": "* gh-145462",
+          "char_offset_start": 283,
+          "char_offset_end": 293,
+          "author": "encukou",
+          "event_timestamp": "2026-03-03T08:56:45Z",
+          "source_artifact_hash": "23870305175b41d8f7dbc021578cc86f035b72beb6671924d5948d1e4a09b3f1",
+          "claim_extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant"
+        }
+      ],
+      "label": "linked_to",
+      "event_time": "2026-03-03T08:56:45Z",
+      "latest_event": "2026-03-03T08:56:45Z"
+    },
+    {
+      "id": "48a39751a22b4a81a9468dbb03779b36627fd8f58355546541d57650d0392180",
+      "node_type": "Claim",
+      "predicate": "caused_by",
+      "object_label": "blurb",
+      "valid_from": "2026-03-03T09:10:09Z",
+      "valid_until": "",
+      "superseded": false,
+      "is_current": true,
+      "confidence": 0.95,
+      "cross_evidence_count": 1,
+      "promoted_to_memory": true,
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "evidence": [
+        {
+          "evidence_id": "00acb83ba305493530ceac52307bb5f80a72cc3b6b64b2ccd4686d8c2bd2da4a",
+          "source_id": "issue#145455/comment#3989661802",
+          "excerpt": "This causes builds to fail with [an opaque error](https://github.com/python/cpython/actions/runs/22048348112/job/63701200590): the makefile suppresses output of `blurb help` and `sphinx-build --version`",
+          "char_offset_start": 0,
+          "char_offset_end": 83,
+          "author": "hugovk",
+          "event_timestamp": "2026-03-03T09:10:09Z",
+          "source_artifact_hash": "97750c2cf1dcf2d2e12b5a54953dea1adb027a3632e5bb881f3648c2341cbc1e",
+          "claim_extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant"
+        }
+      ],
+      "label": "caused_by",
+      "event_time": "2026-03-03T09:10:09Z",
+      "latest_event": "2026-03-03T09:10:09Z"
+    },
+    {
+      "id": "cfb42d4bfeec2660cf1bb02519972176b039464abb260546efae1004ea96e0bd",
+      "node_type": "Claim",
+      "predicate": "caused_by",
+      "object_label": "sphinx-build",
+      "valid_from": "2026-03-03T09:10:09Z",
+      "valid_until": "",
+      "superseded": false,
+      "is_current": true,
+      "confidence": 0.95,
+      "cross_evidence_count": 1,
+      "promoted_to_memory": true,
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "evidence": [
+        {
+          "evidence_id": "cb8813ee9c156d66f9a22341519c8b3724fdec0dacd746598053ee1a7fb6eca9",
+          "source_id": "issue#145455/comment#3989661802",
+          "excerpt": "This causes builds to fail with [an opaque error](https://github.com/python/cpython/actions/runs/22048348112/job/63701200590): the makefile suppresses output of `blurb help` and `sphinx-build --version`",
+          "char_offset_start": 0,
+          "char_offset_end": 83,
+          "author": "hugovk",
+          "event_timestamp": "2026-03-03T09:10:09Z",
+          "source_artifact_hash": "97750c2cf1dcf2d2e12b5a54953dea1adb027a3632e5bb881f3648c2341cbc1e",
+          "claim_extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant"
+        }
+      ],
+      "label": "caused_by",
+      "event_time": "2026-03-03T09:10:09Z",
+      "latest_event": "2026-03-03T09:10:09Z"
+    },
+    {
+      "id": "f585154e0fb11267ff89e3f15c2916a130d93d1679f46cad7245093849851679",
+      "node_type": "Claim",
+      "predicate": "assigned_to",
+      "object_label": "issue#145452",
+      "valid_from": "2026-03-03T08:07:13Z",
+      "valid_until": "",
+      "superseded": false,
+      "is_current": true,
+      "confidence": 1.0,
+      "cross_evidence_count": 1,
+      "promoted_to_memory": true,
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "evidence": [
+        {
+          "evidence_id": "ac041638bce20c3679cc1b800e69dbb77dc5182e72be502c4684ba9fe7acd221",
+          "source_id": "issue#145452",
+          "excerpt": "SOURCE ID: issue#145452",
+          "char_offset_start": 0,
+          "char_offset_end": 15,
+          "author": "johnslavik",
+          "event_timestamp": "2026-03-03T08:07:13Z",
+          "source_artifact_hash": "1d3373461d16f6a32f3f40a16f48c203984de01409e550a146811da55ac47f05",
+          "claim_extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant"
+        }
+      ],
+      "label": "assigned_to",
+      "event_time": "2026-03-03T08:07:13Z",
+      "latest_event": "2026-03-03T08:07:13Z"
+    },
+    {
+      "id": "d27632d39bb9bd428e5d748f6201f499008a81077a0a75bcf0ee775ed01aa992",
+      "node_type": "Claim",
+      "predicate": "owns",
+      "object_label": "issue#145452",
+      "valid_from": "2026-03-03T08:07:13Z",
+      "valid_until": "",
+      "superseded": false,
+      "is_current": true,
+      "confidence": 0.95,
+      "cross_evidence_count": 1,
+      "promoted_to_memory": true,
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "evidence": [
+        {
+          "evidence_id": "ece74e7fb680a232110a14b482f577062e5d0037f87518e091028c80e2c2c6ea",
+          "source_id": "issue#145452",
+          "excerpt": "AUTHOR: johnslavik",
+          "char_offset_start": 0,
+          "char_offset_end": 10,
+          "author": "johnslavik",
+          "event_timestamp": "2026-03-03T08:07:13Z",
+          "source_artifact_hash": "1d3373461d16f6a32f3f40a16f48c203984de01409e550a146811da55ac47f05",
+          "claim_extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant"
+        }
+      ],
+      "label": "owns",
+      "event_time": "2026-03-03T08:07:13Z",
+      "latest_event": "2026-03-03T08:07:13Z"
+    },
+    {
+      "id": "668a02274f129eecd8ce2e3a5baaaa5694ca582a9f7439f17fd962a271e4a55f",
+      "node_type": "Claim",
+      "predicate": "reviewed_by",
+      "object_label": "issue#145452",
+      "valid_from": "2026-03-03T08:07:13Z",
+      "valid_until": "",
+      "superseded": false,
+      "is_current": true,
+      "confidence": 0.8,
+      "cross_evidence_count": 1,
+      "promoted_to_memory": true,
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "evidence": [
+        {
+          "evidence_id": "0d91ad89d7c8488bd0ffb3fa69d71734d14487a8815923456fd8917262787510",
+          "source_id": "issue#145452",
+          "excerpt": "<!-- gh-linked-prs -->\n### Linked PRs\n* gh-145453\n<!-- /gh-linked-prs -->",
+          "char_offset_start": 0,
+          "char_offset_end": 0,
+          "author": "johnslavik",
+          "event_timestamp": "2026-03-03T08:07:13Z",
+          "source_artifact_hash": "1d3373461d16f6a32f3f40a16f48c203984de01409e550a146811da55ac47f05",
+          "claim_extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant"
+        }
+      ],
+      "label": "reviewed_by",
+      "event_time": "2026-03-03T08:07:13Z",
+      "latest_event": "2026-03-03T08:07:13Z"
+    },
+    {
+      "id": "a3b7dcf4b3b8f4e4b404e996816ed126c94212857c2d1d9cfddeda6b20a6804d",
+      "node_type": "Claim",
+      "predicate": "status_changed_to",
+      "object_label": "closed",
+      "valid_from": "2026-03-03T08:07:13Z",
+      "valid_until": "",
+      "superseded": false,
+      "is_current": true,
+      "confidence": 1.0,
+      "cross_evidence_count": 1,
+      "promoted_to_memory": true,
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "evidence": [
+        {
+          "evidence_id": "9be0b7d7b968788cb12e77c75d3de8daa660e0ad75fc35121e41f7879dce99e3",
+          "source_id": "issue#145452",
+          "excerpt": "STATE: closed",
+          "char_offset_start": 0,
+          "char_offset_end": 8,
+          "author": "johnslavik",
+          "event_timestamp": "2026-03-03T08:07:13Z",
+          "source_artifact_hash": "1d3373461d16f6a32f3f40a16f48c203984de01409e550a146811da55ac47f05",
+          "claim_extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant"
+        }
+      ],
+      "label": "status_changed_to",
+      "event_time": "2026-03-03T08:07:13Z",
+      "latest_event": "2026-03-03T08:07:13Z"
+    },
+    {
+      "id": "9fa82a4105198f24a36872894ccd531cd3848add3a666a6f40982aecb6a0ea60",
+      "node_type": "Claim",
+      "predicate": "reviewed_by",
+      "object_label": "issue#60729",
+      "valid_from": "2026-03-03T12:59:05Z",
+      "valid_until": "",
+      "superseded": false,
+      "is_current": true,
+      "confidence": 0.95,
+      "cross_evidence_count": 1,
+      "promoted_to_memory": true,
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "evidence": [
+        {
+          "evidence_id": "1b8274c446c2e92e77e64a86db7288384a3433ff371183f726a4f66f7a86d81c",
+          "source_id": "issue#145450/comment#3990868181",
+          "excerpt": "For the record: this was found in #60729.",
+          "char_offset_start": 34,
+          "char_offset_end": 63,
+          "author": "encukou",
+          "event_timestamp": "2026-03-03T12:59:05Z",
+          "source_artifact_hash": "7b5ad06af703571493d19e04ad3002c2e1e71f348c5fc2258059e64524bb14a3",
+          "claim_extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant"
+        }
+      ],
+      "label": "reviewed_by",
+      "event_time": "2026-03-03T12:59:05Z",
+      "latest_event": "2026-03-03T12:59:05Z"
+    },
+    {
+      "id": "1b8ba96de74fc025a7a4fefdee303a50e086e84baad49cdf22996e2d3bb7cbdb",
+      "node_type": "Claim",
+      "predicate": "assigned_to",
+      "object_label": "issue#145448",
+      "valid_from": "2026-03-03T05:56:28Z",
+      "valid_until": "",
+      "superseded": false,
+      "is_current": true,
+      "confidence": 0.95,
+      "cross_evidence_count": 1,
+      "promoted_to_memory": true,
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "evidence": [
+        {
+          "evidence_id": "20d24381e9d1537975c9c942015284af493141975ae7281d495669c6172e5e55",
+          "source_id": "issue#145448",
+          "excerpt": "I initially reported this issue to Ghostty, and the maintainer's response was:",
+          "char_offset_start": 0,
+          "char_offset_end": 0,
+          "author": "injust",
+          "event_timestamp": "2026-03-03T05:56:28Z",
+          "source_artifact_hash": "edddbe7329517c1fb9b8d2baf1024d48917e59763f1f40598f12eb5bf01ec330",
+          "claim_extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant"
+        }
+      ],
+      "label": "assigned_to",
+      "event_time": "2026-03-03T05:56:28Z",
+      "latest_event": "2026-03-03T05:56:28Z"
+    },
+    {
+      "id": "9175c9d052725254c321dd69607b26bbd63aac4e509ffb0327fd255584b41f6e",
+      "node_type": "Claim",
+      "predicate": "owns",
+      "object_label": "ghostty",
+      "valid_from": "2026-03-03T05:56:28Z",
+      "valid_until": "",
+      "superseded": false,
+      "is_current": true,
+      "confidence": 0.95,
+      "cross_evidence_count": 1,
+      "promoted_to_memory": true,
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "evidence": [
+        {
+          "evidence_id": "d1489e2b9da1789a6c5e8fbf1482da6f099e1f5d39f75b4dfafe255e1689cbb9",
+          "source_id": "issue#145448",
+          "excerpt": "Originally posted by @injust in https://github.com/ghostty-org/ghostty/discussions/11131_",
+          "char_offset_start": 0,
+          "char_offset_end": 0,
+          "author": "injust",
+          "event_timestamp": "2026-03-03T05:56:28Z",
+          "source_artifact_hash": "edddbe7329517c1fb9b8d2baf1024d48917e59763f1f40598f12eb5bf01ec330",
+          "claim_extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant"
+        }
+      ],
+      "label": "owns",
+      "event_time": "2026-03-03T05:56:28Z",
+      "latest_event": "2026-03-03T05:56:28Z"
+    },
+    {
+      "id": "9c7c4f2c43e79a2459d8ab1e005e5a46d2f116c122947fdddb97fa5c352e4687",
+      "node_type": "Claim",
+      "predicate": "caused_by",
+      "object_label": "ghostty",
+      "valid_from": "2026-03-03T05:56:28Z",
+      "valid_until": "",
+      "superseded": false,
+      "is_current": true,
+      "confidence": 0.95,
+      "cross_evidence_count": 1,
+      "promoted_to_memory": true,
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "evidence": [
+        {
+          "evidence_id": "7a8a1b17d9c33deb0cf2362303e0e5241f82ccaca90207124d738ea0c5249d8c",
+          "source_id": "issue#145448",
+          "excerpt": "I reproduced this in Ghostty with both fish shell and bash.",
+          "char_offset_start": 0,
+          "char_offset_end": 0,
+          "author": "injust",
+          "event_timestamp": "2026-03-03T05:56:28Z",
+          "source_artifact_hash": "edddbe7329517c1fb9b8d2baf1024d48917e59763f1f40598f12eb5bf01ec330",
+          "claim_extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant"
+        }
+      ],
+      "label": "caused_by",
+      "event_time": "2026-03-03T05:56:28Z",
+      "latest_event": "2026-03-03T05:56:28Z"
+    },
+    {
+      "id": "168897b20865e30c3c4f03b8fe6d628412a8cc587ce0666f79f77ddc05fe4be9",
+      "node_type": "Claim",
+      "predicate": "caused_by",
+      "object_label": "xterm",
+      "valid_from": "2026-03-03T05:56:28Z",
+      "valid_until": "",
+      "superseded": false,
+      "is_current": true,
+      "confidence": 0.95,
+      "cross_evidence_count": 1,
+      "promoted_to_memory": true,
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "evidence": [
+        {
+          "evidence_id": "e73ac71324f4e5d0ec62bf5af9a5707421c37573a87c31a6c4ab466c2a0de3d7",
+          "source_id": "issue#145448",
+          "excerpt": "Your bug reproduces on xterm, and Ghostty matches xterm.",
+          "char_offset_start": 0,
+          "char_offset_end": 0,
+          "author": "injust",
+          "event_timestamp": "2026-03-03T05:56:28Z",
+          "source_artifact_hash": "edddbe7329517c1fb9b8d2baf1024d48917e59763f1f40598f12eb5bf01ec330",
+          "claim_extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant"
+        }
+      ],
+      "label": "caused_by",
+      "event_time": "2026-03-03T05:56:28Z",
+      "latest_event": "2026-03-03T05:56:28Z"
+    },
+    {
+      "id": "c2e467468177410ec7493509a46ca0aeeba3b39940394eef87157fac70ffdbb5",
+      "node_type": "Claim",
+      "predicate": "caused_by",
+      "object_label": "terminal.app",
+      "valid_from": "2026-03-03T05:56:28Z",
+      "valid_until": "",
+      "superseded": false,
+      "is_current": true,
+      "confidence": 0.95,
+      "cross_evidence_count": 1,
+      "promoted_to_memory": true,
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "evidence": [
+        {
+          "evidence_id": "f24a437f86f1937288d81768e059734feb2f57418d18434af0d21973b7ae6c5b",
+          "source_id": "issue#145448",
+          "excerpt": "This happens with `cursor-style = bar` as well as the default block cursor.",
+          "char_offset_start": 0,
+          "char_offset_end": 0,
+          "author": "injust",
+          "event_timestamp": "2026-03-03T05:56:28Z",
+          "source_artifact_hash": "edddbe7329517c1fb9b8d2baf1024d48917e59763f1f40598f12eb5bf01ec330",
+          "claim_extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant"
+        }
+      ],
+      "label": "caused_by",
+      "event_time": "2026-03-03T05:56:28Z",
+      "latest_event": "2026-03-03T05:56:28Z"
+    },
+    {
+      "id": "b8512c70b623a033537c617fec560124a88b72d3201d856efde85f147bf91532",
+      "node_type": "Claim",
+      "predicate": "caused_by",
+      "object_label": "readline",
+      "valid_from": "2026-03-03T05:56:28Z",
+      "valid_until": "",
+      "superseded": false,
+      "is_current": true,
+      "confidence": 0.95,
+      "cross_evidence_count": 1,
+      "promoted_to_memory": true,
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "evidence": [
+        {
+          "evidence_id": "5e2b2110c225614f58d7a010970366641a26501aa5835c95d65c3867d54c510d",
+          "source_id": "issue#145448",
+          "excerpt": "Or, a bug in Python's readline in how it calculates the amount to move the cursor back.",
+          "char_offset_start": 0,
+          "char_offset_end": 0,
+          "author": "injust",
+          "event_timestamp": "2026-03-03T05:56:28Z",
+          "source_artifact_hash": "edddbe7329517c1fb9b8d2baf1024d48917e59763f1f40598f12eb5bf01ec330",
+          "claim_extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant"
+        }
+      ],
+      "label": "caused_by",
+      "event_time": "2026-03-03T05:56:28Z",
+      "latest_event": "2026-03-03T05:56:28Z"
+    },
+    {
+      "id": "0a43f856d0257d720cb51a657265596e00e3b2d3fe3894cd7781f80a06ff0f1e",
+      "node_type": "Claim",
+      "predicate": "caused_by",
+      "object_label": "python",
+      "valid_from": "2026-03-03T05:56:28Z",
+      "valid_until": "",
+      "superseded": false,
+      "is_current": true,
+      "confidence": 0.95,
+      "cross_evidence_count": 1,
+      "promoted_to_memory": true,
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "evidence": [
+        {
+          "evidence_id": "f48e8d89efa86cfc7a41fb4052e5d16b9b29d0a63c46d1fb160903fed3962ed7",
+          "source_id": "issue#145448",
+          "excerpt": "This is a bug in Terminal.app in how it handles CUB with the cursor in the pending wrap state.",
+          "char_offset_start": 0,
+          "char_offset_end": 0,
+          "author": "injust",
+          "event_timestamp": "2026-03-03T05:56:28Z",
+          "source_artifact_hash": "edddbe7329517c1fb9b8d2baf1024d48917e59763f1f40598f12eb5bf01ec330",
+          "claim_extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant"
+        }
+      ],
+      "label": "caused_by",
+      "event_time": "2026-03-03T05:56:28Z",
+      "latest_event": "2026-03-03T05:56:28Z"
+    },
+    {
+      "id": "b6859a41d4c8fd6555d8425ebeaba1589fc1f8947b27a13e568d96d8a2303682",
+      "node_type": "Claim",
+      "predicate": "assigned_to",
+      "object_label": "issue#145446",
+      "valid_from": "2026-03-03T02:19:48Z",
+      "valid_until": "2026-03-03T15:05:51Z",
+      "superseded": true,
+      "is_current": false,
+      "confidence": 1.0,
+      "cross_evidence_count": 1,
+      "promoted_to_memory": true,
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "evidence": [
+        {
+          "evidence_id": "9bb8a8cb08a663ceb5621d103bad09a82ac42206fdbc1f035785d62928ebf5fc",
+          "source_id": "issue#145446",
+          "excerpt": "I have not checked if other files are missing a critical section, but it is definitely possible.  I will draft a PR shortly for this issue in the coming days, but if anyone else finds other occurrences of `PyDict_Next` that are not thread-safe, please let me know.",
+          "char_offset_start": 0,
+          "char_offset_end": 0,
+          "author": "bkap123",
+          "event_timestamp": "2026-03-03T02:19:48Z",
+          "source_artifact_hash": "344badff355c586b0a05de77d05ae1c23df6954ef32346b928eb13ac9c246852",
+          "claim_extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant"
+        }
+      ],
+      "label": "assigned_to",
+      "event_time": "2026-03-03T02:19:48Z",
+      "latest_event": "2026-03-03T02:19:48Z"
+    },
+    {
+      "id": "e6a2b5ccd2d6bca3926dabf007a23a3322b749a0b4d0ef93ad5797620278b8d9",
+      "node_type": "Claim",
+      "predicate": "linked_to",
+      "object_label": "https://github.com/python/cpython/pull/145362",
+      "valid_from": "2026-03-03T02:19:48Z",
+      "valid_until": "",
+      "superseded": false,
+      "is_current": true,
+      "confidence": 1.0,
+      "cross_evidence_count": 1,
+      "promoted_to_memory": true,
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "evidence": [
+        {
+          "evidence_id": "18d21a22461a8efba52ce5c396f79acee3bc7e46236ca143bbefa726bdb0cb0d",
+          "source_id": "issue#145446",
+          "excerpt": "After some discussion  on PR https://github.com/python/cpython/pull/145362",
+          "char_offset_start": 0,
+          "char_offset_end": 0,
+          "author": "bkap123",
+          "event_timestamp": "2026-03-03T02:19:48Z",
+          "source_artifact_hash": "344badff355c586b0a05de77d05ae1c23df6954ef32346b928eb13ac9c246852",
+          "claim_extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant"
+        }
+      ],
+      "label": "linked_to",
+      "event_time": "2026-03-03T02:19:48Z",
+      "latest_event": "2026-03-03T02:19:48Z"
+    },
+    {
+      "id": "5c523e791a247972206af6e9ba145b2e5c446e206399c86718733742acdbb438",
+      "node_type": "Claim",
+      "predicate": "caused_by",
+      "object_label": "PyDict_Next",
+      "valid_from": "2026-03-03T02:19:48Z",
+      "valid_until": "",
+      "superseded": false,
+      "is_current": true,
+      "confidence": 0.95,
+      "cross_evidence_count": 1,
+      "promoted_to_memory": true,
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "evidence": [
+        {
+          "evidence_id": "33f3fe36ed14cbe4259a37215f9021bce696fc8eb703debc8eee8d99a5d2da96",
+          "source_id": "issue#145446",
+          "excerpt": "all use cases of `PyDict_Next` do not use a critical section",
+          "char_offset_start": 0,
+          "char_offset_end": 0,
+          "author": "bkap123",
+          "event_timestamp": "2026-03-03T02:19:48Z",
+          "source_artifact_hash": "344badff355c586b0a05de77d05ae1c23df6954ef32346b928eb13ac9c246852",
+          "claim_extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant"
+        }
+      ],
+      "label": "caused_by",
+      "event_time": "2026-03-03T02:19:48Z",
+      "latest_event": "2026-03-03T02:19:48Z"
+    },
+    {
+      "id": "d5087b4f3efedb516541068653c1951b1bd3a9794871425224ca52df9066be1c",
+      "node_type": "Claim",
+      "predicate": "reviewed_by",
+      "object_label": "",
+      "valid_from": "2026-03-03T03:44:33Z",
+      "valid_until": "",
+      "superseded": false,
+      "is_current": true,
+      "confidence": 0.8,
+      "cross_evidence_count": 1,
+      "promoted_to_memory": true,
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "evidence": [
+        {
+          "evidence_id": "dcfaa1f4ce00c69b8842de13e9e73181fca4d9bf33c912d921b1cf315b042baf",
+          "source_id": "issue#145446/comment#3988452588",
+          "excerpt": "",
+          "char_offset_start": 0,
+          "char_offset_end": 0,
+          "author": "aisk",
+          "event_timestamp": "2026-03-03T03:44:33Z",
+          "source_artifact_hash": "e6de65cfb18295ced91b483dd30b8d23b30ca77259697115bcdaa2daac11dc74",
+          "claim_extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant"
+        }
+      ],
+      "label": "reviewed_by",
+      "event_time": "2026-03-03T03:44:33Z",
+      "latest_event": "2026-03-03T03:44:33Z"
+    },
+    {
+      "id": "fd69af4f0fdf2d23e6f64a6ff4135728bc65d12d66a660710aa82b82c740d772",
+      "node_type": "Claim",
+      "predicate": "reviewed_by",
+      "object_label": "issue#120858",
+      "valid_from": "2026-03-03T03:50:39Z",
+      "valid_until": "",
+      "superseded": false,
+      "is_current": true,
+      "confidence": 0.95,
+      "cross_evidence_count": 3,
+      "promoted_to_memory": true,
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "evidence": [
+        {
+          "evidence_id": "6b5f8a6829058cfbca5f21b18b057b15d85927d96aa1c8acaf8fbf103762c70b",
+          "source_id": "issue#145446/comment#3988470254",
+          "excerpt": "https://github.com/python/cpython/issues/120858",
+          "char_offset_start": 0,
+          "char_offset_end": 64,
+          "author": "aisk",
+          "event_timestamp": "2026-03-03T03:50:39Z",
+          "source_artifact_hash": "b59069725fcec4727d2ab4ba947f14da8fe95a301232ca68502b78b279e927bc",
+          "claim_extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant"
+        }
+      ],
+      "label": "reviewed_by",
+      "event_time": "2026-03-03T03:50:39Z",
+      "latest_event": "2026-03-03T03:50:39Z"
+    },
+    {
+      "id": "297f2bcc7b25bb3d8089608749a92c49207b54bb3950367b0470291545ccaf68",
+      "node_type": "Claim",
+      "predicate": "reviewed_by",
+      "object_label": "pydict_next",
+      "valid_from": "2026-03-03T03:50:39Z",
+      "valid_until": "",
+      "superseded": false,
+      "is_current": true,
+      "confidence": 0.95,
+      "cross_evidence_count": 2,
+      "promoted_to_memory": true,
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "evidence": [
+        {
+          "evidence_id": "0e1471b36299cbee2c0684c6c6125df9b676f1609f9d9e096378e7b257948579",
+          "source_id": "issue#145446/comment#3988470254",
+          "excerpt": "PyDict_Next",
+          "char_offset_start": 0,
+          "char_offset_end": 12,
+          "author": "aisk",
+          "event_timestamp": "2026-03-03T03:50:39Z",
+          "source_artifact_hash": "b59069725fcec4727d2ab4ba947f14da8fe95a301232ca68502b78b279e927bc",
+          "claim_extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant"
+        }
+      ],
+      "label": "reviewed_by",
+      "event_time": "2026-03-03T03:50:39Z",
+      "latest_event": "2026-03-03T03:50:39Z"
+    },
+    {
+      "id": "8417191a019424fa348105e926a539fef0de85e3b40252bae762782d52a56b7c",
+      "node_type": "Claim",
+      "predicate": "reviewed_by",
+      "object_label": "issue#145446",
+      "valid_from": "2026-03-03T04:11:45Z",
+      "valid_until": "",
+      "superseded": false,
+      "is_current": true,
+      "confidence": 0.95,
+      "cross_evidence_count": 1,
+      "promoted_to_memory": true,
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "evidence": [
+        {
+          "evidence_id": "94d2eeece84062d57434d5186c686e0cf2e78b721968b0a7c7560f7c50ddfa20",
+          "source_id": "issue#145446/comment#3988534715",
+          "excerpt": "Sorry, I re-read your issue, you mean make `_functoolsmodule` thread-safe when calling `PyDict_Next` by adding a critical section?",
+          "char_offset_start": 0,
+          "char_offset_end": 120,
+          "author": "aisk",
+          "event_timestamp": "2026-03-03T04:11:45Z",
+          "source_artifact_hash": "c4b13ed114e2a6d7a9da78d2dc8a34a635a7eb259318af650534e52d5fed87ae",
+          "claim_extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant"
+        }
+      ],
+      "label": "reviewed_by",
+      "event_time": "2026-03-03T04:11:45Z",
+      "latest_event": "2026-03-03T04:11:45Z"
+    },
+    {
+      "id": "d57975aef64457c3a0f1b3c5421580507f95e8da4b3aba214b6bc51a1279af0b",
+      "node_type": "Claim",
+      "predicate": "reviewed_by",
+      "object_label": "issue#145446",
+      "valid_from": "2026-03-03T11:40:55Z",
+      "valid_until": "",
+      "superseded": false,
+      "is_current": true,
+      "confidence": 0.95,
+      "cross_evidence_count": 25,
+      "promoted_to_memory": true,
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "evidence": [
+        {
+          "evidence_id": "205e377bc38e1ba5c326d6987943d9b843df7b656f30da2f460dea3d6e56c405",
+          "source_id": "issue#145446/comment#3990458157",
+          "excerpt": "Thank you for changing the title.",
+          "char_offset_start": 0,
+          "char_offset_end": 24,
+          "author": "bkap123",
+          "event_timestamp": "2026-03-03T11:40:55Z",
+          "source_artifact_hash": "32741038f76ea0e5cd2c967c9148ae11920f04b4797e52f27bf9d721a836c6e0",
+          "claim_extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant"
+        }
+      ],
+      "label": "reviewed_by",
+      "event_time": "2026-03-03T11:40:55Z",
+      "latest_event": "2026-03-03T11:40:55Z"
+    },
+    {
+      "id": "c774f8384c5915a2144c33ee8134828a400e9e897c0e652478f59948ec0d7e90",
+      "node_type": "Claim",
+      "predicate": "assigned_to",
+      "object_label": "issue#145426",
+      "valid_from": "2026-03-02T15:53:04Z",
+      "valid_until": "",
+      "superseded": false,
+      "is_current": true,
+      "confidence": 1.0,
+      "cross_evidence_count": 2,
+      "promoted_to_memory": true,
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "evidence": [
+        {
+          "evidence_id": "54859776de5aafffbead2f78bb9d0379ccd2ffa0f7d4c7dfb443beb9ff73109e",
+          "source_id": "issue#145426",
+          "excerpt": "",
+          "char_offset_start": 0,
+          "char_offset_end": 0,
+          "author": "vfazio",
+          "event_timestamp": "2026-03-02T15:53:04Z",
+          "source_artifact_hash": "7c22e717557eafbac33b6a57c37638c440b29460bd492b77079c74e432c4fc5d",
+          "claim_extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant"
+        },
+        {
+          "evidence_id": "5d3222605057735627c6cd97238553b99e7d0b0ec630ce852ec22e8090b9dfff",
+          "source_id": "issue#145426/comment#3991648909",
+          "excerpt": "",
+          "char_offset_start": 0,
+          "char_offset_end": 0,
+          "author": "vfazio",
+          "event_timestamp": "2026-03-03T15:01:25Z",
+          "source_artifact_hash": "3322c86a37a8e5dbc9f2aecf22a818b7e17dd0d03ff80c3003762303a205020e",
+          "claim_extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant"
+        }
+      ],
+      "label": "assigned_to",
+      "event_time": "2026-03-02T15:53:04Z",
+      "latest_event": "2026-03-03T15:01:25Z"
+    },
+    {
+      "id": "b26c25f59644d4d7d66ed48176dc202695c93aefdded1577985f71a8af6ad24d",
+      "node_type": "Claim",
+      "predicate": "reviewed_by",
+      "object_label": "JelleZijlstra",
+      "valid_from": "2026-03-02T23:05:57Z",
+      "valid_until": "",
+      "superseded": false,
+      "is_current": true,
+      "confidence": 1.0,
+      "cross_evidence_count": 1,
+      "promoted_to_memory": true,
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "evidence": [
+        {
+          "evidence_id": "f108890a6699b5c9f18be22ccdcbd790442984c3e01633b66ff6d7fc72f81773",
+          "source_id": "issue#145426/comment#3987512088",
+          "excerpt": "cc @JelleZijlstra",
+          "char_offset_start": 0,
+          "char_offset_end": 13,
+          "author": "picnixz",
+          "event_timestamp": "2026-03-02T23:05:57Z",
+          "source_artifact_hash": "f0a8deb5bb77705f39c1da59f6519102b35bef2cf4a4501ba40a12599e02c5fe",
+          "claim_extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant"
+        }
+      ],
+      "label": "reviewed_by",
+      "event_time": "2026-03-02T23:05:57Z",
+      "latest_event": "2026-03-02T23:05:57Z"
+    },
+    {
+      "id": "0c383aed9aa01f03716c7624304679b4281f794cdcd6b27598dfa153b1eca99e",
+      "node_type": "Claim",
+      "predicate": "reviewed_by",
+      "object_label": "issue#145426",
+      "valid_from": "2026-03-03T03:11:15Z",
+      "valid_until": "",
+      "superseded": false,
+      "is_current": true,
+      "confidence": 0.95,
+      "cross_evidence_count": 2,
+      "promoted_to_memory": true,
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "evidence": [
+        {
+          "evidence_id": "88c03e4606a4569ada2a8983843580374e62f08c3f26f2ebdda5150138342026",
+          "source_id": "issue#145426/comment#3988346308",
+          "excerpt": "I believe this has to do with `exec` interactions with `import` and global/local scopes.",
+          "char_offset_start": 0,
+          "char_offset_end": 83,
+          "author": "inventshah",
+          "event_timestamp": "2026-03-03T03:11:15Z",
+          "source_artifact_hash": "32c886690882e603b9091d0dfae7a1446787dc2d60f80856c6f20f3c56e9960d",
+          "claim_extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant"
+        },
+        {
+          "evidence_id": "0c08878b0cb5861e3257ae81e123dfdc303b40ac0bd61162d130b1599d2a12da",
+          "source_id": "issue#145426/comment#3991648909",
+          "excerpt": "@inventshah Thanks for chiming in!",
+          "char_offset_start": 69,
+          "char_offset_end": 91,
+          "author": "vfazio",
+          "event_timestamp": "2026-03-03T15:01:25Z",
+          "source_artifact_hash": "3322c86a37a8e5dbc9f2aecf22a818b7e17dd0d03ff80c3003762303a205020e",
+          "claim_extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant"
+        }
+      ],
+      "label": "reviewed_by",
+      "event_time": "2026-03-03T03:11:15Z",
+      "latest_event": "2026-03-03T15:01:25Z"
+    },
+    {
+      "id": "6ed49a894b745cdd55ccd3b5a4d266ee31dceb183ab204c4f3a62ffcff77c553",
+      "node_type": "Claim",
+      "predicate": "linked_to",
+      "object_label": "issue#145426",
+      "valid_from": "2026-03-03T03:11:15Z",
+      "valid_until": "",
+      "superseded": false,
+      "is_current": true,
+      "confidence": 0.95,
+      "cross_evidence_count": 2,
+      "promoted_to_memory": true,
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "evidence": [
+        {
+          "evidence_id": "8c68b890a5794d5d6f3698713a27bde761e12d4b9098a15e359b4b71458c58dc",
+          "source_id": "issue#145426/comment#3988346308",
+          "excerpt": "For OP, if you remove the explicit locals dictionary (or make it the same as globals to mimic module level behavior), the tests should pass (of course you may want to make a copy to prevent pollution).",
+          "char_offset_start": 0,
+          "char_offset_end": 246,
+          "author": "inventshah",
+          "event_timestamp": "2026-03-03T03:11:15Z",
+          "source_artifact_hash": "32c886690882e603b9091d0dfae7a1446787dc2d60f80856c6f20f3c56e9960d",
+          "claim_extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant"
+        }
+      ],
+      "label": "linked_to",
+      "event_time": "2026-03-03T03:11:15Z",
+      "latest_event": "2026-03-03T03:11:15Z"
+    },
+    {
+      "id": "03173376972d59f06a835fe882dcf71d32cebdfbba2b675dea6ce52b6bf7e108",
+      "node_type": "Claim",
+      "predicate": "owns",
+      "object_label": "pytest",
+      "valid_from": "2026-03-03T15:01:25Z",
+      "valid_until": "2026-03-03T15:01:25Z",
+      "superseded": true,
+      "is_current": false,
+      "confidence": 0.95,
+      "cross_evidence_count": 1,
+      "promoted_to_memory": true,
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "evidence": [
+        {
+          "evidence_id": "583c5ecdca792821da8304c53df78615138fae529089f479f89572e2f01abdae",
+          "source_id": "issue#145426/comment#3991648909",
+          "excerpt": "",
+          "char_offset_start": 0,
+          "char_offset_end": 0,
+          "author": "vfazio",
+          "event_timestamp": "2026-03-03T15:01:25Z",
+          "source_artifact_hash": "3322c86a37a8e5dbc9f2aecf22a818b7e17dd0d03ff80c3003762303a205020e",
+          "claim_extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant"
+        }
+      ],
+      "label": "owns",
+      "event_time": "2026-03-03T15:01:25Z",
+      "latest_event": "2026-03-03T15:01:25Z"
+    },
+    {
+      "id": "58591939246eeec8bce526802453e27913c2ee9a429cd06d1309ea89edd06b1e",
+      "node_type": "Claim",
+      "predicate": "owns",
+      "object_label": "python",
+      "valid_from": "2026-03-03T15:01:25Z",
+      "valid_until": "2026-03-03T15:01:25Z",
+      "superseded": true,
+      "is_current": false,
+      "confidence": 0.95,
+      "cross_evidence_count": 1,
+      "promoted_to_memory": true,
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "evidence": [
+        {
+          "evidence_id": "f378bd002449210bb62a719d12694f3a78d98ac6151fb7882dfb36b1d5e592bf",
+          "source_id": "issue#145426/comment#3991648909",
+          "excerpt": "",
+          "char_offset_start": 0,
+          "char_offset_end": 0,
+          "author": "vfazio",
+          "event_timestamp": "2026-03-03T15:01:25Z",
+          "source_artifact_hash": "3322c86a37a8e5dbc9f2aecf22a818b7e17dd0d03ff80c3003762303a205020e",
+          "claim_extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant"
+        }
+      ],
+      "label": "owns",
+      "event_time": "2026-03-03T15:01:25Z",
+      "latest_event": "2026-03-03T15:01:25Z"
+    },
+    {
+      "id": "90073aafbb55e0f07c1be7572b859ff57a6cd9b33589a6727457d180e5ea3708",
+      "node_type": "Claim",
+      "predicate": "owns",
+      "object_label": "typing",
+      "valid_from": "2026-03-03T15:01:25Z",
+      "valid_until": "2026-03-03T15:01:25Z",
+      "superseded": true,
+      "is_current": false,
+      "confidence": 0.95,
+      "cross_evidence_count": 1,
+      "promoted_to_memory": true,
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "evidence": [
+        {
+          "evidence_id": "5571f4b07db8b76206f808c3172d083dae18b12c76501b0780fc01a6624a1ecd",
+          "source_id": "issue#145426/comment#3991648909",
+          "excerpt": "",
+          "char_offset_start": 0,
+          "char_offset_end": 0,
+          "author": "vfazio",
+          "event_timestamp": "2026-03-03T15:01:25Z",
+          "source_artifact_hash": "3322c86a37a8e5dbc9f2aecf22a818b7e17dd0d03ff80c3003762303a205020e",
+          "claim_extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant"
+        }
+      ],
+      "label": "owns",
+      "event_time": "2026-03-03T15:01:25Z",
+      "latest_event": "2026-03-03T15:01:25Z"
+    },
+    {
+      "id": "19163c969cb9c394092cdd132bc3ce49c57ff8048e4969b57594627e3131b5cc",
+      "node_type": "Claim",
+      "predicate": "owns",
+      "object_label": "annotated_types",
+      "valid_from": "2026-03-03T15:01:25Z",
+      "valid_until": "2026-03-03T15:01:25Z",
+      "superseded": true,
+      "is_current": false,
+      "confidence": 0.95,
+      "cross_evidence_count": 1,
+      "promoted_to_memory": true,
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "evidence": [
+        {
+          "evidence_id": "2b0a026c237e7c8664804a8332870a99c1c3aa43355998e396151a7564fa7b56",
+          "source_id": "issue#145426/comment#3991648909",
+          "excerpt": "",
+          "char_offset_start": 0,
+          "char_offset_end": 0,
+          "author": "vfazio",
+          "event_timestamp": "2026-03-03T15:01:25Z",
+          "source_artifact_hash": "3322c86a37a8e5dbc9f2aecf22a818b7e17dd0d03ff80c3003762303a205020e",
+          "claim_extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant"
+        }
+      ],
+      "label": "owns",
+      "event_time": "2026-03-03T15:01:25Z",
+      "latest_event": "2026-03-03T15:01:25Z"
+    },
+    {
+      "id": "5181417675984eda2fc0a36ff61c730bdb64b2e4644887ab2e2ed69ea413aaa6",
+      "node_type": "Claim",
+      "predicate": "owns",
+      "object_label": "issue#145426",
+      "valid_from": "2026-03-03T15:01:25Z",
+      "valid_until": "",
+      "superseded": false,
+      "is_current": true,
+      "confidence": 0.95,
+      "cross_evidence_count": 1,
+      "promoted_to_memory": true,
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "evidence": [
+        {
+          "evidence_id": "bdb89339fe079627a0b5d2d4a6183ce781a0f2eff8d6b0d3834ab84bd7da40c0",
+          "source_id": "issue#145426/comment#3991648909",
+          "excerpt": "",
+          "char_offset_start": 0,
+          "char_offset_end": 0,
+          "author": "vfazio",
+          "event_timestamp": "2026-03-03T15:01:25Z",
+          "source_artifact_hash": "3322c86a37a8e5dbc9f2aecf22a818b7e17dd0d03ff80c3003762303a205020e",
+          "claim_extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant"
+        }
+      ],
+      "label": "owns",
+      "event_time": "2026-03-03T15:01:25Z",
+      "latest_event": "2026-03-03T15:01:25Z"
+    },
+    {
+      "id": "bf5a9180c3b168819285b1d6480dad450b241e490b18caa887c9f0817b474e09",
+      "node_type": "Claim",
+      "predicate": "assigned_to",
+      "object_label": "issue#145417",
+      "valid_from": "2026-03-02T12:02:06Z",
+      "valid_until": "",
+      "superseded": false,
+      "is_current": true,
+      "confidence": 1.0,
+      "cross_evidence_count": 1,
+      "promoted_to_memory": true,
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "evidence": [
+        {
+          "evidence_id": "6bb02dc69811c010172c5628770affef125aef74bbd7537a3b8b779e5c8cf37a",
+          "source_id": "issue#145417",
+          "excerpt": "SOURCE ID: issue#145417",
+          "char_offset_start": 0,
+          "char_offset_end": 17,
+          "author": "hroncok",
+          "event_timestamp": "2026-03-02T12:02:06Z",
+          "source_artifact_hash": "5e71722dfceccd847a980d57890dff403558d92720ff98175ac02456dde75a4f",
+          "claim_extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant"
+        }
+      ],
+      "label": "assigned_to",
+      "event_time": "2026-03-02T12:02:06Z",
+      "latest_event": "2026-03-02T12:02:06Z"
+    },
+    {
+      "id": "e284e72b36920316913d47941d9db412760410e5558c2ebc51ef38c5d5b3a6ef",
+      "node_type": "Claim",
+      "predicate": "owns",
+      "object_label": "cpython",
+      "valid_from": "2026-03-02T12:02:06Z",
+      "valid_until": "",
+      "superseded": false,
+      "is_current": true,
+      "confidence": 0.95,
+      "cross_evidence_count": 1,
+      "promoted_to_memory": true,
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "evidence": [
+        {
+          "evidence_id": "d7df2956959cdcf04e7341c177d5cac008ca9eaacd30c99351c2a7355d444632",
+          "source_id": "issue#145417",
+          "excerpt": "I think the prolem might be near https://github.com/python/cpython/blob/v3.14.3/Lib/venv/__init__.py#L590",
+          "char_offset_start": 0,
+          "char_offset_end": 93,
+          "author": "hroncok",
+          "event_timestamp": "2026-03-02T12:02:06Z",
+          "source_artifact_hash": "5e71722dfceccd847a980d57890dff403558d92720ff98175ac02456dde75a4f",
+          "claim_extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant"
+        }
+      ],
+      "label": "owns",
+      "event_time": "2026-03-02T12:02:06Z",
+      "latest_event": "2026-03-02T12:02:06Z"
+    },
+    {
+      "id": "d1fca5bc07615dbc5b3e64e962e55e7c74ee412a9183a0e2fefb6a2f648f47ce",
+      "node_type": "Claim",
+      "predicate": "caused_by",
+      "object_label": "issue#145454",
+      "valid_from": "2026-03-02T12:02:06Z",
+      "valid_until": "",
+      "superseded": false,
+      "is_current": true,
+      "confidence": 0.95,
+      "cross_evidence_count": 1,
+      "promoted_to_memory": true,
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "evidence": [
+        {
+          "evidence_id": "cc1ec61e214e837cfe7689bdd28713f51ab0bec15e74019649de075ccb773185",
+          "source_id": "issue#145417",
+          "excerpt": "I can submit a PR.",
+          "char_offset_start": 0,
+          "char_offset_end": 13,
+          "author": "hroncok",
+          "event_timestamp": "2026-03-02T12:02:06Z",
+          "source_artifact_hash": "5e71722dfceccd847a980d57890dff403558d92720ff98175ac02456dde75a4f",
+          "claim_extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant"
+        }
+      ],
+      "label": "caused_by",
+      "event_time": "2026-03-02T12:02:06Z",
+      "latest_event": "2026-03-02T12:02:06Z"
+    },
+    {
+      "id": "447f82e32bd8f5b188021169009cbfe1072b5a7daa70b26318a52578c138af8b",
+      "node_type": "Claim",
+      "predicate": "reviewed_by",
+      "object_label": "Shrey-N",
+      "valid_from": "2026-03-03T12:07:37Z",
+      "valid_until": "",
+      "superseded": false,
+      "is_current": true,
+      "confidence": 0.95,
+      "cross_evidence_count": 1,
+      "promoted_to_memory": true,
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "evidence": [
+        {
+          "evidence_id": "1f84f52501bb1cc13d8f4d3b08bf1c4d5b1edeb782941680eb39d9856c909bf6",
+          "source_id": "issue#145417/comment#3990590429",
+          "excerpt": "The PR by @Shrey-n now has a test ",
+          "char_offset_start": 0,
+          "char_offset_end": 24,
+          "author": "hroncok",
+          "event_timestamp": "2026-03-03T12:07:37Z",
+          "source_artifact_hash": "f9e04b8af22cf402d3eb01f0dad58c091370ac41e433d0d3eacd1c9ec667a190",
+          "claim_extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant"
+        }
+      ],
+      "label": "reviewed_by",
+      "event_time": "2026-03-03T12:07:37Z",
+      "latest_event": "2026-03-03T12:07:37Z"
+    },
+    {
+      "id": "910c4e535b600800973cc9701c5904f3390d3b95cbe49439cd6e32df1c8302be",
+      "node_type": "Claim",
+      "predicate": "assigned_to",
+      "object_label": "issue#145411",
+      "valid_from": "2026-03-02T09:51:16Z",
+      "valid_until": "2026-03-03T11:25:46Z",
+      "superseded": true,
+      "is_current": false,
+      "confidence": 1.0,
+      "cross_evidence_count": 1,
+      "promoted_to_memory": true,
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "evidence": [
+        {
+          "evidence_id": "f546d742d535ad78fc636d401efda0b31d1e44f8941a9acf3a73cd994d05cc05",
+          "source_id": "issue#145411",
+          "excerpt": "SOURCE ID: issue#145411",
+          "char_offset_start": 0,
+          "char_offset_end": 15,
+          "author": "maurycy",
+          "event_timestamp": "2026-03-02T09:51:16Z",
+          "source_artifact_hash": "70a300b705ef6a12c695fe2eb67f9385ef4fa3168fb8029115cdbf5f08b543f5",
+          "claim_extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant"
+        }
+      ],
+      "label": "assigned_to",
+      "event_time": "2026-03-02T09:51:16Z",
+      "latest_event": "2026-03-02T09:51:16Z"
+    },
+    {
+      "id": "eefa19f30e4725624e36ceacca3c91ebc50c569b177ac86b599f97e8205c71a1",
+      "node_type": "Claim",
+      "predicate": "owns",
+      "object_label": "stdlib",
+      "valid_from": "2026-03-02T09:51:16Z",
+      "valid_until": "2026-03-02T09:51:16Z",
+      "superseded": true,
+      "is_current": false,
+      "confidence": 0.95,
+      "cross_evidence_count": 1,
+      "promoted_to_memory": true,
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "evidence": [
+        {
+          "evidence_id": "a3ad3300e27fb3fe440a27acd3786fdfd03e8c18d91f916bed7dd2ee3d12d224",
+          "source_id": "issue#145411",
+          "excerpt": "LABELS: [\"type-feature\", \"stdlib\", \"topic-profiling\"]",
+          "char_offset_start": 14,
+          "char_offset_end": 25,
+          "author": "maurycy",
+          "event_timestamp": "2026-03-02T09:51:16Z",
+          "source_artifact_hash": "70a300b705ef6a12c695fe2eb67f9385ef4fa3168fb8029115cdbf5f08b543f5",
+          "claim_extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant"
+        }
+      ],
+      "label": "owns",
+      "event_time": "2026-03-02T09:51:16Z",
+      "latest_event": "2026-03-02T09:51:16Z"
+    },
+    {
+      "id": "07a172d5be554f7a9fb4b18260cf33b75e937108342f7cbdb41f28d49ec2baad",
+      "node_type": "Claim",
+      "predicate": "owns",
+      "object_label": "topic-profiling",
+      "valid_from": "2026-03-02T09:51:16Z",
+      "valid_until": "2026-03-03T11:25:46Z",
+      "superseded": true,
+      "is_current": false,
+      "confidence": 0.95,
+      "cross_evidence_count": 1,
+      "promoted_to_memory": true,
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "evidence": [
+        {
+          "evidence_id": "3646b396f7c97594a12bc121e7ccd066f8d614c5e5170604b133fe23e3aeb047",
+          "source_id": "issue#145411",
+          "excerpt": "LABELS: [\"type-feature\", \"stdlib\", \"topic-profiling\"]",
+          "char_offset_start": 34,
+          "char_offset_end": 45,
+          "author": "maurycy",
+          "event_timestamp": "2026-03-02T09:51:16Z",
+          "source_artifact_hash": "70a300b705ef6a12c695fe2eb67f9385ef4fa3168fb8029115cdbf5f08b543f5",
+          "claim_extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant"
+        }
+      ],
+      "label": "owns",
+      "event_time": "2026-03-02T09:51:16Z",
+      "latest_event": "2026-03-02T09:51:16Z"
+    },
+    {
+      "id": "74da7109b8d5d2f2decba0b42ec5377b90ee708b523b805b7f5f922ee68f42e9",
+      "node_type": "Claim",
+      "predicate": "assigned_to",
+      "object_label": "issue#145410",
+      "valid_from": "2026-03-02T09:45:44Z",
+      "valid_until": "",
+      "superseded": false,
+      "is_current": true,
+      "confidence": 1.0,
+      "cross_evidence_count": 1,
+      "promoted_to_memory": true,
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "evidence": [
+        {
+          "evidence_id": "b6e2304c6a96c570b4a1aaf243927f4cfdd701bb215104cba3dd6a4c47e66e9e",
+          "source_id": "issue#145410",
+          "excerpt": "SOURCE ID: issue#145410",
+          "char_offset_start": 0,
+          "char_offset_end": 15,
+          "author": "char101",
+          "event_timestamp": "2026-03-02T09:45:44Z",
+          "source_artifact_hash": "717be4601d1a7936ea738744aa2d0feda116e61973cceada17261289e9882d1a",
+          "claim_extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant"
+        }
+      ],
+      "label": "assigned_to",
+      "event_time": "2026-03-02T09:45:44Z",
+      "latest_event": "2026-03-02T09:45:44Z"
+    },
+    {
+      "id": "25b74e3fcf022fffd00119104deade742554b80da01c675549f2b3f59e720e84",
+      "node_type": "Claim",
+      "predicate": "owns",
+      "object_label": "issue#145410",
+      "valid_from": "2026-03-02T09:45:44Z",
+      "valid_until": "",
+      "superseded": false,
+      "is_current": true,
+      "confidence": 1.0,
+      "cross_evidence_count": 1,
+      "promoted_to_memory": true,
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "evidence": [
+        {
+          "evidence_id": "5275a25bf41ae2c48dd8815d151ecbb1584972c8a86a37e15509f4638626bb3b",
+          "source_id": "issue#145410",
+          "excerpt": "SOURCE ID: issue#145410",
+          "char_offset_start": 0,
+          "char_offset_end": 15,
+          "author": "char101",
+          "event_timestamp": "2026-03-02T09:45:44Z",
+          "source_artifact_hash": "717be4601d1a7936ea738744aa2d0feda116e61973cceada17261289e9882d1a",
+          "claim_extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant"
+        }
+      ],
+      "label": "owns",
+      "event_time": "2026-03-02T09:45:44Z",
+      "latest_event": "2026-03-02T09:45:44Z"
+    },
+    {
+      "id": "b479faf3f8a12daa1b7052388fe69ee6ff9946d5034d6aaba383d4c4f2d4776c",
+      "node_type": "Claim",
+      "predicate": "reviewed_by",
+      "object_label": "issue#145410",
+      "valid_from": "2026-03-02T09:45:44Z",
+      "valid_until": "",
+      "superseded": false,
+      "is_current": true,
+      "confidence": 1.0,
+      "cross_evidence_count": 2,
+      "promoted_to_memory": true,
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "evidence": [
+        {
+          "evidence_id": "4a85f62c5eff4c0179253e5a3a30965cd1fac9f119f351ee1ee5d7a732918a53",
+          "source_id": "issue#145410",
+          "excerpt": "SOURCE ID: issue#145410",
+          "char_offset_start": 0,
+          "char_offset_end": 15,
+          "author": "char101",
+          "event_timestamp": "2026-03-02T09:45:44Z",
+          "source_artifact_hash": "717be4601d1a7936ea738744aa2d0feda116e61973cceada17261289e9882d1a",
+          "claim_extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant"
+        },
+        {
+          "evidence_id": "3b54c614d34b7e1dc1e1f8d7d59ac71789a43e3ec78fc0886f5162851d38deef",
+          "source_id": "issue#145410/comment#3985282093",
+          "excerpt": "I think for future proofing, it is better for the `sysconfig` module not to depend on `sys.version` because it is fragile.",
+          "char_offset_start": 0,
+          "char_offset_end": 143,
+          "author": "char101",
+          "event_timestamp": "2026-03-02T16:02:32Z",
+          "source_artifact_hash": "40b7d115cc9f74ddf56b781d1d24cc35c37289adb5bd3e5e37a34faf1a9bce0b",
+          "claim_extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant"
+        }
+      ],
+      "label": "reviewed_by",
+      "event_time": "2026-03-02T09:45:44Z",
+      "latest_event": "2026-03-02T16:02:32Z"
+    },
+    {
+      "id": "9a77f3b65ea006e0bb48a2efe6a61ac9314d5afe1ca446d05ba08bd7198ae61d",
+      "node_type": "Claim",
+      "predicate": "decided",
+      "object_label": "issue#145410",
+      "valid_from": "2026-03-02T09:45:44Z",
+      "valid_until": "",
+      "superseded": false,
+      "is_current": true,
+      "confidence": 1.0,
+      "cross_evidence_count": 1,
+      "promoted_to_memory": true,
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "evidence": [
+        {
+          "evidence_id": "8deedf0cdfcaa90876e49b8b5350ad2a1a5ca977ad1b0f15cd70ae8c42d1ef26",
+          "source_id": "issue#145410",
+          "excerpt": "SOURCE ID: issue#145410",
+          "char_offset_start": 0,
+          "char_offset_end": 15,
+          "author": "char101",
+          "event_timestamp": "2026-03-02T09:45:44Z",
+          "source_artifact_hash": "717be4601d1a7936ea738744aa2d0feda116e61973cceada17261289e9882d1a",
+          "claim_extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant"
+        }
+      ],
+      "label": "decided",
+      "event_time": "2026-03-02T09:45:44Z",
+      "latest_event": "2026-03-02T09:45:44Z"
+    },
+    {
+      "id": "07d0e52460bd5dbd8f6e3bd03e9d95b0daa05843cbc5f4d4b44b6756885abee9",
+      "node_type": "Claim",
+      "predicate": "caused_by",
+      "object_label": "sysconfig.get_platform() could return wrong value because sys.version is truncated",
+      "valid_from": "2026-03-02T09:45:44Z",
+      "valid_until": "",
+      "superseded": false,
+      "is_current": true,
+      "confidence": 1.0,
+      "cross_evidence_count": 1,
+      "promoted_to_memory": true,
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "evidence": [
+        {
+          "evidence_id": "5714762e84c51370c8b01061bb821a1f618cb6abd33b2a904774b38a23c672f2",
+          "source_id": "issue#145410",
+          "excerpt": "sysconfig.get_platform() could return wrong value because sys.version is truncated",
+          "char_offset_start": 0,
+          "char_offset_end": 63,
+          "author": "char101",
+          "event_timestamp": "2026-03-02T09:45:44Z",
+          "source_artifact_hash": "717be4601d1a7936ea738744aa2d0feda116e61973cceada17261289e9882d1a",
+          "claim_extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant"
+        }
+      ],
+      "label": "caused_by",
+      "event_time": "2026-03-02T09:45:44Z",
+      "latest_event": "2026-03-02T09:45:44Z"
+    },
+    {
+      "id": "54e0d00ea6b25f12daed46053d05faad131892dcbc47c476e925e4990144e333",
+      "node_type": "Claim",
+      "predicate": "owns",
+      "object_label": "get_platform",
+      "valid_from": "2026-03-02T09:45:44Z",
+      "valid_until": "",
+      "superseded": false,
+      "is_current": true,
+      "confidence": 1.0,
+      "cross_evidence_count": 1,
+      "promoted_to_memory": true,
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "evidence": [
+        {
+          "evidence_id": "f5a43502b437f4ca6f900eb0782b74b7b83b8d92234e0a2d6a58fb1c8dcb422f",
+          "source_id": "issue#145410",
+          "excerpt": "On Windows, `sysconfig.get_platform()` checks for the string `amd64` (for 64 intel) in `sys.version`.",
+          "char_offset_start": 0,
+          "char_offset_end": 83,
+          "author": "char101",
+          "event_timestamp": "2026-03-02T09:45:44Z",
+          "source_artifact_hash": "717be4601d1a7936ea738744aa2d0feda116e61973cceada17261289e9882d1a",
+          "claim_extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant"
+        }
+      ],
+      "label": "owns",
+      "event_time": "2026-03-02T09:45:44Z",
+      "latest_event": "2026-03-02T09:45:44Z"
+    },
+    {
+      "id": "e3c4ec85eb7bf23d42cd2b3ebad00145a28c4c329a37226fc51bb55faf0efc24",
+      "node_type": "Claim",
+      "predicate": "owns",
+      "object_label": "version",
+      "valid_from": "2026-03-02T09:45:44Z",
+      "valid_until": "",
+      "superseded": false,
+      "is_current": true,
+      "confidence": 1.0,
+      "cross_evidence_count": 1,
+      "promoted_to_memory": true,
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "evidence": [
+        {
+          "evidence_id": "5786c99440f1da02357cabdc7625973fec52c8ebe59c681c05b946018342edad",
+          "source_id": "issue#145410",
+          "excerpt": "This is the value of `sys.version` for python 3.14.3 (64 bit) compiled with clang 22.1.0",
+          "char_offset_start": 0,
+          "char_offset_end": 83,
+          "author": "char101",
+          "event_timestamp": "2026-03-02T09:45:44Z",
+          "source_artifact_hash": "717be4601d1a7936ea738744aa2d0feda116e61973cceada17261289e9882d1a",
+          "claim_extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant"
+        }
+      ],
+      "label": "owns",
+      "event_time": "2026-03-02T09:45:44Z",
+      "latest_event": "2026-03-02T09:45:44Z"
+    },
+    {
+      "id": "f80b1e0a995b0138e7d49c8b999878dacd4e3b8cbee088c0eb1377ac13db63dc",
+      "node_type": "Claim",
+      "predicate": "owns",
+      "object_label": "architecture",
+      "valid_from": "2026-03-02T09:45:44Z",
+      "valid_until": "",
+      "superseded": false,
+      "is_current": true,
+      "confidence": 1.0,
+      "cross_evidence_count": 1,
+      "promoted_to_memory": true,
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "evidence": [
+        {
+          "evidence_id": "a7aba0091a26114d15da340bb3c18d6e6b9460ddf8a5da1513cbc6ce640e0c04",
+          "source_id": "issue#145410",
+          "excerpt": ">>> import platform",
+          "char_offset_start": 0,
+          "char_offset_end": 23,
+          "author": "char101",
+          "event_timestamp": "2026-03-02T09:45:44Z",
+          "source_artifact_hash": "717be4601d1a7936ea738744aa2d0feda116e61973cceada17261289e9882d1a",
+          "claim_extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant"
+        }
+      ],
+      "label": "owns",
+      "event_time": "2026-03-02T09:45:44Z",
+      "latest_event": "2026-03-02T09:45:44Z"
+    },
+    {
+      "id": "a04a45b481c7d6565f3d0d38f3b5b0082dcf55c4e9df4ea2df4a7efd5d5cb137",
+      "node_type": "Claim",
+      "predicate": "reviewed_by",
+      "object_label": "issue#145410",
+      "valid_from": "2026-03-02T15:47:08Z",
+      "valid_until": "",
+      "superseded": false,
+      "is_current": true,
+      "confidence": 0.0,
+      "cross_evidence_count": 2,
+      "promoted_to_memory": true,
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "evidence": [
+        {
+          "evidence_id": "347cfc83add1eed2543d937fb67d77af17759f883256669c044b5af8e146e81c",
+          "source_id": "issue#145410/comment#3985194979",
+          "excerpt": "",
+          "char_offset_start": 0,
+          "char_offset_end": 0,
+          "author": "encukou",
+          "event_timestamp": "2026-03-02T15:47:08Z",
+          "source_artifact_hash": "7a13267c1de7e092b59ed7805f3507e7e79149b4af972e1ee068e40ad7e68a1b",
+          "claim_extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant"
+        }
+      ],
+      "label": "reviewed_by",
+      "event_time": "2026-03-02T15:47:08Z",
+      "latest_event": "2026-03-02T15:47:08Z"
+    },
+    {
+      "id": "7a817d5d1cdddacd905b054d93049ac690be796e80ec1d069a56f2c8fc9b8626",
+      "node_type": "Claim",
+      "predicate": "caused_by",
+      "object_label": "issue#145410",
+      "valid_from": "2026-03-02T15:47:08Z",
+      "valid_until": "",
+      "superseded": false,
+      "is_current": true,
+      "confidence": 0.95,
+      "cross_evidence_count": 1,
+      "promoted_to_memory": true,
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "evidence": [
+        {
+          "evidence_id": "4c23b22eb6a422b240571a1b4fe2d286af15192f736cc9093e9684473c5fbb3f",
+          "source_id": "issue#145410/comment#3985194979",
+          "excerpt": "This looks like an artifact of `clang` being untested & [unsupported](https://peps.python.org/pep-0011/) on Windows.",
+          "char_offset_start": 14,
+          "char_offset_end": 23,
+          "author": "encukou",
+          "event_timestamp": "2026-03-02T15:47:08Z",
+          "source_artifact_hash": "7a13267c1de7e092b59ed7805f3507e7e79149b4af972e1ee068e40ad7e68a1b",
+          "claim_extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant"
+        }
+      ],
+      "label": "caused_by",
+      "event_time": "2026-03-02T15:47:08Z",
+      "latest_event": "2026-03-02T15:47:08Z"
+    },
+    {
+      "id": "6a7a31bfc0231bfdd9e612ad9e2b914df01b67f89b32c01cd5824f5081907387",
+      "node_type": "Claim",
+      "predicate": "linked_to",
+      "object_label": "https://github.com/python/cpython/blob/201d251567738c234081329a244449e08fa86245/PC/pyconfig.h#L161",
+      "valid_from": "2026-03-02T16:02:32Z",
+      "valid_until": "",
+      "superseded": false,
+      "is_current": true,
+      "confidence": 0.95,
+      "cross_evidence_count": 1,
+      "promoted_to_memory": true,
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "evidence": [
+        {
+          "evidence_id": "a29fd620f2e764a000605875e3459f4763780c426ca416d6e1f940151f49a8f5",
+          "source_id": "issue#145410/comment#3985282093",
+          "excerpt": "https://github.com/python/cpython/blob/201d251567738c234081329a244449e08fa86245/PC/pyconfig.h#L161",
+          "char_offset_start": 144,
+          "char_offset_end": 193,
+          "author": "char101",
+          "event_timestamp": "2026-03-02T16:02:32Z",
+          "source_artifact_hash": "40b7d115cc9f74ddf56b781d1d24cc35c37289adb5bd3e5e37a34faf1a9bce0b",
+          "claim_extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant"
+        }
+      ],
+      "label": "linked_to",
+      "event_time": "2026-03-02T16:02:32Z",
+      "latest_event": "2026-03-02T16:02:32Z"
+    },
+    {
+      "id": "464908ce4d1e187f27ba20c984476d130df0e9bb9c244fd60bbee1f5d33ea2cd",
+      "node_type": "Claim",
+      "predicate": "linked_to",
+      "object_label": "platform",
+      "valid_from": "2026-03-02T16:02:32Z",
+      "valid_until": "",
+      "superseded": false,
+      "is_current": true,
+      "confidence": 0.95,
+      "cross_evidence_count": 1,
+      "promoted_to_memory": true,
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "evidence": [
+        {
+          "evidence_id": "83203862e2a9b579e1031c2f2bd9fc66917212e1b3fd0f4b62025e3a7b4c48ea",
+          "source_id": "issue#145410/comment#3985282093",
+          "excerpt": "The `plaform` module seems to be a better choice.",
+          "char_offset_start": 194,
+          "char_offset_end": 206,
+          "author": "char101",
+          "event_timestamp": "2026-03-02T16:02:32Z",
+          "source_artifact_hash": "40b7d115cc9f74ddf56b781d1d24cc35c37289adb5bd3e5e37a34faf1a9bce0b",
+          "claim_extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant"
+        }
+      ],
+      "label": "linked_to",
+      "event_time": "2026-03-02T16:02:32Z",
+      "latest_event": "2026-03-02T16:02:32Z"
+    },
+    {
+      "id": "52996151bdb2d6442a67965e7b46d092d10fe5a0a60fa662518a25457f458f48",
+      "node_type": "Claim",
+      "predicate": "assigned_to",
+      "object_label": "issue#145405",
+      "valid_from": "2026-03-02T06:53:38Z",
+      "valid_until": "",
+      "superseded": false,
+      "is_current": true,
+      "confidence": 1.0,
+      "cross_evidence_count": 1,
+      "promoted_to_memory": true,
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "evidence": [
+        {
+          "evidence_id": "2ced668ce59d49abb8fe92059f4405dc44e97c2ee95f10826b2d574795766371",
+          "source_id": "issue#145405",
+          "excerpt": "AUTHOR: cyberphone",
+          "char_offset_start": 0,
+          "char_offset_end": 10,
+          "author": "cyberphone",
+          "event_timestamp": "2026-03-02T06:53:38Z",
+          "source_artifact_hash": "c414e03fb15e16b416e56abf23200bac42d058db569191bcfbc7297273e37963",
+          "claim_extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant"
+        }
+      ],
+      "label": "assigned_to",
+      "event_time": "2026-03-02T06:53:38Z",
+      "latest_event": "2026-03-02T06:53:38Z"
+    },
+    {
+      "id": "422e19230d5421035dbfb7d838dc84e52df6ade126968c3b7de5514e490ee40a",
+      "node_type": "Claim",
+      "predicate": "caused_by",
+      "object_label": "issue#145405",
+      "valid_from": "2026-03-02T06:53:38Z",
+      "valid_until": "",
+      "superseded": false,
+      "is_current": true,
+      "confidence": 0.95,
+      "cross_evidence_count": 1,
+      "promoted_to_memory": true,
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "evidence": [
+        {
+          "evidence_id": "e6086aecde888496d2c42e415186630a6e7f63679f2fc50c020bde5dc1b6de56",
+          "source_id": "issue#145405",
+          "excerpt": "However, I want to know the UTC offset to output an ISO time ending with +01:00\n\nI have found a terrible workaround:\n```python\nimport datetime\nimport math\n```",
+          "char_offset_start": 134,
+          "char_offset_end": 144,
+          "author": "cyberphone",
+          "event_timestamp": "2026-03-02T06:53:38Z",
+          "source_artifact_hash": "c414e03fb15e16b416e56abf23200bac42d058db569191bcfbc7297273e37963",
+          "claim_extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant"
+        }
+      ],
+      "label": "caused_by",
+      "event_time": "2026-03-02T06:53:38Z",
+      "latest_event": "2026-03-02T06:53:38Z"
+    },
+    {
+      "id": "680a0f61cf620d0ee16d39e7dd2aa9cb49ea9ace6863848d00f65b316b866a63",
+      "node_type": "Claim",
+      "predicate": "caused_by",
+      "object_label": "issue#145405",
+      "valid_from": "2026-03-02T06:53:38Z",
+      "valid_until": "",
+      "superseded": false,
+      "is_current": true,
+      "confidence": 0.95,
+      "cross_evidence_count": 1,
+      "promoted_to_memory": true,
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "evidence": [
+        {
+          "evidence_id": "e79e8eeb7ccf86393db4ce9e311296578cfa4155f15256e7792f92085e017b9a",
+          "source_id": "issue#145405",
+          "excerpt": "However, I want to know the UTC offset to output an ISO time ending with +01:00\n\nI have found a terrible workaround:\n```python\nimport datetime\nimport math\n```",
+          "char_offset_start": 145,
+          "char_offset_end": 153,
+          "author": "cyberphone",
+          "event_timestamp": "2026-03-02T06:53:38Z",
+          "source_artifact_hash": "c414e03fb15e16b416e56abf23200bac42d058db569191bcfbc7297273e37963",
+          "claim_extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant"
+        }
+      ],
+      "label": "caused_by",
+      "event_time": "2026-03-02T06:53:38Z",
+      "latest_event": "2026-03-02T06:53:38Z"
+    },
+    {
+      "id": "1b2bab54533448b4281e8ea102e71d52cc1f959fc3a428aa78d5984aedb97f34",
+      "node_type": "Claim",
+      "predicate": "reviewed_by",
+      "object_label": "issue#145405",
+      "valid_from": "2026-03-02T07:55:53Z",
+      "valid_until": "",
+      "superseded": false,
+      "is_current": true,
+      "confidence": 0.95,
+      "cross_evidence_count": 1,
+      "promoted_to_memory": true,
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "evidence": [
+        {
+          "evidence_id": "f74aaabdd85247f8d1e5ecf28af730bf9f17596b2039f4b5aad58d8a820d8184",
+          "source_id": "issue#145405/comment#3982734343",
+          "excerpt": "I added the `pending` label and removed the `docs` label, if you don't want to request to update the doc, I (or somebody else) will close this issue.",
+          "char_offset_start": 0,
+          "char_offset_end": 0,
+          "author": "aisk",
+          "event_timestamp": "2026-03-02T07:55:53Z",
+          "source_artifact_hash": "f888dcdb14b5163b282bf4ef6cef21b5242dc41be3bd1904d20b126261a5bb9d",
+          "claim_extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant"
+        }
+      ],
+      "label": "reviewed_by",
+      "event_time": "2026-03-02T07:55:53Z",
+      "latest_event": "2026-03-02T07:55:53Z"
+    },
+    {
+      "id": "2349a5889dec8f84666adadd96c2c4a996e94d048b69570f9ac22e55677c514f",
+      "node_type": "Claim",
+      "predicate": "reviewed_by",
+      "object_label": "discuss.python.org/c/help/7",
+      "valid_from": "2026-03-02T07:55:53Z",
+      "valid_until": "",
+      "superseded": false,
+      "is_current": true,
+      "confidence": 0.95,
+      "cross_evidence_count": 1,
+      "promoted_to_memory": true,
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "evidence": [
+        {
+          "evidence_id": "c15da19f08a68e6ad15c7d676b59ba87dc8c375ea5dac06110bdfdb7bd6c1d43",
+          "source_id": "issue#145405/comment#3982734343",
+          "excerpt": "as the guide suggested when creating an issue.",
+          "char_offset_start": 0,
+          "char_offset_end": 0,
+          "author": "aisk",
+          "event_timestamp": "2026-03-02T07:55:53Z",
+          "source_artifact_hash": "f888dcdb14b5163b282bf4ef6cef21b5242dc41be3bd1904d20b126261a5bb9d",
+          "claim_extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant"
+        }
+      ],
+      "label": "reviewed_by",
+      "event_time": "2026-03-02T07:55:53Z",
+      "latest_event": "2026-03-02T07:55:53Z"
+    },
+    {
+      "id": "d385d6128f70e22587985b72f47d746056b61b262dadc4c9bb8210aa09dc45a1",
+      "node_type": "Claim",
+      "predicate": "owns",
+      "object_label": "python.org",
+      "valid_from": "2026-03-02T07:55:53Z",
+      "valid_until": "",
+      "superseded": false,
+      "is_current": true,
+      "confidence": 0.95,
+      "cross_evidence_count": 1,
+      "promoted_to_memory": true,
+      "extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant",
+      "evidence": [
+        {
+          "evidence_id": "d4132924cbc545157925ebb423a9ca7c2ae9cbed63cb970ce97db752edc251ce",
+          "source_id": "issue#145405/comment#3982734343",
+          "excerpt": "You can use this to get the same result: https://python.org",
+          "char_offset_start": 0,
+          "char_offset_end": 0,
+          "author": "aisk",
+          "event_timestamp": "2026-03-02T07:55:53Z",
+          "source_artifact_hash": "f888dcdb14b5163b282bf4ef6cef21b5242dc41be3bd1904d20b126261a5bb9d",
+          "claim_extraction_version": "schema_v1/prompt_v1/llama-3.1-8b-instant"
+        }
+      ],
+      "label": "owns",
+      "event_time": "2026-03-02T07:55:53Z",
+      "latest_event": "2026-03-02T07:55:53Z"
+    }
+  ],
+  "edges": [
+    {
+      "source": "2a87acd1264bbf4cebcadd27a12f8fb658ac3b0aab56fdc5140a17df7d8126c5",
+      "target": "8580a85e38f905f5844422c8d9aefcfa3fe7b7b5151e8b1090e9904ed9a9b940",
+      "edge_type": "subject_of",
+      "predicate": "assigned_to"
+    },
+    {
+      "source": "2a87acd1264bbf4cebcadd27a12f8fb658ac3b0aab56fdc5140a17df7d8126c5",
+      "target": "7768ddcfbeecee9de597b6f04aa04cd9b5e963ae716ceac6bf1f5763319b6829",
+      "edge_type": "subject_of",
+      "predicate": "owns"
+    },
+    {
+      "source": "a740ef0b6ced6b50c5e2de94aba57e98dc6422c027cf498ff702159e67eba1b8",
+      "target": "d3673c77864c2850f54ba4b7d2b5ae6145830c6e1865ea0cc6af7c49227f66f8",
+      "edge_type": "subject_of",
+      "predicate": "assigned_to"
+    },
+    {
+      "source": "a740ef0b6ced6b50c5e2de94aba57e98dc6422c027cf498ff702159e67eba1b8",
+      "target": "4965d7260ee22accb6e847e4962b5914bae150e8f97c940867c957d01b7e17ba",
+      "edge_type": "subject_of",
+      "predicate": "decided"
+    },
+    {
+      "source": "a740ef0b6ced6b50c5e2de94aba57e98dc6422c027cf498ff702159e67eba1b8",
+      "target": "21d4207319a1fc8ac29bf96e432b1f85c874815f6e4b45fbde78fca7ef0be072",
+      "edge_type": "subject_of",
+      "predicate": "decided"
+    },
+    {
+      "source": "a740ef0b6ced6b50c5e2de94aba57e98dc6422c027cf498ff702159e67eba1b8",
+      "target": "f554b262bd66c0c0d7d8621c341f69540032923a03a439f4d0cb4d5c473149de",
+      "edge_type": "subject_of",
+      "predicate": "owns"
+    },
+    {
+      "source": "a740ef0b6ced6b50c5e2de94aba57e98dc6422c027cf498ff702159e67eba1b8",
+      "target": "b6859a41d4c8fd6555d8425ebeaba1589fc1f8947b27a13e568d96d8a2303682",
+      "edge_type": "subject_of",
+      "predicate": "assigned_to"
+    },
+    {
+      "source": "a740ef0b6ced6b50c5e2de94aba57e98dc6422c027cf498ff702159e67eba1b8",
+      "target": "d57975aef64457c3a0f1b3c5421580507f95e8da4b3aba214b6bc51a1279af0b",
+      "edge_type": "subject_of",
+      "predicate": "reviewed_by"
+    },
+    {
+      "source": "0f4fee82e1ecd51cb1872c9fbfd5946453a2fcf6f96bca4284b0717fab9d53ce",
+      "target": "e6a2b5ccd2d6bca3926dabf007a23a3322b749a0b4d0ef93ad5797620278b8d9",
+      "edge_type": "subject_of",
+      "predicate": "linked_to"
+    },
+    {
+      "source": "0f4fee82e1ecd51cb1872c9fbfd5946453a2fcf6f96bca4284b0717fab9d53ce",
+      "target": "5c523e791a247972206af6e9ba145b2e5c446e206399c86718733742acdbb438",
+      "edge_type": "subject_of",
+      "predicate": "caused_by"
+    },
+    {
+      "source": "1c9a7cd7ed43991213c56afe5cbd8c6b82ea5dbfb150c77bc4d33daee875af16",
+      "target": "9a5616a365d85b13d333e02aade5a3e372bf2a751c17329cf453f5903ffc1f6c",
+      "edge_type": "subject_of",
+      "predicate": "caused_by"
+    },
+    {
+      "source": "1c9a7cd7ed43991213c56afe5cbd8c6b82ea5dbfb150c77bc4d33daee875af16",
+      "target": "699c07698f75bf2ecc09cce93db5c2819fed4190b0d24be3113343b133177d11",
+      "edge_type": "subject_of",
+      "predicate": "caused_by"
+    },
+    {
+      "source": "1c9a7cd7ed43991213c56afe5cbd8c6b82ea5dbfb150c77bc4d33daee875af16",
+      "target": "43c8c15cfbb68afd0175c88c1a16bd9126ef2f6c142b8bbab1dc47fdc181fac4",
+      "edge_type": "subject_of",
+      "predicate": "caused_by"
+    },
+    {
+      "source": "436bb99d9ba4f68538bb2dc2e612c8efae76484d437942510b687f617e9ff7de",
+      "target": "70a178db85882e3810580b9f77d212f9238c7de20fc04af95c731583776e3c74",
+      "edge_type": "subject_of",
+      "predicate": "assigned_to"
+    },
+    {
+      "source": "436bb99d9ba4f68538bb2dc2e612c8efae76484d437942510b687f617e9ff7de",
+      "target": "3edff4232f6282b152345c633a078b7ddbb9344575703cdbd0f7a2bc6c4dcb4c",
+      "edge_type": "subject_of",
+      "predicate": "reviewed_by"
+    },
+    {
+      "source": "436bb99d9ba4f68538bb2dc2e612c8efae76484d437942510b687f617e9ff7de",
+      "target": "48a39751a22b4a81a9468dbb03779b36627fd8f58355546541d57650d0392180",
+      "edge_type": "subject_of",
+      "predicate": "caused_by"
+    },
+    {
+      "source": "436bb99d9ba4f68538bb2dc2e612c8efae76484d437942510b687f617e9ff7de",
+      "target": "cfb42d4bfeec2660cf1bb02519972176b039464abb260546efae1004ea96e0bd",
+      "edge_type": "subject_of",
+      "predicate": "caused_by"
+    },
+    {
+      "source": "3d6bb8b9975ca70f0778549c2ec5a091872f353ac62456bddb011a3e044d5b76",
+      "target": "01b8118adf618daae716d26e36037b6167b37f597b7fa4bce48bd7ee294098bb",
+      "edge_type": "subject_of",
+      "predicate": "assigned_to"
+    },
+    {
+      "source": "3d6bb8b9975ca70f0778549c2ec5a091872f353ac62456bddb011a3e044d5b76",
+      "target": "3f04062127891282f37123d707d6c42ac60e8649c74ed666f88c7db9e8edd49a",
+      "edge_type": "subject_of",
+      "predicate": "owns"
+    },
+    {
+      "source": "3d6bb8b9975ca70f0778549c2ec5a091872f353ac62456bddb011a3e044d5b76",
+      "target": "6ca9a233859628579340cff523e1487832462bc6fcca1f74be56084ddbd3ee0c",
+      "edge_type": "subject_of",
+      "predicate": "decided"
+    },
+    {
+      "source": "3d6bb8b9975ca70f0778549c2ec5a091872f353ac62456bddb011a3e044d5b76",
+      "target": "a5d81783e0c1094dc1560853301353473b580b3a7f055a82694c498827d8cac2",
+      "edge_type": "subject_of",
+      "predicate": "linked_to"
+    },
+    {
+      "source": "3d6bb8b9975ca70f0778549c2ec5a091872f353ac62456bddb011a3e044d5b76",
+      "target": "910c4e535b600800973cc9701c5904f3390d3b95cbe49439cd6e32df1c8302be",
+      "edge_type": "subject_of",
+      "predicate": "assigned_to"
+    },
+    {
+      "source": "3d6bb8b9975ca70f0778549c2ec5a091872f353ac62456bddb011a3e044d5b76",
+      "target": "eefa19f30e4725624e36ceacca3c91ebc50c569b177ac86b599f97e8205c71a1",
+      "edge_type": "subject_of",
+      "predicate": "owns"
+    },
+    {
+      "source": "3d6bb8b9975ca70f0778549c2ec5a091872f353ac62456bddb011a3e044d5b76",
+      "target": "07a172d5be554f7a9fb4b18260cf33b75e937108342f7cbdb41f28d49ec2baad",
+      "edge_type": "subject_of",
+      "predicate": "owns"
+    },
+    {
+      "source": "c91c333d48fb59c7cfc99b55cd84771cf5ad0587ffe0b9e2fb30255755c0426b",
+      "target": "d07f7ebee89fd05834362ef4182633eda15a536f45cec76c1e6b2c93454d3dd8",
+      "edge_type": "subject_of",
+      "predicate": "assigned_to"
+    },
+    {
+      "source": "c91c333d48fb59c7cfc99b55cd84771cf5ad0587ffe0b9e2fb30255755c0426b",
+      "target": "d69cb5bd546ea1e73a79a77daa3e9aa60ac99ea56e1ff75de4fe0ae9dd1e63bc",
+      "edge_type": "subject_of",
+      "predicate": "caused_by"
+    },
+    {
+      "source": "5bf5439186187f2e34da80560e7a5f2127ea2a0157043c8816975bc0f9ab3440",
+      "target": "b26c25f59644d4d7d66ed48176dc202695c93aefdded1577985f71a8af6ad24d",
+      "edge_type": "subject_of",
+      "predicate": "reviewed_by"
+    },
+    {
+      "source": "ea0096f494e005eaa9a8eebd58faf5ae0f8f08d5b3cd950bc3f7fabda2ae0e9c",
+      "target": "2dca9de279e3f9e60d7c699ca8f03c4fa591bb4264cb44469bd244c35cd4e7ab",
+      "edge_type": "subject_of",
+      "predicate": "assigned_to"
+    },
+    {
+      "source": "ea0096f494e005eaa9a8eebd58faf5ae0f8f08d5b3cd950bc3f7fabda2ae0e9c",
+      "target": "f15131c25ccae2dc5040f9778b4d1d6a7ee7ba20bd9d3569799efe49a42ac491",
+      "edge_type": "subject_of",
+      "predicate": "owns"
+    },
+    {
+      "source": "ea0096f494e005eaa9a8eebd58faf5ae0f8f08d5b3cd950bc3f7fabda2ae0e9c",
+      "target": "9fa82a4105198f24a36872894ccd531cd3848add3a666a6f40982aecb6a0ea60",
+      "edge_type": "subject_of",
+      "predicate": "reviewed_by"
+    },
+    {
+      "source": "ea0096f494e005eaa9a8eebd58faf5ae0f8f08d5b3cd950bc3f7fabda2ae0e9c",
+      "target": "a04a45b481c7d6565f3d0d38f3b5b0082dcf55c4e9df4ea2df4a7efd5d5cb137",
+      "edge_type": "subject_of",
+      "predicate": "reviewed_by"
+    },
+    {
+      "source": "3962c90be4a9645848bca8976eff122fefc9d1a5296e3772bde8b939f6702347",
+      "target": "2764d414450f076ba1eb91e59ee05c2d165df8622aa1b2d5e87f0af1ba3e6255",
+      "edge_type": "subject_of",
+      "predicate": "linked_to"
+    },
+    {
+      "source": "3962c90be4a9645848bca8976eff122fefc9d1a5296e3772bde8b939f6702347",
+      "target": "8d111e5a8b1787e88bc929d5c1057a7b1776a4cd9c46bc40e8a5955b26d65830",
+      "edge_type": "subject_of",
+      "predicate": "linked_to"
+    },
+    {
+      "source": "3962c90be4a9645848bca8976eff122fefc9d1a5296e3772bde8b939f6702347",
+      "target": "d90bb242ccc4a9093b8bcac9f5ea5d6f6641e7f51718a76253226450c98ebb58",
+      "edge_type": "subject_of",
+      "predicate": "linked_to"
+    },
+    {
+      "source": "3962c90be4a9645848bca8976eff122fefc9d1a5296e3772bde8b939f6702347",
+      "target": "e483d5bb0728494733a1c4992eab9f44f7884d221ee28d9f872e799f37b01d41",
+      "edge_type": "subject_of",
+      "predicate": "linked_to"
+    },
+    {
+      "source": "26ff84c22576da63a2000aec22630c170ac4db1556a5b9ead77c3fac73d09246",
+      "target": "f585154e0fb11267ff89e3f15c2916a130d93d1679f46cad7245093849851679",
+      "edge_type": "subject_of",
+      "predicate": "assigned_to"
+    },
+    {
+      "source": "26ff84c22576da63a2000aec22630c170ac4db1556a5b9ead77c3fac73d09246",
+      "target": "d27632d39bb9bd428e5d748f6201f499008a81077a0a75bcf0ee775ed01aa992",
+      "edge_type": "subject_of",
+      "predicate": "owns"
+    },
+    {
+      "source": "26ff84c22576da63a2000aec22630c170ac4db1556a5b9ead77c3fac73d09246",
+      "target": "668a02274f129eecd8ce2e3a5baaaa5694ca582a9f7439f17fd962a271e4a55f",
+      "edge_type": "subject_of",
+      "predicate": "reviewed_by"
+    },
+    {
+      "source": "2531afca19bd41f837f2b1cd1ab038471456d880cd640489a0019adcf196422a",
+      "target": "a3b7dcf4b3b8f4e4b404e996816ed126c94212857c2d1d9cfddeda6b20a6804d",
+      "edge_type": "subject_of",
+      "predicate": "status_changed_to"
+    },
+    {
+      "source": "4bf4f4e0cba2dafbf1cabafb884d4d538321163b6712933005c332fd34c83f2e",
+      "target": "1b8ba96de74fc025a7a4fefdee303a50e086e84baad49cdf22996e2d3bb7cbdb",
+      "edge_type": "subject_of",
+      "predicate": "assigned_to"
+    },
+    {
+      "source": "4bf4f4e0cba2dafbf1cabafb884d4d538321163b6712933005c332fd34c83f2e",
+      "target": "9175c9d052725254c321dd69607b26bbd63aac4e509ffb0327fd255584b41f6e",
+      "edge_type": "subject_of",
+      "predicate": "owns"
+    },
+    {
+      "source": "4bf4f4e0cba2dafbf1cabafb884d4d538321163b6712933005c332fd34c83f2e",
+      "target": "9c7c4f2c43e79a2459d8ab1e005e5a46d2f116c122947fdddb97fa5c352e4687",
+      "edge_type": "subject_of",
+      "predicate": "caused_by"
+    },
+    {
+      "source": "4bf4f4e0cba2dafbf1cabafb884d4d538321163b6712933005c332fd34c83f2e",
+      "target": "168897b20865e30c3c4f03b8fe6d628412a8cc587ce0666f79f77ddc05fe4be9",
+      "edge_type": "subject_of",
+      "predicate": "caused_by"
+    },
+    {
+      "source": "4bf4f4e0cba2dafbf1cabafb884d4d538321163b6712933005c332fd34c83f2e",
+      "target": "c2e467468177410ec7493509a46ca0aeeba3b39940394eef87157fac70ffdbb5",
+      "edge_type": "subject_of",
+      "predicate": "caused_by"
+    },
+    {
+      "source": "4bf4f4e0cba2dafbf1cabafb884d4d538321163b6712933005c332fd34c83f2e",
+      "target": "b8512c70b623a033537c617fec560124a88b72d3201d856efde85f147bf91532",
+      "edge_type": "subject_of",
+      "predicate": "caused_by"
+    },
+    {
+      "source": "4bf4f4e0cba2dafbf1cabafb884d4d538321163b6712933005c332fd34c83f2e",
+      "target": "0a43f856d0257d720cb51a657265596e00e3b2d3fe3894cd7781f80a06ff0f1e",
+      "edge_type": "subject_of",
+      "predicate": "caused_by"
+    },
+    {
+      "source": "48a60ef18f9063ddc7fd5f4ee92db1ebf97457c85ee75ef1c07e1d4371b25966",
+      "target": "d5087b4f3efedb516541068653c1951b1bd3a9794871425224ca52df9066be1c",
+      "edge_type": "subject_of",
+      "predicate": "reviewed_by"
+    },
+    {
+      "source": "48a60ef18f9063ddc7fd5f4ee92db1ebf97457c85ee75ef1c07e1d4371b25966",
+      "target": "fd69af4f0fdf2d23e6f64a6ff4135728bc65d12d66a660710aa82b82c740d772",
+      "edge_type": "subject_of",
+      "predicate": "reviewed_by"
+    },
+    {
+      "source": "48a60ef18f9063ddc7fd5f4ee92db1ebf97457c85ee75ef1c07e1d4371b25966",
+      "target": "297f2bcc7b25bb3d8089608749a92c49207b54bb3950367b0470291545ccaf68",
+      "edge_type": "subject_of",
+      "predicate": "reviewed_by"
+    },
+    {
+      "source": "48a60ef18f9063ddc7fd5f4ee92db1ebf97457c85ee75ef1c07e1d4371b25966",
+      "target": "8417191a019424fa348105e926a539fef0de85e3b40252bae762782d52a56b7c",
+      "edge_type": "subject_of",
+      "predicate": "reviewed_by"
+    },
+    {
+      "source": "48a60ef18f9063ddc7fd5f4ee92db1ebf97457c85ee75ef1c07e1d4371b25966",
+      "target": "1b2bab54533448b4281e8ea102e71d52cc1f959fc3a428aa78d5984aedb97f34",
+      "edge_type": "subject_of",
+      "predicate": "reviewed_by"
+    },
+    {
+      "source": "48a60ef18f9063ddc7fd5f4ee92db1ebf97457c85ee75ef1c07e1d4371b25966",
+      "target": "2349a5889dec8f84666adadd96c2c4a996e94d048b69570f9ac22e55677c514f",
+      "edge_type": "subject_of",
+      "predicate": "reviewed_by"
+    },
+    {
+      "source": "48a60ef18f9063ddc7fd5f4ee92db1ebf97457c85ee75ef1c07e1d4371b25966",
+      "target": "d385d6128f70e22587985b72f47d746056b61b262dadc4c9bb8210aa09dc45a1",
+      "edge_type": "subject_of",
+      "predicate": "owns"
+    },
+    {
+      "source": "f07f6e4e73b52c984f791ade5624a237281ab4398218dbd833a251b09fc35f7b",
+      "target": "c774f8384c5915a2144c33ee8134828a400e9e897c0e652478f59948ec0d7e90",
+      "edge_type": "subject_of",
+      "predicate": "assigned_to"
+    },
+    {
+      "source": "f07f6e4e73b52c984f791ade5624a237281ab4398218dbd833a251b09fc35f7b",
+      "target": "03173376972d59f06a835fe882dcf71d32cebdfbba2b675dea6ce52b6bf7e108",
+      "edge_type": "subject_of",
+      "predicate": "owns"
+    },
+    {
+      "source": "f07f6e4e73b52c984f791ade5624a237281ab4398218dbd833a251b09fc35f7b",
+      "target": "58591939246eeec8bce526802453e27913c2ee9a429cd06d1309ea89edd06b1e",
+      "edge_type": "subject_of",
+      "predicate": "owns"
+    },
+    {
+      "source": "f07f6e4e73b52c984f791ade5624a237281ab4398218dbd833a251b09fc35f7b",
+      "target": "90073aafbb55e0f07c1be7572b859ff57a6cd9b33589a6727457d180e5ea3708",
+      "edge_type": "subject_of",
+      "predicate": "owns"
+    },
+    {
+      "source": "f07f6e4e73b52c984f791ade5624a237281ab4398218dbd833a251b09fc35f7b",
+      "target": "19163c969cb9c394092cdd132bc3ce49c57ff8048e4969b57594627e3131b5cc",
+      "edge_type": "subject_of",
+      "predicate": "owns"
+    },
+    {
+      "source": "f07f6e4e73b52c984f791ade5624a237281ab4398218dbd833a251b09fc35f7b",
+      "target": "5181417675984eda2fc0a36ff61c730bdb64b2e4644887ab2e2ed69ea413aaa6",
+      "edge_type": "subject_of",
+      "predicate": "owns"
+    },
+    {
+      "source": "46ad4900a915808b357f1ecf44f2b9720f2a46cc5501d08466ee13e7ed015dbf",
+      "target": "0c383aed9aa01f03716c7624304679b4281f794cdcd6b27598dfa153b1eca99e",
+      "edge_type": "subject_of",
+      "predicate": "reviewed_by"
+    },
+    {
+      "source": "46ad4900a915808b357f1ecf44f2b9720f2a46cc5501d08466ee13e7ed015dbf",
+      "target": "6ed49a894b745cdd55ccd3b5a4d266ee31dceb183ab204c4f3a62ffcff77c553",
+      "edge_type": "subject_of",
+      "predicate": "linked_to"
+    },
+    {
+      "source": "e3e3f3f78cd4aaa3cce0dcafe4a2c5437580117fe85a675ad8632525dcd8dc5e",
+      "target": "bf5a9180c3b168819285b1d6480dad450b241e490b18caa887c9f0817b474e09",
+      "edge_type": "subject_of",
+      "predicate": "assigned_to"
+    },
+    {
+      "source": "e3e3f3f78cd4aaa3cce0dcafe4a2c5437580117fe85a675ad8632525dcd8dc5e",
+      "target": "e284e72b36920316913d47941d9db412760410e5558c2ebc51ef38c5d5b3a6ef",
+      "edge_type": "subject_of",
+      "predicate": "owns"
+    },
+    {
+      "source": "e3e3f3f78cd4aaa3cce0dcafe4a2c5437580117fe85a675ad8632525dcd8dc5e",
+      "target": "d1fca5bc07615dbc5b3e64e962e55e7c74ee412a9183a0e2fefb6a2f648f47ce",
+      "edge_type": "subject_of",
+      "predicate": "caused_by"
+    },
+    {
+      "source": "e3e3f3f78cd4aaa3cce0dcafe4a2c5437580117fe85a675ad8632525dcd8dc5e",
+      "target": "447f82e32bd8f5b188021169009cbfe1072b5a7daa70b26318a52578c138af8b",
+      "edge_type": "subject_of",
+      "predicate": "reviewed_by"
+    },
+    {
+      "source": "a6a85110d5e53d3912caacc60e2658795474bdb292db72e389d6154808a37ac9",
+      "target": "74da7109b8d5d2f2decba0b42ec5377b90ee708b523b805b7f5f922ee68f42e9",
+      "edge_type": "subject_of",
+      "predicate": "assigned_to"
+    },
+    {
+      "source": "a6a85110d5e53d3912caacc60e2658795474bdb292db72e389d6154808a37ac9",
+      "target": "25b74e3fcf022fffd00119104deade742554b80da01c675549f2b3f59e720e84",
+      "edge_type": "subject_of",
+      "predicate": "owns"
+    },
+    {
+      "source": "a6a85110d5e53d3912caacc60e2658795474bdb292db72e389d6154808a37ac9",
+      "target": "b479faf3f8a12daa1b7052388fe69ee6ff9946d5034d6aaba383d4c4f2d4776c",
+      "edge_type": "subject_of",
+      "predicate": "reviewed_by"
+    },
+    {
+      "source": "a6a85110d5e53d3912caacc60e2658795474bdb292db72e389d6154808a37ac9",
+      "target": "9a77f3b65ea006e0bb48a2efe6a61ac9314d5afe1ca446d05ba08bd7198ae61d",
+      "edge_type": "subject_of",
+      "predicate": "decided"
+    },
+    {
+      "source": "a6a85110d5e53d3912caacc60e2658795474bdb292db72e389d6154808a37ac9",
+      "target": "07d0e52460bd5dbd8f6e3bd03e9d95b0daa05843cbc5f4d4b44b6756885abee9",
+      "edge_type": "subject_of",
+      "predicate": "caused_by"
+    },
+    {
+      "source": "a6a85110d5e53d3912caacc60e2658795474bdb292db72e389d6154808a37ac9",
+      "target": "6a7a31bfc0231bfdd9e612ad9e2b914df01b67f89b32c01cd5824f5081907387",
+      "edge_type": "subject_of",
+      "predicate": "linked_to"
+    },
+    {
+      "source": "a6a85110d5e53d3912caacc60e2658795474bdb292db72e389d6154808a37ac9",
+      "target": "464908ce4d1e187f27ba20c984476d130df0e9bb9c244fd60bbee1f5d33ea2cd",
+      "edge_type": "subject_of",
+      "predicate": "linked_to"
+    },
+    {
+      "source": "4efb5aa25528cb4fe49747a9a60a4c38d8769d2f8f3dd57d5a13c6e66dbaca56",
+      "target": "54e0d00ea6b25f12daed46053d05faad131892dcbc47c476e925e4990144e333",
+      "edge_type": "subject_of",
+      "predicate": "owns"
+    },
+    {
+      "source": "839489b08e28abe8d307d81b763c494b4b93d70509c091d3a95bf9d26c47f548",
+      "target": "f80b1e0a995b0138e7d49c8b999878dacd4e3b8cbee088c0eb1377ac13db63dc",
+      "edge_type": "subject_of",
+      "predicate": "owns"
+    },
+    {
+      "source": "0652099cf0604dc084b342b979e566c39e7b47c487d51ef92e686b2f4414b9a1",
+      "target": "e3c4ec85eb7bf23d42cd2b3ebad00145a28c4c329a37226fc51bb55faf0efc24",
+      "edge_type": "subject_of",
+      "predicate": "owns"
+    },
+    {
+      "source": "ca9894b5fdbd292a931090d879676433cf8e292eef4de0970e6abe690c5b9ff1",
+      "target": "7a817d5d1cdddacd905b054d93049ac690be796e80ec1d069a56f2c8fc9b8626",
+      "edge_type": "subject_of",
+      "predicate": "caused_by"
+    },
+    {
+      "source": "6dd8210794580d05bd58bcf52bfb11b23ceb579a0f21a97a3bd777ffccbe5c58",
+      "target": "52996151bdb2d6442a67965e7b46d092d10fe5a0a60fa662518a25457f458f48",
+      "edge_type": "subject_of",
+      "predicate": "assigned_to"
+    },
+    {
+      "source": "cff4b31a91d6ec6548f48658b0289f45000133d8c0fe2a16ce0cf82279c029a5",
+      "target": "422e19230d5421035dbfb7d838dc84e52df6ade126968c3b7de5514e490ee40a",
+      "edge_type": "subject_of",
+      "predicate": "caused_by"
+    },
+    {
+      "source": "be5e0e23ef1b22a26b5bfc8363c3ba522dd36201bf6eb3c2e796ff0691f628cc",
+      "target": "680a0f61cf620d0ee16d39e7dd2aa9cb49ea9ace6863848d00f65b316b866a63",
+      "edge_type": "subject_of",
+      "predicate": "caused_by"
+    },
+    {
+      "source": "8580a85e38f905f5844422c8d9aefcfa3fe7b7b5151e8b1090e9904ed9a9b940",
+      "target": "0cf7d4ee550e2bbec52d659bd81fd7398c4612dc4f66fa04f2c9f58131e20972",
+      "edge_type": "object_of",
+      "predicate": "assigned_to"
+    },
+    {
+      "source": "7768ddcfbeecee9de597b6f04aa04cd9b5e963ae716ceac6bf1f5763319b6829",
+      "target": "156d77c70dd94602ec770c3a0d4bf1746b88b0e602f73820c992d3e50b105888",
+      "edge_type": "object_of",
+      "predicate": "owns"
+    },
+    {
+      "source": "4965d7260ee22accb6e847e4962b5914bae150e8f97c940867c957d01b7e17ba",
+      "target": "9d03c73c12be3a04a2ae8b88637a693fc656fa81304ca8aa5c207fe7d3288282",
+      "edge_type": "object_of",
+      "predicate": "decided"
+    },
+    {
+      "source": "21d4207319a1fc8ac29bf96e432b1f85c874815f6e4b45fbde78fca7ef0be072",
+      "target": "0f4fee82e1ecd51cb1872c9fbfd5946453a2fcf6f96bca4284b0717fab9d53ce",
+      "edge_type": "object_of",
+      "predicate": "decided"
+    },
+    {
+      "source": "f554b262bd66c0c0d7d8621c341f69540032923a03a439f4d0cb4d5c473149de",
+      "target": "6e03b2b33987d80c68aa9642589447cf459535ebc4b723971a75545ad9ac471c",
+      "edge_type": "object_of",
+      "predicate": "owns"
+    },
+    {
+      "source": "9a5616a365d85b13d333e02aade5a3e372bf2a751c17329cf453f5903ffc1f6c",
+      "target": "860290cd12ac0198c1b85fb348dfaed6d910a4fe47b25996d57aefaa81413468",
+      "edge_type": "object_of",
+      "predicate": "caused_by"
+    },
+    {
+      "source": "699c07698f75bf2ecc09cce93db5c2819fed4190b0d24be3113343b133177d11",
+      "target": "17b3a6a5a467108290f910303c72c8c503d8df6be982fc78eefddfbd0d8fec18",
+      "edge_type": "object_of",
+      "predicate": "caused_by"
+    },
+    {
+      "source": "43c8c15cfbb68afd0175c88c1a16bd9126ef2f6c142b8bbab1dc47fdc181fac4",
+      "target": "5129fc78468fb1263a0db930dc6dd6fb1047e71691cc19fceebc389409c72524",
+      "edge_type": "object_of",
+      "predicate": "caused_by"
+    },
+    {
+      "source": "3edff4232f6282b152345c633a078b7ddbb9344575703cdbd0f7a2bc6c4dcb4c",
+      "target": "1335e152f34303c69a19bf8eba6e5f26ad8f86b6755f90a392017732c2d593d7",
+      "edge_type": "object_of",
+      "predicate": "reviewed_by"
+    },
+    {
+      "source": "01b8118adf618daae716d26e36037b6167b37f597b7fa4bce48bd7ee294098bb",
+      "target": "531b88606193708b73be9e420c1403382e3081062cd32a286a004f6dc9a4451b",
+      "edge_type": "object_of",
+      "predicate": "assigned_to"
+    },
+    {
+      "source": "3f04062127891282f37123d707d6c42ac60e8649c74ed666f88c7db9e8edd49a",
+      "target": "d8c12994992af490d8140e0b2874ecd268dbc3f1b572199f6eb55dc88f97346a",
+      "edge_type": "object_of",
+      "predicate": "owns"
+    },
+    {
+      "source": "d07f7ebee89fd05834362ef4182633eda15a536f45cec76c1e6b2c93454d3dd8",
+      "target": "020583c629e737cd57723ed3868bd912316afaa4e6e255654d3389e790920333",
+      "edge_type": "object_of",
+      "predicate": "assigned_to"
+    },
+    {
+      "source": "d69cb5bd546ea1e73a79a77daa3e9aa60ac99ea56e1ff75de4fe0ae9dd1e63bc",
+      "target": "dcf6858a2fcdbc35c3a1568f8d0857b1b6e27d29b5907004e845ee203b713208",
+      "edge_type": "object_of",
+      "predicate": "caused_by"
+    },
+    {
+      "source": "2dca9de279e3f9e60d7c699ca8f03c4fa591bb4264cb44469bd244c35cd4e7ab",
+      "target": "3962c90be4a9645848bca8976eff122fefc9d1a5296e3772bde8b939f6702347",
+      "edge_type": "object_of",
+      "predicate": "assigned_to"
+    },
+    {
+      "source": "f15131c25ccae2dc5040f9778b4d1d6a7ee7ba20bd9d3569799efe49a42ac491",
+      "target": "3962c90be4a9645848bca8976eff122fefc9d1a5296e3772bde8b939f6702347",
+      "edge_type": "object_of",
+      "predicate": "owns"
+    },
+    {
+      "source": "48a39751a22b4a81a9468dbb03779b36627fd8f58355546541d57650d0392180",
+      "target": "4f8447bb2a31836e812357af0e45441192ea70a6255cc419d9501d2e4fc6878a",
+      "edge_type": "object_of",
+      "predicate": "caused_by"
+    },
+    {
+      "source": "cfb42d4bfeec2660cf1bb02519972176b039464abb260546efae1004ea96e0bd",
+      "target": "9ba8d4fb0d79acec02730a2decc5ef9107abfc888351b5d58eeb49de267db069",
+      "edge_type": "object_of",
+      "predicate": "caused_by"
+    },
+    {
+      "source": "f585154e0fb11267ff89e3f15c2916a130d93d1679f46cad7245093849851679",
+      "target": "2531afca19bd41f837f2b1cd1ab038471456d880cd640489a0019adcf196422a",
+      "edge_type": "object_of",
+      "predicate": "assigned_to"
+    },
+    {
+      "source": "d27632d39bb9bd428e5d748f6201f499008a81077a0a75bcf0ee775ed01aa992",
+      "target": "2531afca19bd41f837f2b1cd1ab038471456d880cd640489a0019adcf196422a",
+      "edge_type": "object_of",
+      "predicate": "owns"
+    },
+    {
+      "source": "668a02274f129eecd8ce2e3a5baaaa5694ca582a9f7439f17fd962a271e4a55f",
+      "target": "2531afca19bd41f837f2b1cd1ab038471456d880cd640489a0019adcf196422a",
+      "edge_type": "object_of",
+      "predicate": "reviewed_by"
+    },
+    {
+      "source": "9fa82a4105198f24a36872894ccd531cd3848add3a666a6f40982aecb6a0ea60",
+      "target": "7edb8ef1cd38edc96f188fc9b642883fad6f0b1b2afdf8fdbedb0420715a3951",
+      "edge_type": "object_of",
+      "predicate": "reviewed_by"
+    },
+    {
+      "source": "9175c9d052725254c321dd69607b26bbd63aac4e509ffb0327fd255584b41f6e",
+      "target": "ee155bfdc8cf7ee79bd42d5b2fde1781e42a3e8a1c4546e6f4c7c965bfc8132c",
+      "edge_type": "object_of",
+      "predicate": "owns"
+    },
+    {
+      "source": "9c7c4f2c43e79a2459d8ab1e005e5a46d2f116c122947fdddb97fa5c352e4687",
+      "target": "ee155bfdc8cf7ee79bd42d5b2fde1781e42a3e8a1c4546e6f4c7c965bfc8132c",
+      "edge_type": "object_of",
+      "predicate": "caused_by"
+    },
+    {
+      "source": "168897b20865e30c3c4f03b8fe6d628412a8cc587ce0666f79f77ddc05fe4be9",
+      "target": "056ea4f70a3b9e3a2a10542feeec95855be3556242ecdc03fe253af504949e83",
+      "edge_type": "object_of",
+      "predicate": "caused_by"
+    },
+    {
+      "source": "c2e467468177410ec7493509a46ca0aeeba3b39940394eef87157fac70ffdbb5",
+      "target": "84035e386a1dd7079b1632572fdf331e0eac58d4e48e79fdb4f7f851665b8157",
+      "edge_type": "object_of",
+      "predicate": "caused_by"
+    },
+    {
+      "source": "b8512c70b623a033537c617fec560124a88b72d3201d856efde85f147bf91532",
+      "target": "a94896672086cbb5ef5f4b8f34bfabfc87089832d45e6b34b590a386456b52d0",
+      "edge_type": "object_of",
+      "predicate": "caused_by"
+    },
+    {
+      "source": "0a43f856d0257d720cb51a657265596e00e3b2d3fe3894cd7781f80a06ff0f1e",
+      "target": "cf2fe52aeb457882ada870939db83c18561dd6a8e16617e5f0442ff86f9f632d",
+      "edge_type": "object_of",
+      "predicate": "caused_by"
+    },
+    {
+      "source": "b6859a41d4c8fd6555d8425ebeaba1589fc1f8947b27a13e568d96d8a2303682",
+      "target": "0f4fee82e1ecd51cb1872c9fbfd5946453a2fcf6f96bca4284b0717fab9d53ce",
+      "edge_type": "object_of",
+      "predicate": "assigned_to"
+    },
+    {
+      "source": "fd69af4f0fdf2d23e6f64a6ff4135728bc65d12d66a660710aa82b82c740d772",
+      "target": "7bcdac4abf2df277a53d2f24bc8d9c0e89dc3ecdaf4dee687323d3e8c55f3d83",
+      "edge_type": "object_of",
+      "predicate": "reviewed_by"
+    },
+    {
+      "source": "297f2bcc7b25bb3d8089608749a92c49207b54bb3950367b0470291545ccaf68",
+      "target": "83428a717b9d13ae001e81e00ab64b37b781a534fd0bf6c0f89a9a263cad137d",
+      "edge_type": "object_of",
+      "predicate": "reviewed_by"
+    },
+    {
+      "source": "8417191a019424fa348105e926a539fef0de85e3b40252bae762782d52a56b7c",
+      "target": "0f4fee82e1ecd51cb1872c9fbfd5946453a2fcf6f96bca4284b0717fab9d53ce",
+      "edge_type": "object_of",
+      "predicate": "reviewed_by"
+    },
+    {
+      "source": "b26c25f59644d4d7d66ed48176dc202695c93aefdded1577985f71a8af6ad24d",
+      "target": "3f7374d083ca759df20dc6e7df6c0ca4f0d7f6ee83b8e1401bb2a8232acff083",
+      "edge_type": "object_of",
+      "predicate": "reviewed_by"
+    },
+    {
+      "source": "03173376972d59f06a835fe882dcf71d32cebdfbba2b675dea6ce52b6bf7e108",
+      "target": "f88fe1b91e6b2bfc7de25a1f7d4cf71f3179364ae1484cfee77c50100f6a8cf2",
+      "edge_type": "object_of",
+      "predicate": "owns"
+    },
+    {
+      "source": "58591939246eeec8bce526802453e27913c2ee9a429cd06d1309ea89edd06b1e",
+      "target": "cf2fe52aeb457882ada870939db83c18561dd6a8e16617e5f0442ff86f9f632d",
+      "edge_type": "object_of",
+      "predicate": "owns"
+    },
+    {
+      "source": "90073aafbb55e0f07c1be7572b859ff57a6cd9b33589a6727457d180e5ea3708",
+      "target": "deb67ddcdf1f6940661b3663458834b28307a66817a631d264ccfceb87d61f8e",
+      "edge_type": "object_of",
+      "predicate": "owns"
+    },
+    {
+      "source": "19163c969cb9c394092cdd132bc3ce49c57ff8048e4969b57594627e3131b5cc",
+      "target": "23226984c165682221d0d73062eb0391a1db8fbafc524cd42b5d63a9424ca78b",
+      "edge_type": "object_of",
+      "predicate": "owns"
+    },
+    {
+      "source": "5181417675984eda2fc0a36ff61c730bdb64b2e4644887ab2e2ed69ea413aaa6",
+      "target": "ee2b958b1b3a0e526d73ffa596e67a33b2639e713c3628e9bb28166a255efcf8",
+      "edge_type": "object_of",
+      "predicate": "owns"
+    },
+    {
+      "source": "bf5a9180c3b168819285b1d6480dad450b241e490b18caa887c9f0817b474e09",
+      "target": "11529fd05819bd2a7f3788ea49737367bd21c9bf6d64a0728d4f11330f269845",
+      "edge_type": "object_of",
+      "predicate": "assigned_to"
+    },
+    {
+      "source": "e284e72b36920316913d47941d9db412760410e5558c2ebc51ef38c5d5b3a6ef",
+      "target": "5129fc78468fb1263a0db930dc6dd6fb1047e71691cc19fceebc389409c72524",
+      "edge_type": "object_of",
+      "predicate": "owns"
+    },
+    {
+      "source": "d1fca5bc07615dbc5b3e64e962e55e7c74ee412a9183a0e2fefb6a2f648f47ce",
+      "target": "d6345baaf97a5b0ca93bd221969b3676bced185cb66057ca1c4c2788232bc60d",
+      "edge_type": "object_of",
+      "predicate": "caused_by"
+    },
+    {
+      "source": "447f82e32bd8f5b188021169009cbfe1072b5a7daa70b26318a52578c138af8b",
+      "target": "54939402299b564b7549880e364e9e1955eeaaa3cd43c962e606416c34adb0b5",
+      "edge_type": "object_of",
+      "predicate": "reviewed_by"
+    },
+    {
+      "source": "910c4e535b600800973cc9701c5904f3390d3b95cbe49439cd6e32df1c8302be",
+      "target": "35e8c2df7b8d2504ae6c5458a9071cf0afda665758d076a3456e832c12ca24b6",
+      "edge_type": "object_of",
+      "predicate": "assigned_to"
+    },
+    {
+      "source": "eefa19f30e4725624e36ceacca3c91ebc50c569b177ac86b599f97e8205c71a1",
+      "target": "6d07d0d386a9902a04500b7505f0ff5222c42fe09e2b64163f089576071367b4",
+      "edge_type": "object_of",
+      "predicate": "owns"
+    },
+    {
+      "source": "07a172d5be554f7a9fb4b18260cf33b75e937108342f7cbdb41f28d49ec2baad",
+      "target": "8ac5a81afb6714d0fcc497b87243025238df4d7f714ad6dff9d7f8484ffcd659",
+      "edge_type": "object_of",
+      "predicate": "owns"
+    },
+    {
+      "source": "74da7109b8d5d2f2decba0b42ec5377b90ee708b523b805b7f5f922ee68f42e9",
+      "target": "0c72aa07542a56e3c474b6e6d7f31bd975494b40f6b2acdf7f6fe304c72a6965",
+      "edge_type": "object_of",
+      "predicate": "assigned_to"
+    },
+    {
+      "source": "25b74e3fcf022fffd00119104deade742554b80da01c675549f2b3f59e720e84",
+      "target": "0c72aa07542a56e3c474b6e6d7f31bd975494b40f6b2acdf7f6fe304c72a6965",
+      "edge_type": "object_of",
+      "predicate": "owns"
+    },
+    {
+      "source": "b479faf3f8a12daa1b7052388fe69ee6ff9946d5034d6aaba383d4c4f2d4776c",
+      "target": "0c72aa07542a56e3c474b6e6d7f31bd975494b40f6b2acdf7f6fe304c72a6965",
+      "edge_type": "object_of",
+      "predicate": "reviewed_by"
+    },
+    {
+      "source": "9a77f3b65ea006e0bb48a2efe6a61ac9314d5afe1ca446d05ba08bd7198ae61d",
+      "target": "0c72aa07542a56e3c474b6e6d7f31bd975494b40f6b2acdf7f6fe304c72a6965",
+      "edge_type": "object_of",
+      "predicate": "decided"
+    },
+    {
+      "source": "464908ce4d1e187f27ba20c984476d130df0e9bb9c244fd60bbee1f5d33ea2cd",
+      "target": "839489b08e28abe8d307d81b763c494b4b93d70509c091d3a95bf9d26c47f548",
+      "edge_type": "object_of",
+      "predicate": "linked_to"
+    },
+    {
+      "source": "1b2bab54533448b4281e8ea102e71d52cc1f959fc3a428aa78d5984aedb97f34",
+      "target": "dd066fb5b26be2e9007270a732a74267666e2ce56193fd000107a11dddb5ad7e",
+      "edge_type": "object_of",
+      "predicate": "reviewed_by"
+    },
+    {
+      "source": "d385d6128f70e22587985b72f47d746056b61b262dadc4c9bb8210aa09dc45a1",
+      "target": "f90904a2bcc50a8fdfe152fdfcd8a087fb0503237a8b85cef2ca9e697577bcf4",
+      "edge_type": "object_of",
+      "predicate": "owns"
+    }
+  ]
+}
