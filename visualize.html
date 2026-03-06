@@ -1,0 +1,1305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Layer10 — Memory Graph Explorer</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap');
+
+  :root {
+    --bg:        #0a0c0f;
+    --surface:   #111318;
+    --border:    #1e2229;
+    --border2:   #2a2f3a;
+    --text:      #c8cdd6;
+    --text-dim:  #5a6172;
+    --text-mid:  #8a93a6;
+    --accent:    #4af0b0;
+    --accent2:   #2ec4f0;
+    --warn:      #f0b04a;
+    --danger:    #f05a4a;
+    --entity:    #4af0b0;
+    --claim-cur: #2ec4f0;
+    --claim-old: #3a4050;
+
+    --font-mono: 'IBM Plex Mono', monospace;
+    --font-sans: 'IBM Plex Sans', sans-serif;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-sans);
+    font-size: 13px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  /* ── Header ── */
+  header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 10px 20px;
+    border-bottom: 1px solid var(--border);
+    background: var(--surface);
+    flex-shrink: 0;
+    z-index: 100;
+  }
+  header .logo {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--accent);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  header .sep { color: var(--border2); }
+  header .subtitle {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--text-dim);
+    letter-spacing: 0.05em;
+  }
+  .stats-row {
+    margin-left: auto;
+    display: flex;
+    gap: 20px;
+  }
+  .stat { display: flex; flex-direction: column; align-items: flex-end; }
+  .stat-val {
+    font-family: var(--font-mono);
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text);
+  }
+  .stat-lbl {
+    font-size: 10px;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+  /* ── Layout ── */
+  .layout {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+  }
+
+  /* ── Left sidebar ── */
+  .sidebar {
+    width: 240px;
+    flex-shrink: 0;
+    border-right: 1px solid var(--border);
+    background: var(--surface);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  .sidebar-section {
+    border-bottom: 1px solid var(--border);
+    padding: 12px 14px;
+  }
+  .sidebar-title {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-dim);
+    margin-bottom: 10px;
+  }
+
+  /* Search */
+  .search-wrap { position: relative; }
+  .search-wrap input {
+    width: 100%;
+    background: var(--bg);
+    border: 1px solid var(--border2);
+    border-radius: 4px;
+    padding: 7px 10px 7px 30px;
+    color: var(--text);
+    font-family: var(--font-mono);
+    font-size: 12px;
+    outline: none;
+    transition: border-color 0.15s;
+  }
+  .search-wrap input:focus { border-color: var(--accent); }
+  .search-wrap input::placeholder { color: var(--text-dim); }
+  .search-icon {
+    position: absolute;
+    left: 9px; top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-dim);
+    font-size: 12px;
+    pointer-events: none;
+  }
+
+  /* Filters */
+  .filter-group { display: flex; flex-direction: column; gap: 5px; }
+  .filter-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    padding: 3px 0;
+    user-select: none;
+  }
+  .filter-row:hover .filter-label { color: var(--text); }
+  .filter-dot {
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  .filter-label {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--text-mid);
+    flex: 1;
+  }
+  .filter-count {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    color: var(--text-dim);
+  }
+  .filter-row input[type=checkbox] { display: none; }
+  .filter-row.disabled .filter-dot { opacity: 0.25; }
+  .filter-row.disabled .filter-label { color: var(--text-dim); }
+
+  /* Entity list */
+  .entity-list {
+    flex: 1;
+    overflow-y: auto;
+    padding: 0;
+  }
+  .entity-list::-webkit-scrollbar { width: 4px; }
+  .entity-list::-webkit-scrollbar-track { background: transparent; }
+  .entity-list::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 2px; }
+  .entity-item {
+    padding: 8px 14px;
+    cursor: pointer;
+    border-bottom: 1px solid var(--border);
+    transition: background 0.1s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .entity-item:hover { background: var(--border); }
+  .entity-item.selected { background: rgba(74,240,176,0.07); }
+  .entity-type-badge {
+    font-family: var(--font-mono);
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    padding: 2px 5px;
+    border-radius: 2px;
+    flex-shrink: 0;
+  }
+  .badge-Person    { background: rgba(74,240,176,0.12);  color: var(--accent);  }
+  .badge-Issue     { background: rgba(46,196,240,0.12);  color: var(--accent2); }
+  .badge-Component { background: rgba(240,176,74,0.12);  color: var(--warn);    }
+  .badge-Decision  { background: rgba(240,90,74,0.12);   color: var(--danger);  }
+  .entity-name {
+    font-size: 12px;
+    color: var(--text);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  /* ── Graph canvas ── */
+  .graph-area {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    background: var(--bg);
+  }
+  #graph-svg {
+    width: 100%;
+    height: 100%;
+  }
+  .graph-controls {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .ctrl-btn {
+    width: 32px; height: 32px;
+    background: var(--surface);
+    border: 1px solid var(--border2);
+    border-radius: 4px;
+    color: var(--text-mid);
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.15s;
+  }
+  .ctrl-btn:hover { background: var(--border2); color: var(--text); }
+
+  .graph-hint {
+    position: absolute;
+    bottom: 16px; left: 16px;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    color: var(--text-dim);
+    letter-spacing: 0.05em;
+    line-height: 1.7;
+    pointer-events: none;
+  }
+
+  /* ── Right panel ── */
+  .detail-panel {
+    width: 320px;
+    flex-shrink: 0;
+    border-left: 1px solid var(--border);
+    background: var(--surface);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: width 0.2s;
+  }
+  .detail-panel.empty {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .empty-state {
+    text-align: center;
+    color: var(--text-dim);
+  }
+  .empty-state .icon {
+    font-size: 32px;
+    margin-bottom: 10px;
+    opacity: 0.4;
+  }
+  .empty-state p {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    line-height: 1.6;
+  }
+  .panel-header {
+    padding: 14px 16px;
+    border-bottom: 1px solid var(--border);
+    flex-shrink: 0;
+  }
+  .panel-tag {
+    font-family: var(--font-mono);
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-dim);
+    margin-bottom: 5px;
+  }
+  .panel-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    word-break: break-all;
+  }
+  .panel-body {
+    flex: 1;
+    overflow-y: auto;
+    padding: 14px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .panel-body::-webkit-scrollbar { width: 4px; }
+  .panel-body::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 2px; }
+
+  /* Detail sections */
+  .detail-section { }
+  .detail-section-title {
+    font-family: var(--font-mono);
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-dim);
+    margin-bottom: 8px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid var(--border);
+  }
+  .kv-row {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 5px;
+    align-items: flex-start;
+  }
+  .kv-key {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    color: var(--text-dim);
+    min-width: 90px;
+    flex-shrink: 0;
+    padding-top: 1px;
+  }
+  .kv-val {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--text);
+    word-break: break-all;
+    line-height: 1.4;
+  }
+
+  /* Claim cards */
+  .claim-card {
+    background: var(--bg);
+    border: 1px solid var(--border2);
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    transition: border-color 0.15s, background 0.15s;
+    margin-bottom: 6px;
+  }
+  .claim-card:hover { border-color: var(--accent2); background: rgba(46,196,240,0.04); }
+  .claim-card.selected { border-color: var(--accent); background: rgba(74,240,176,0.05); }
+  .claim-card.superseded { opacity: 0.5; border-style: dashed; }
+  .claim-top {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 5px;
+    flex-wrap: wrap;
+  }
+  .predicate-tag {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    background: rgba(46,196,240,0.12);
+    color: var(--accent2);
+    padding: 2px 6px;
+    border-radius: 3px;
+  }
+  .status-tag {
+    font-family: var(--font-mono);
+    font-size: 9px;
+    padding: 2px 6px;
+    border-radius: 3px;
+  }
+  .status-current  { background: rgba(74,240,176,0.12);  color: var(--accent);  }
+  .status-old      { background: rgba(90,97,114,0.2);    color: var(--text-dim); }
+  .status-conflict { background: rgba(240,176,74,0.15);  color: var(--warn);    }
+  .claim-object {
+    font-size: 12px;
+    color: var(--text);
+    margin-bottom: 4px;
+  }
+  .claim-conf {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .conf-bar-wrap {
+    flex: 1;
+    height: 3px;
+    background: var(--border2);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+  .conf-bar {
+    height: 100%;
+    border-radius: 2px;
+    background: var(--accent);
+  }
+  .conf-val {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    color: var(--text-dim);
+    min-width: 30px;
+    text-align: right;
+  }
+
+  /* Evidence block */
+  .evidence-block {
+    background: var(--bg);
+    border: 1px solid var(--border2);
+    border-left: 3px solid var(--accent2);
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 8px;
+  }
+  .evidence-meta {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 6px;
+    flex-wrap: wrap;
+  }
+  .evidence-source {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    color: var(--accent2);
+  }
+  .evidence-author {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    color: var(--text-dim);
+  }
+  .evidence-time {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    color: var(--text-dim);
+    margin-left: auto;
+  }
+  .evidence-excerpt {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--text-mid);
+    line-height: 1.6;
+    white-space: pre-wrap;
+    word-break: break-word;
+    max-height: 120px;
+    overflow-y: auto;
+  }
+  .evidence-excerpt::-webkit-scrollbar { width: 3px; }
+  .evidence-excerpt::-webkit-scrollbar-thumb { background: var(--border2); }
+
+  /* Alias pill row */
+  .alias-pills { display: flex; flex-wrap: wrap; gap: 5px; }
+  .alias-pill {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    background: var(--border2);
+    color: var(--text-mid);
+    padding: 2px 8px;
+    border-radius: 12px;
+  }
+
+  /* Merge log */
+  .merge-item {
+    background: var(--bg);
+    border: 1px solid var(--border2);
+    border-radius: 4px;
+    padding: 8px 10px;
+    margin-bottom: 5px;
+  }
+  .merge-row {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--text-mid);
+    margin-bottom: 3px;
+  }
+  .merge-reason {
+    font-size: 10px;
+    color: var(--text-dim);
+  }
+
+  /* Tooltip */
+  #tooltip {
+    position: fixed;
+    background: var(--surface);
+    border: 1px solid var(--border2);
+    border-radius: 5px;
+    padding: 8px 12px;
+    pointer-events: none;
+    z-index: 9999;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--text);
+    max-width: 220px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    display: none;
+  }
+  #tooltip .tt-name { font-weight: 600; color: var(--accent); margin-bottom: 3px; }
+  #tooltip .tt-type { color: var(--text-dim); font-size: 10px; }
+
+  /* Node styles in SVG */
+  .node-entity circle {
+    stroke-width: 2;
+    transition: r 0.15s;
+  }
+  .node-claim rect {
+    stroke-width: 1.5;
+  }
+  .node-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    fill: #c8cdd6;
+    pointer-events: none;
+    text-anchor: middle;
+  }
+  .link {
+    stroke-opacity: 0.4;
+  }
+  .link.subject-of { stroke: #4af0b0; }
+  .link.object-of  { stroke: #2ec4f0; }
+  .link.highlighted { stroke-opacity: 1; stroke-width: 2.5; }
+
+  /* Upload overlay */
+  #upload-overlay {
+    position: fixed; inset: 0;
+    background: rgba(10,12,15,0.95);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 500;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .upload-box {
+    border: 2px dashed var(--border2);
+    border-radius: 10px;
+    padding: 48px 64px;
+    text-align: center;
+    cursor: pointer;
+    transition: border-color 0.2s, background 0.2s;
+    max-width: 420px;
+    width: 100%;
+  }
+  .upload-box:hover, .upload-box.dragover {
+    border-color: var(--accent);
+    background: rgba(74,240,176,0.04);
+  }
+  .upload-icon { font-size: 40px; margin-bottom: 12px; }
+  .upload-title {
+    font-family: var(--font-mono);
+    font-size: 14px;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .upload-sub {
+    font-size: 12px;
+    color: var(--text-dim);
+    line-height: 1.6;
+    margin-bottom: 16px;
+  }
+  .upload-btn {
+    background: var(--accent);
+    color: var(--bg);
+    border: none;
+    border-radius: 4px;
+    padding: 9px 20px;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    transition: opacity 0.15s;
+  }
+  .upload-btn:hover { opacity: 0.85; }
+  #file-input { display: none; }
+  .demo-btn {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--text-dim);
+    background: none;
+    border: 1px solid var(--border2);
+    border-radius: 4px;
+    padding: 8px 18px;
+    cursor: pointer;
+    transition: color 0.15s, border-color 0.15s;
+  }
+  .demo-btn:hover { color: var(--text); border-color: var(--text-mid); }
+
+  .loading {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--text-dim);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .spinner {
+    width: 16px; height: 16px;
+    border: 2px solid var(--border2);
+    border-top-color: var(--accent);
+    border-radius: 50%;
+    animation: spin 0.7s linear infinite;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  /* Tabs in panel */
+  .panel-tabs {
+    display: flex;
+    border-bottom: 1px solid var(--border);
+    flex-shrink: 0;
+  }
+  .panel-tab {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 9px 14px;
+    cursor: pointer;
+    color: var(--text-dim);
+    border-bottom: 2px solid transparent;
+    transition: color 0.15s;
+  }
+  .panel-tab:hover { color: var(--text-mid); }
+  .panel-tab.active { color: var(--accent); border-bottom-color: var(--accent); }
+
+  .tab-content { display: none; }
+  .tab-content.active { display: block; }
+</style>
+</head>
+<body>
+
+<!-- Upload overlay -->
+<div id="upload-overlay">
+  <div class="upload-box" id="drop-zone">
+    <div class="upload-icon">⬡</div>
+    <div class="upload-title">Memory Graph Explorer</div>
+    <div class="upload-sub">Drop your <code>memory_graph.json</code> here,<br>or click to select from disk.</div>
+    <button class="upload-btn" onclick="document.getElementById('file-input').click()">Load Graph File</button>
+  </div>
+  <button class="demo-btn" onclick="loadDemo()">▶ Load Demo Graph</button>
+  <input type="file" id="file-input" accept=".json" />
+</div>
+
+<!-- Main UI (hidden until loaded) -->
+<div id="main-ui" style="display:none; flex-direction:column; height:100vh;">
+
+  <header>
+    <span class="logo">Layer10</span>
+    <span class="sep">|</span>
+    <span class="subtitle">Memory Graph Explorer</span>
+    <div class="stats-row">
+      <div class="stat"><span class="stat-val" id="stat-entities">—</span><span class="stat-lbl">Entities</span></div>
+      <div class="stat"><span class="stat-val" id="stat-claims">—</span><span class="stat-lbl">Claims</span></div>
+      <div class="stat"><span class="stat-val" id="stat-current">—</span><span class="stat-lbl">Current</span></div>
+      <div class="stat"><span class="stat-val" id="stat-evidence">—</span><span class="stat-lbl">Evidence</span></div>
+    </div>
+  </header>
+
+  <div class="layout">
+
+    <!-- Left sidebar -->
+    <div class="sidebar">
+
+      <div class="sidebar-section">
+        <div class="sidebar-title">Search</div>
+        <div class="search-wrap">
+          <span class="search-icon">⌕</span>
+          <input type="text" id="search-input" placeholder="entity name…" />
+        </div>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="sidebar-title">Entity Types</div>
+        <div class="filter-group" id="type-filters"></div>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="sidebar-title">Claim Status</div>
+        <div class="filter-group">
+          <label class="filter-row" id="filter-current-row">
+            <input type="checkbox" id="filter-current" checked />
+            <span class="filter-dot" style="background:#4af0b0"></span>
+            <span class="filter-label">Current</span>
+            <span class="filter-count" id="count-current">—</span>
+          </label>
+          <label class="filter-row" id="filter-super-row">
+            <input type="checkbox" id="filter-superseded" checked />
+            <span class="filter-dot" style="background:#3a4050"></span>
+            <span class="filter-label">Superseded</span>
+            <span class="filter-count" id="count-super">—</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="sidebar-title" style="padding:12px 14px 6px;">Entities</div>
+      <div class="entity-list" id="entity-list"></div>
+
+    </div>
+
+    <!-- Graph -->
+    <div class="graph-area">
+      <svg id="graph-svg"></svg>
+      <div class="graph-hint">
+        scroll to zoom · drag to pan · click node to inspect<br>
+        shift+drag to lasso · double-click to focus
+      </div>
+      <div class="graph-controls">
+        <button class="ctrl-btn" id="btn-zoom-in" title="Zoom in">+</button>
+        <button class="ctrl-btn" id="btn-zoom-out" title="Zoom out">−</button>
+        <button class="ctrl-btn" id="btn-reset" title="Reset view">⊙</button>
+      </div>
+    </div>
+
+    <!-- Right detail panel -->
+    <div class="detail-panel" id="detail-panel">
+      <div class="empty-state" style="padding:40px; text-align:center;">
+        <div class="icon" style="font-size:28px; opacity:0.3; margin-bottom:10px;">◈</div>
+        <p style="font-family:var(--font-mono); font-size:11px; color:var(--text-dim); line-height:1.7;">
+          Click any node<br>to inspect details<br>and evidence
+        </p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div id="tooltip"></div>
+
+<script>
+// ─────────────────────────────────────────────────────────────
+// DATA & STATE
+// ─────────────────────────────────────────────────────────────
+let G = null;          // raw graph JSON
+let nodeMap = {};      // id -> node
+let entityNodes = [];
+let claimNodes  = [];
+let edgeList    = [];
+
+let selectedNode = null;
+let simulation   = null;
+let svgEl, gEl, zoomBehavior;
+
+const TYPE_COLORS = {
+  Person:    '#4af0b0',
+  Issue:     '#2ec4f0',
+  Component: '#f0b04a',
+  Decision:  '#f05a4a',
+};
+
+// ─────────────────────────────────────────────────────────────
+// FILE LOADING
+// ─────────────────────────────────────────────────────────────
+document.getElementById('file-input').addEventListener('change', e => {
+  const f = e.target.files[0];
+  if (!f) return;
+  const r = new FileReader();
+  r.onload = ev => initGraph(JSON.parse(ev.target.result));
+  r.readAsText(f);
+});
+
+const dz = document.getElementById('drop-zone');
+dz.addEventListener('dragover', e => { e.preventDefault(); dz.classList.add('dragover'); });
+dz.addEventListener('dragleave', () => dz.classList.remove('dragover'));
+dz.addEventListener('drop', e => {
+  e.preventDefault(); dz.classList.remove('dragover');
+  const f = e.dataTransfer.files[0];
+  if (!f) return;
+  const r = new FileReader();
+  r.onload = ev => initGraph(JSON.parse(ev.target.result));
+  r.readAsText(f);
+});
+
+function loadDemo() {
+  // Build a synthetic demo graph
+  const demo = buildDemoGraph();
+  initGraph(demo);
+}
+
+function buildDemoGraph() {
+  const nodes = [
+    {id:'e1', node_type:'Entity', entity_type:'Person',    canonical_name:'gvanrossum',   aliases:['Guido van Rossum'], first_seen:'2024-01-10T08:00:00Z'},
+    {id:'e2', node_type:'Entity', entity_type:'Issue',     canonical_name:'issue#123',    aliases:[], first_seen:'2024-01-10T08:00:00Z'},
+    {id:'e3', node_type:'Entity', entity_type:'Component', canonical_name:'asyncio',      aliases:['async io'], first_seen:'2024-01-10T08:00:00Z'},
+    {id:'e4', node_type:'Entity', entity_type:'Person',    canonical_name:'bkap123',      aliases:['Benjamin K'], first_seen:'2024-01-11T09:00:00Z'},
+    {id:'e5', node_type:'Entity', entity_type:'Issue',     canonical_name:'issue#456',    aliases:[], first_seen:'2024-01-12T10:00:00Z'},
+    {id:'e6', node_type:'Entity', entity_type:'Decision',  canonical_name:'deprecate-asyncio-debug', aliases:[], first_seen:'2024-01-15T12:00:00Z'},
+    {id:'e7', node_type:'Entity', entity_type:'Component', canonical_name:'typing',       aliases:['type hints'], first_seen:'2024-01-08T07:00:00Z'},
+    {id:'e8', node_type:'Entity', entity_type:'Person',    canonical_name:'vstinner',     aliases:['Victor Stinner'], first_seen:'2024-01-09T06:00:00Z'},
+
+    {id:'c1', node_type:'Claim', predicate:'assigned_to', object_label:'issue#123', confidence:0.95, is_current:true,  superseded:false, valid_from:'2024-01-10T08:00:00Z', valid_until:null, cross_evidence_count:2, promoted_to_memory:true,
+      evidence:[{source_id:'issue#123', author:'gvanrossum', event_timestamp:'2024-01-10T08:00:00Z', excerpt:'Assigned gvanrossum to the asyncio concurrency regression.'}]},
+    {id:'c2', node_type:'Claim', predicate:'caused_by',   object_label:'asyncio',   confidence:0.88, is_current:true,  superseded:false, valid_from:'2024-01-10T09:00:00Z', valid_until:null, cross_evidence_count:1, promoted_to_memory:true,
+      evidence:[{source_id:'issue#123/comment#1', author:'vstinner', event_timestamp:'2024-01-10T09:00:00Z', excerpt:'Root cause traced to asyncio event loop scheduling; reproduced in 3.12.'}]},
+    {id:'c3', node_type:'Claim', predicate:'blocks',      object_label:'issue#456', confidence:0.80, is_current:true,  superseded:false, valid_from:'2024-01-11T10:00:00Z', valid_until:null, cross_evidence_count:1, promoted_to_memory:true,
+      evidence:[{source_id:'issue#123/comment#2', author:'bkap123', event_timestamp:'2024-01-11T10:00:00Z', excerpt:'This is blocking issue#456 — cannot ship until resolved.'}]},
+    {id:'c4', node_type:'Claim', predicate:'assigned_to', object_label:'issue#123', confidence:0.90, is_current:false, superseded:true,  valid_from:'2024-01-08T08:00:00Z', valid_until:'2024-01-10T08:00:00Z', cross_evidence_count:1, promoted_to_memory:false,
+      evidence:[{source_id:'issue#123', author:'admin', event_timestamp:'2024-01-08T08:00:00Z', excerpt:'Originally assigned to bkap123 before triage reassignment.'}]},
+    {id:'c5', node_type:'Claim', predicate:'decided',     object_label:'deprecate-asyncio-debug', confidence:0.92, is_current:true, superseded:false, valid_from:'2024-01-15T12:00:00Z', valid_until:null, cross_evidence_count:2, promoted_to_memory:true,
+      evidence:[{source_id:'issue#123/comment#5', author:'gvanrossum', event_timestamp:'2024-01-15T12:00:00Z', excerpt:'Decision: deprecate asyncio debug mode in 3.13. Accepted by core devs.'}]},
+    {id:'c6', node_type:'Claim', predicate:'owns',        object_label:'typing',    confidence:0.85, is_current:true,  superseded:false, valid_from:'2024-01-08T07:00:00Z', valid_until:null, cross_evidence_count:3, promoted_to_memory:true,
+      evidence:[{source_id:'issue#456', author:'vstinner', event_timestamp:'2024-01-08T07:00:00Z', excerpt:'vstinner is the primary maintainer for the typing module.'}]},
+  ];
+
+  const edges = [
+    {source:'e1', target:'c1', edge_type:'subject_of'}, {source:'c1', target:'e2', edge_type:'object_of'},
+    {source:'e2', target:'c2', edge_type:'subject_of'}, {source:'c2', target:'e3', edge_type:'object_of'},
+    {source:'e2', target:'c3', edge_type:'subject_of'}, {source:'c3', target:'e5', edge_type:'object_of'},
+    {source:'e4', target:'c4', edge_type:'subject_of'}, {source:'c4', target:'e2', edge_type:'object_of'},
+    {source:'e1', target:'c5', edge_type:'subject_of'}, {source:'c5', target:'e6', edge_type:'object_of'},
+    {source:'e8', target:'c6', edge_type:'subject_of'}, {source:'c6', target:'e7', edge_type:'object_of'},
+  ];
+
+  return {
+    metadata: { node_count: nodes.length, edge_count: edges.length, entity_count: 8, claim_count: 6, current_claims: 5, predicate_distribution: {assigned_to:2, caused_by:1, blocks:1, decided:1, owns:1} },
+    nodes, edges
+  };
+}
+
+// ─────────────────────────────────────────────────────────────
+// INIT
+// ─────────────────────────────────────────────────────────────
+function initGraph(data) {
+  G = data;
+  nodeMap = {};
+  G.nodes.forEach(n => nodeMap[n.id] = n);
+  entityNodes = G.nodes.filter(n => n.node_type === 'Entity');
+  claimNodes  = G.nodes.filter(n => n.node_type === 'Claim');
+  edgeList    = G.edges || [];
+
+  document.getElementById('upload-overlay').style.display = 'none';
+  const ui = document.getElementById('main-ui');
+  ui.style.display = 'flex';
+
+  updateStats();
+  buildTypeFilters();
+  buildEntityList();
+  buildGraph();
+
+  document.getElementById('search-input').addEventListener('input', e => {
+    filterEntityList(e.target.value);
+  });
+  document.getElementById('filter-current').addEventListener('change', applyClaimFilter);
+  document.getElementById('filter-superseded').addEventListener('change', applyClaimFilter);
+}
+
+function updateStats() {
+  const meta = G.metadata || {};
+  document.getElementById('stat-entities').textContent = meta.entity_count || entityNodes.length;
+  document.getElementById('stat-claims').textContent   = meta.claim_count  || claimNodes.length;
+  document.getElementById('stat-current').textContent  = meta.current_claims || claimNodes.filter(c=>c.is_current).length;
+  const evCount = claimNodes.reduce((s,c) => s + (c.evidence||[]).length, 0);
+  document.getElementById('stat-evidence').textContent = evCount;
+  document.getElementById('count-current').textContent = claimNodes.filter(c=>c.is_current).length;
+  document.getElementById('count-super').textContent   = claimNodes.filter(c=>!c.is_current).length;
+}
+
+// ─────────────────────────────────────────────────────────────
+// LEFT PANEL
+// ─────────────────────────────────────────────────────────────
+const activeTypes = new Set(['Person','Issue','Component','Decision']);
+
+function buildTypeFilters() {
+  const typeCounts = {};
+  entityNodes.forEach(e => typeCounts[e.entity_type] = (typeCounts[e.entity_type]||0)+1);
+  const container = document.getElementById('type-filters');
+  container.innerHTML = '';
+  Object.entries(typeCounts).forEach(([type, count]) => {
+    const row = document.createElement('label');
+    row.className = 'filter-row';
+    row.innerHTML = `
+      <input type="checkbox" checked data-type="${type}" />
+      <span class="filter-dot" style="background:${TYPE_COLORS[type]||'#888'}"></span>
+      <span class="filter-label">${type}</span>
+      <span class="filter-count">${count}</span>
+    `;
+    row.querySelector('input').addEventListener('change', function() {
+      if (this.checked) activeTypes.add(type); else activeTypes.delete(type);
+      row.classList.toggle('disabled', !this.checked);
+      applyNodeFilter();
+    });
+    container.appendChild(row);
+  });
+}
+
+function buildEntityList(filter='') {
+  const list = document.getElementById('entity-list');
+  list.innerHTML = '';
+  const fl = filter.toLowerCase();
+  entityNodes
+    .filter(e => !fl || e.canonical_name.toLowerCase().includes(fl) || (e.aliases||[]).some(a=>a.toLowerCase().includes(fl)))
+    .slice(0, 200)
+    .forEach(e => {
+      const item = document.createElement('div');
+      item.className = 'entity-item';
+      item.dataset.id = e.id;
+      item.innerHTML = `<span class="entity-type-badge badge-${e.entity_type}">${e.entity_type[0]}</span><span class="entity-name">${e.canonical_name}</span>`;
+      item.addEventListener('click', () => selectNode(e.id, true));
+      list.appendChild(item);
+    });
+}
+
+function filterEntityList(q) { buildEntityList(q); }
+
+// ─────────────────────────────────────────────────────────────
+// D3 FORCE GRAPH
+// ─────────────────────────────────────────────────────────────
+function buildGraph() {
+  svgEl = d3.select('#graph-svg');
+  svgEl.selectAll('*').remove();
+
+  const W = svgEl.node().clientWidth;
+  const H = svgEl.node().clientHeight;
+
+  // Defs: arrowheads
+  const defs = svgEl.append('defs');
+  ['subject', 'object'].forEach(k => {
+    defs.append('marker')
+      .attr('id', `arrow-${k}`)
+      .attr('viewBox','0 -4 8 8')
+      .attr('refX',14).attr('refY',0)
+      .attr('markerWidth',6).attr('markerHeight',6)
+      .attr('orient','auto')
+      .append('path')
+      .attr('d','M0,-4L8,0L0,4')
+      .attr('fill', k==='subject' ? '#4af0b0' : '#2ec4f0')
+      .attr('opacity',0.5);
+  });
+
+  zoomBehavior = d3.zoom().scaleExtent([0.05, 4]).on('zoom', e => gEl.attr('transform', e.transform));
+  svgEl.call(zoomBehavior);
+
+  gEl = svgEl.append('g');
+
+  // Limit visible nodes for performance
+  const MAX_NODES = 300;
+  let visibleEntities = entityNodes.slice(0, MAX_NODES);
+  let visibleEntityIds = new Set(visibleEntities.map(e=>e.id));
+
+  // Only show claims connected to visible entities
+  let visibleClaims = claimNodes.filter(c => {
+    const conEdges = edgeList.filter(ed => ed.source===c.id || ed.target===c.id);
+    return conEdges.some(ed => visibleEntityIds.has(ed.source) || visibleEntityIds.has(ed.target));
+  }).slice(0, MAX_NODES);
+  let visibleClaimIds = new Set(visibleClaims.map(c=>c.id));
+
+  let allVisible = new Set([...visibleEntityIds, ...visibleClaimIds]);
+  let visibleEdges = edgeList.filter(ed => allVisible.has(ed.source) && allVisible.has(ed.target));
+
+  // Deep copy for d3 simulation (it mutates x/y)
+  const simNodes = [...visibleEntities, ...visibleClaims].map(n => ({...n}));
+  const idToSim  = {};
+  simNodes.forEach(n => idToSim[n.id] = n);
+  const simEdges = visibleEdges.map(e => ({...e, source: idToSim[e.source]||e.source, target: idToSim[e.target]||e.target}));
+
+  simulation = d3.forceSimulation(simNodes)
+    .force('link',   d3.forceLink(simEdges).id(d=>d.id).distance(60).strength(0.5))
+    .force('charge', d3.forceManyBody().strength(-120))
+    .force('center', d3.forceCenter(W/2, H/2))
+    .force('x',      d3.forceX(W/2).strength(0.03))
+    .force('y',      d3.forceY(H/2).strength(0.03))
+    .force('collide',d3.forceCollide(18));
+
+  // Edges
+  const linkSel = gEl.append('g').selectAll('line')
+    .data(simEdges).enter().append('line')
+    .attr('class', d => `link ${d.edge_type==='subject_of'?'subject-of':'object-of'}`)
+    .attr('stroke-width', 1.2)
+    .attr('marker-end', d => d.edge_type==='subject_of' ? 'url(#arrow-subject)' : 'url(#arrow-object)');
+
+  // Nodes
+  const nodeSel = gEl.append('g').selectAll('g')
+    .data(simNodes).enter().append('g')
+    .attr('class', d => d.node_type==='Entity' ? 'node-entity' : 'node-claim')
+    .style('cursor','pointer')
+    .call(d3.drag()
+      .on('start', (ev,d) => { if (!ev.active) simulation.alphaTarget(0.3).restart(); d.fx=d.x; d.fy=d.y; })
+      .on('drag',  (ev,d) => { d.fx=ev.x; d.fy=ev.y; })
+      .on('end',   (ev,d) => { if (!ev.active) simulation.alphaTarget(0); d.fx=null; d.fy=null; }))
+    .on('click', (ev, d) => { ev.stopPropagation(); selectNode(d.id, false); })
+    .on('mouseover', (ev,d) => showTooltip(ev,d))
+    .on('mousemove', (ev) => moveTooltip(ev))
+    .on('mouseout', hideTooltip)
+    .on('dblclick', (ev,d) => { ev.stopPropagation(); focusNode(d); });
+
+  // Entity circles
+  nodeSel.filter(d=>d.node_type==='Entity').append('circle')
+    .attr('r', d => Math.min(12, 6 + Math.log1p((d.aliases||[]).length+1)*2))
+    .attr('fill', d => (TYPE_COLORS[d.entity_type]||'#888')+'22')
+    .attr('stroke', d => TYPE_COLORS[d.entity_type]||'#888');
+
+  // Claim rects
+  nodeSel.filter(d=>d.node_type==='Claim').append('rect')
+    .attr('x',-14).attr('y',-6).attr('width',28).attr('height',12).attr('rx',3)
+    .attr('fill', d => d.is_current ? '#2ec4f022' : '#1e202822')
+    .attr('stroke', d => d.is_current ? '#2ec4f0' : '#3a4050');
+
+  // Labels
+  nodeSel.filter(d=>d.node_type==='Entity').append('text')
+    .attr('class','node-label').attr('dy',22)
+    .text(d => d.canonical_name.length>14 ? d.canonical_name.slice(0,13)+'…' : d.canonical_name);
+
+  nodeSel.filter(d=>d.node_type==='Claim').append('text')
+    .attr('class','node-label').attr('dy',4).attr('font-size',9)
+    .attr('fill', d=>d.is_current?'#2ec4f0':'#5a6172')
+    .text(d => d.predicate||'');
+
+  simulation.on('tick', () => {
+    linkSel
+      .attr('x1', d=>d.source.x).attr('y1', d=>d.source.y)
+      .attr('x2', d=>d.target.x).attr('y2', d=>d.target.y);
+    nodeSel.attr('transform', d=>`translate(${d.x},${d.y})`);
+  });
+
+  // Click background to deselect
+  svgEl.on('click', () => { selectedNode = null; clearPanel(); highlightNeighbors(null); });
+
+  // Zoom controls
+  document.getElementById('btn-zoom-in').onclick  = () => svgEl.transition().call(zoomBehavior.scaleBy, 1.4);
+  document.getElementById('btn-zoom-out').onclick = () => svgEl.transition().call(zoomBehavior.scaleBy, 0.7);
+  document.getElementById('btn-reset').onclick    = () => svgEl.transition().call(zoomBehavior.transform, d3.zoomIdentity.translate(W/2,H/2).scale(1));
+}
+
+function applyNodeFilter() {
+  if (!gEl) return;
+  gEl.selectAll('.node-entity').style('opacity', d => activeTypes.has(d.entity_type) ? 1 : 0.08);
+}
+
+function applyClaimFilter() {
+  if (!gEl) return;
+  const showCurrent    = document.getElementById('filter-current').checked;
+  const showSuperseded = document.getElementById('filter-superseded').checked;
+  gEl.selectAll('.node-claim').style('opacity', d => {
+    if (d.is_current && showCurrent) return 1;
+    if (!d.is_current && showSuperseded) return 1;
+    return 0.05;
+  });
+}
+
+// ─────────────────────────────────────────────────────────────
+// SELECTION & HIGHLIGHTING
+// ─────────────────────────────────────────────────────────────
+function selectNode(id, scroll) {
+  selectedNode = id;
+  const node = nodeMap[id];
+  if (!node) return;
+
+  highlightNeighbors(id);
+  showDetailPanel(node);
+
+  // Highlight entity list
+  document.querySelectorAll('.entity-item').forEach(el => {
+    el.classList.toggle('selected', el.dataset.id === id);
+  });
+
+  if (scroll) {
+    const el = document.querySelector(`.entity-item[data-id="${id}"]`);
+    if (el) el.scrollIntoView({block:'nearest'});
+  }
+}
+
+function highlightNeighbors(id) {
+  if (!gEl) return;
+  if (!id) {
+    gEl.selectAll('.node-entity circle').attr('stroke-width', 2).attr('r', d=>Math.min(12,6+Math.log1p((d.aliases||[]).length+1)*2));
+    gEl.selectAll('.node-claim rect').attr('stroke-width', 1.5);
+    gEl.selectAll('.link').classed('highlighted', false).attr('stroke-opacity',0.4);
+    return;
+  }
+  // Collect neighbors
+  const neighbors = new Set([id]);
+  edgeList.forEach(e => {
+    if (e.source===id || (e.source.id&&e.source.id===id)) neighbors.add(typeof e.target==='object'?e.target.id:e.target);
+    if (e.target===id || (e.target.id&&e.target.id===id)) neighbors.add(typeof e.source==='object'?e.source.id:e.source);
+  });
+
+  gEl.selectAll('.node-entity').style('opacity', d => neighbors.has(d.id) ? 1 : 0.15);
+  gEl.selectAll('.node-claim').style('opacity', d => neighbors.has(d.id) ? 1 : 0.15);
+  gEl.selectAll('.link')
+    .attr('stroke-opacity', d => {
+      const s = typeof d.source==='object'?d.source.id:d.source;
+      const t = typeof d.target==='object'?d.target.id:d.target;
+      return (neighbors.has(s)&&neighbors.has(t)) ? 0.9 : 0.05;
+    })
+    .classed('highlighted', d => {
+      const s = typeof d.source==='object'?d.source.id:d.source;
+      const t = typeof d.target==='object'?d.target.id:d.target;
+      return neighbors.has(s)&&neighbors.has(t);
+    });
+}
+
+function focusNode(d) {
+  if (!svgEl || !zoomBehavior) return;
+  const W = svgEl.node().clientWidth;
+  const H = svgEl.node().clientHeight;
+  svgEl.transition().duration(500).call(
+    zoomBehavior.transform,
+    d3.zoomIdentity.translate(W/2 - d.x*1.8, H/2 - d.y*1.8).scale(1.8)
+  );
+}
+
+// ─────────────────────────────────────────────────────────────
+// DETAIL PANEL
+// ─────────────────────────────────────────────────────────────
+function clearPanel() {
+  const panel = document.getElementById('detail-panel');
+  panel.innerHTML = `<div class="empty-state" style="padding:40px; text-align:center;">
+    <div class="icon" style="font-size:28px; opacity:0.3; margin-bottom:10px;">◈</div>
+    <p style="font-family:var(--font-mono); font-size:11px; color:var(--text-dim); line-height:1.7;">Click any node<br>to inspect details<br>and evidence</p>
+  </div>`;
+  document.querySelectorAll('.entity-item').forEach(el => el.classList.remove('selected'));
+}
+
+function showDetailPanel(node) {
+  const panel = document.getElementById('detail-panel');
+  if (node.node_type === 'Entity') renderEntityPanel(panel, node);
+  else renderClaimPanel(panel, node);
+}
+
+function renderEntityPanel(panel, node) {
+  // Find connected claims
+  const connectedClaimIds = edgeList
+    .filter(e => {
+      const s = typeof e.source==='object'?e.source.id:e.source;
+      const t = typeof e.target==='object'?e.target.id:e.target;
+      return s===node.id || t===node.id;
+    })
+    .map(e => {
+      const s = typeof e.source==='object'?e.source.id:e.source;
+      const t = typeof e.target==='object'?e.target.id:e.target;
+      return s===node.id ? t : s;
+    })
+    .filter(id => nodeMap[id] && nodeMap[id].node_type==='Claim');
+
+  const claims = [...new Set(connectedClaimIds)].map(id=>nodeMap[id]).filter(Boolean);
+  const currentClaims    = claims.filter(c=>c.is_current);
+  const supersededClaims = claims.filter(c=>!c.is_current);
+
+  const aliases = (node.aliases||[]).filter(Boolean);
+
+  panel.innerHTML = `
+    <div class="panel-header">
+      <div class="panel-tag">Entity · ${node.entity_type}</div>
+      <div class="panel-name">${node.canonical_name}</div>
+    </div>
+    <div class="panel-tabs">
+      <div class="panel-tab active" data-tab="info">Info</div>
+      <div class="panel-tab" data-tab="claims">Claims <span style="color:var(--text-dim)">(${claims.length})</span></div>
+    </div>
+    <div class="panel-body">
+      <div class="tab-content active" id="tab-info">
+        <div class="detail-section">
+          <div class="detail-section-title">Properties</div>
+          <div class="kv-row"><span class="kv-key">type</span><span class="kv-val">${node.entity_type}</span></div>
+          <div class="kv-row"><span class="kv-key">canonical</span><span class="kv-val">${node.canonical_name}</span></div>
+          <div class="kv-row"><span class="kv-key">first seen</span><span class="kv-val">${fmtDate(node.first_seen)}</span></div>
+          <div class="kv-row"><span class="kv-key">ext version</span><span class="kv-val">${node.extraction_version||'—'}</span></div>
+        </div>
+        ${aliases.length ? `
+        <div class="detail-section">
+          <div class="detail-section-title">Aliases / Merges</div>
+          <div class="alias-pills">${aliases.map(a=>`<span class="alias-pill">${a}</span>`).join('')}</div>
+        </div>` : ''}
+        <div class="detail-section">
+          <div class="detail-section-title">Summary</div>
+          <div class="kv-row"><span class="kv-key">total claims</span><span class="kv-val">${claims.length}</span></div>
+          <div class="kv-row"><span class="kv-key">current</span><span class="kv-val" style="color:var(--accent)">${currentClaims.length}</span></div>
+          <div class="kv-row"><span class="kv-key">superseded</span><span class="kv-val" style="color:var(--text-dim)">${supersededClaims.length}</span></div>
+        </div>
+      </div>
+      <div class="tab-content" id="tab-claims">
+        ${claims.length===0 ? '<p style="color:var(--text-dim); font-family:var(--font-mono); font-size:11px;">No claims found.</p>' : ''}
+        ${currentClaims.length ? `<div class="detail-section-title" style="margin-bottom:8px;">Current</div>${currentClaims.map(c=>claimCard(c)).join('')}` : ''}
+        ${supersededClaims.length ? `<div class="detail-section-title" style="margin-bottom:8px; margin-top:12px;">Superseded</div>${supersededClaims.map(c=>claimCard(c, true)).join('')}` : ''}
+      </div>
+    </div>
+  `;
+
+  // Tab switching
+  panel.querySelectorAll('.panel-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      panel.querySelectorAll('.panel-tab').forEach(t=>t.classList.remove('active'));
+      panel.querySelectorAll('.tab-content').forEach(t=>t.classList.remove('active'));
+      tab.classList.add('active');
+      panel.querySelector(`#tab-${tab.dataset.tab}`).classList.add('active');
+    });
+  });
+
+  // Claim card click -> show claim panel
+  panel.querySelectorAll('.claim-card').forEach(card => {
+    card.addEventListener('click', () => {
+      const cn = nodeMap[card.dataset.id];
+      if (cn) renderClaimPanel(panel, cn);
+    });
+  });
+}
+
+function claimCard(c, isSuperseded=false) {
+  const conf = (c.confidence||0);
+  const barW = Math.round(conf*100);
+  return `
+    <div class="claim-card ${isSuperseded?'superseded':''}" data-id="${c.id}">
+      <div class="claim-top">
+        <span class="predicate-tag">${c.predicate||'?'}</span>
+        <span class="status-tag ${c.is_current?'status-current':'status-old'}">${c.is_current?'current':'old'}</span>
+      </div>
+      <div class="claim-object">→ ${c.object_label||'?'}</div>
+      <div class="claim-conf">
+        <div class="conf-bar-wrap"><div class="conf-bar" style="width:${barW}%;opacity:${c.is_current?1:0.4}"></div></div>
+        <span class="conf-val">${(conf*100).toFixed(0)}%</span>
+      </div>
+    </div>`;
+}
+
+function renderClaimPanel(panel, node) {
+  const evList = node.evidence || [];
+  const validFrom  = fmtDate(node.valid_from);
+  const validUntil = node.valid_until ? fmtDate(node.valid_until) : 'present';
+
+  panel.innerHTML = `
+    <div class="panel-header">
+      <div class="panel-tag">Claim · ${node.is_current?'Current':'Superseded'}</div>
+      <div class="panel-name">${node.predicate||'?'}</div>
+    </div>
+    <div class="panel-body">
+      <div class="detail-section">
+        <div class="detail-section-title">Claim Properties</div>
+        <div class="kv-row"><span class="kv-key">predicate</span><span class="kv-val">${node.predicate}</span></div>
+        <div class="kv-row"><span class="kv-key">object</span><span class="kv-val">${node.object_label||'—'}</span></div>
+        <div class="kv-row"><span class="kv-key">confidence</span><span class="kv-val">${((node.confidence||0)*100).toFixed(0)}%</span></div>
+        <div class="kv-row"><span class="kv-key">valid</span><span class="kv-val">${validFrom} → ${validUntil}</span></div>
+        <div class="kv-row"><span class="kv-key">evidence</span><span class="kv-val">${evList.length} source(s)</span></div>
+        <div class="kv-row"><span class="kv-key">in memory</span><span class="kv-val">${node.promoted_to_memory?'✓ yes':'✗ pending'}</span></div>
+      </div>
+      <div class="detail-section">
+        <div class="detail-section-title">Evidence (${evList.length})</div>
+        ${evList.length===0 ? '<p style="color:var(--text-dim); font-size:11px; font-family:var(--font-mono);">No evidence found.</p>' : evList.map(ev=>evidenceBlock(ev)).join('')}
+      </div>
+    </div>
+  `;
+}
+
+function evidenceBlock(ev) {
+  return `
+    <div class="evidence-block">
+      <div class="evidence-meta">
+        <span class="evidence-source">${ev.source_id||'?'}</span>
+        <span class="evidence-author">@${ev.author||'unknown'}</span>
+        <span class="evidence-time">${fmtDate(ev.event_timestamp)}</span>
+      </div>
+      <div class="evidence-excerpt">${escHtml(ev.excerpt||'')}</div>
+    </div>`;
+}
+
+// ─────────────────────────────────────────────────────────────
+// TOOLTIP
+// ─────────────────────────────────────────────────────────────
+const tooltip = document.getElementById('tooltip');
+function showTooltip(ev, d) {
+  let html = '';
+  if (d.node_type==='Entity') {
+    html = `<div class="tt-name">${d.canonical_name}</div><div class="tt-type">${d.entity_type}</div>`;
+    if ((d.aliases||[]).length) html += `<div style="margin-top:4px; font-size:10px; color:var(--text-dim)">aka: ${d.aliases.slice(0,3).join(', ')}</div>`;
+  } else {
+    html = `<div class="tt-name">${d.predicate}</div><div class="tt-type">→ ${d.object_label||'?'} · conf ${((d.confidence||0)*100).toFixed(0)}%</div>`;
+    html += `<div style="margin-top:4px; font-size:10px; color:${d.is_current?'#4af0b0':'#5a6172'}">${d.is_current?'● current':'○ superseded'}</div>`;
+  }
+  tooltip.innerHTML = html;
+  tooltip.style.display = 'block';
+  moveTooltip(ev);
+}
+function moveTooltip(ev) {
+  tooltip.style.left = (ev.clientX+14)+'px';
+  tooltip.style.top  = (ev.clientY-10)+'px';
+}
+function hideTooltip() { tooltip.style.display='none'; }
+
+// ─────────────────────────────────────────────────────────────
+// UTILS
+// ─────────────────────────────────────────────────────────────
+function fmtDate(s) {
+  if (!s) return '—';
+  try { return new Date(s).toISOString().slice(0,10); }
+  catch { return s; }
+}
+function escHtml(s) {
+  return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+</script>
+</body>
+</html>
